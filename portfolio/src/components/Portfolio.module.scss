@@ -1,0 +1,441 @@
+@import "../sassVariables/variables.scss";
+
+@media (max-width: (map-get($breakpoints, medium ))-1) {
+    .container{
+        background-color: $primary-color;
+        width: 100%;
+        // width: 110%;
+        height: fit-content;
+        text-align: left;
+        padding-left: $padding-base-mobile;
+        padding-bottom: 1rem;
+             
+        .elements{
+            //display: flex;
+            //justify-content: flex-start;
+            //background-color: aquamarine;
+            //align-items: flex-start;
+            //flex-direction: column;
+            // margin-left: 5rem;
+            margin-right: 1rem;
+            padding: 0.5rem;
+              
+            h1{
+                font-family: 'Crimson Pro', serif;
+                font-size: 3rem;
+                color:$color-text-primary;
+                
+            }
+    
+            .line {
+                //width: 0.5rem;
+                height: 4rem;           
+                border-left: 0.15rem solid $color-text-primary ;                   
+            }
+        }
+
+        .botones{
+            display: flex;
+            align-items:flex-end;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 3rem;
+           
+
+        button{
+                display: flex;
+                align-items: center;
+                background: none;
+                border:none;
+                border: 0.15rem solid;
+                font-size: 1.2rem;
+                text-align: left;
+                color: $color-text-primary;
+                padding: 0.8rem;
+                height: fit-content;
+
+                a{
+                    outline: none;
+                    text-decoration: none;
+                    color: $color-text-primary;
+                }
+
+                &:hover{
+                    border-image: linear-gradient(to right, $primary,$secondary);
+                    border-image-slice: 1;
+                    font-size: 1.3rem;
+                    padding: 1rem;
+                }
+                
+            }
+
+        .repo{
+                margin-left: 1rem;
+            }
+        }
+    
+        .cart {
+            display:block;
+            //justify-content: center; 
+            flex-direction: column;
+            // margin-left: 5rem;
+            margin-right: 2.5rem;
+            margin-top: 1rem;   
+            //background-color: rgb(23, 2, 56);
+            padding: 0 0 2rem 0;
+            height: fit-content;
+                        
+            .info{
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                //background-color: blueviolet;
+                //align-self: flex-end;
+                //justify-content: flex-start;
+                //align-items: flex-start;
+                flex-direction: column;
+                top: 0;
+    
+                .texto{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    //background-color: coral;
+                    color: $color-text-primary; 
+                    width: 100%;
+        
+                    h2{
+                        
+                        font-family: 'Crimson Pro', serif;
+                        font-size: 2rem;
+                        //color: $color-text-primary;  
+                        //background-color: rgb(62, 15, 107); 
+                        margin-top: 0;                
+                    }
+                   
+                    span{
+                        margin-top: 0.2rem; 
+                        font-size: 1.5rem;
+                        //background-color: burlywood;
+                        padding: 0.8rem 0 0.8rem 0 ;
+                    }
+                    
+                }
+               
+                      
+            }
+            
+            .imagen{
+                display: flex;
+                width: 100%;
+                height: auto;
+                //background-color: rgb(48, 63, 33);
+                //margin-top:10rem;
+                
+                img{
+                    width: 100% ;
+                    object-fit: fill;
+                }
+    
+                video{
+                    width: 100% ;
+                    height:auto;
+                }
+            }
+        }
+    
+        }
+   
+}
+
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
+
+    .container{
+        background-color:$primary-color;
+        width: $width-min-medium;
+        // width: 110%;
+        height: fit-content;
+        text-align: left;
+        padding-left: $padding-base-medium;
+        
+        .elements{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            // margin-left: 5rem;
+            margin-right: 5rem;
+            // margin-top: 3rem;
+    
+            h1{
+                font-family: 'Crimson Pro', serif;
+                font-size: 3rem;
+                color:$color-text-primary;
+            }
+    
+            .line {
+                //width: 0.5rem;
+                height: 6rem;           
+                border-left: 0.15rem solid $color-text-primary ;                   
+            }
+        }
+    
+        .cart {
+            display:flex;
+            //justify-content: center;
+            //align-items: center;
+            //flex-direction: column;
+            // margin-left: 5rem;
+            margin-right: 2rem;
+            margin-top: 2rem;   
+            padding: 0 0 1rem 0;
+            
+            
+            .info{
+                display: flex;
+                width: 50%;
+                height: fit-content;
+                flex-direction: column;
+                top: 0;
+    
+                .texto{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    //background-color: coral;
+                    color: $color-text-primary; 
+                    h2{
+                        font-family: 'Crimson Pro', serif;
+                        font-size: 2rem;
+                        margin-top: 0;                
+                    }
+                    // .description{
+                    //     background-color: blueviolet;
+                    // }
+                    span{
+                        //margin-top: 0.2rem;
+                        //background-color: blue;
+                        font-size: 1rem;
+                        //background-color: burlywood;
+                        padding: 0 0 0.5rem 0 ;
+                    }
+                   
+                    
+                }
+                    
+            }
+            
+            .imagen{
+                display: flex;
+                width: 50%;
+                height: fit-content;
+                align-self: center;
+                //background-color: rgb(48, 63, 33);
+                margin-left:0.5rem ;
+                
+                img{
+                    width: 100% ;
+                    object-fit: fill;
+                }
+    
+                video{
+                    width: 100% ;
+                    height:auto;
+                }
+            }
+        }
+
+        .botones{
+            display: flex;
+            align-items:center;
+            padding-bottom: 2rem;
+            //background-color: crimson;
+            width: 100%;
+            height: 100%;
+           
+
+        button{
+                display: flex;
+                align-items: center;
+                background: none;
+                border:none;
+                border: 0.15rem solid;
+                font-size: 90%;
+                //width: 100%;
+                text-align: left;
+                color: $color-text-primary;
+                //font-weight: bold;
+                //margin-bottom: 0;
+                padding: 2%;
+                height: fit-content;
+
+                a{
+                    outline: none;
+                    text-decoration: none;
+                    color: $color-text-primary;
+                }
+
+                &:hover{
+                    border-image: linear-gradient(to right, $primary,$secondary);
+                    border-image-slice: 1;
+                }
+                
+            }
+
+        .repo{
+                margin-left: 1rem;
+            }
+        }
+    
+        }
+    
+}
+
+
+@media (min-width: (map-get($breakpoints, large))) {
+  
+    .container{
+    background-color:$primary-color;
+    width: $width-min-medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    text-align: left;
+    padding-left: $padding-base-large;
+    
+    .elements{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-right: 5rem;
+        margin-top: 3rem;
+        
+
+        h1{
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            color:$color-text-primary;
+        }
+
+        .line {
+            height: 6rem;           
+            border-left: 0.15rem solid $color-text-primary ;                   
+        }
+    }
+
+        .botones{
+            display: flex;
+            align-items:flex-end;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 3rem;
+           
+
+        button{
+                display: flex;
+                align-items: center;
+                background: none;
+                border:none;
+                border: 0.15rem solid;
+                font-size: 1.2rem;
+                text-align: left;
+                color: $color-text-primary;
+                padding: 0.8rem;
+                height: fit-content;
+
+                a{
+                    outline: none;
+                    text-decoration: none;
+                    color: $color-text-primary;
+                }
+
+                &:hover{
+                    border-image: linear-gradient(to right, $primary,$secondary);
+                    border-image-slice: 1;
+                    font-size: 1.3rem;
+                    //font-size: 1.4rem;
+                    //padding: 1rem 0;
+                }
+                
+            }
+
+        .repo{
+                margin-left: 1rem;
+            }
+        }
+    
+
+
+
+    .cart {
+        display:flex;
+        //justify-content: center;
+        //align-items: center;
+        //flex-direction: column;
+        // margin-left: 5rem;
+        margin-right: 5rem;
+        margin-top: 1.5rem;   
+        //background-color: rgb(23, 2, 56);
+        padding: 0 0 0.5rem 0;
+        
+        
+        
+        .info{
+            display: flex;
+            width: 48%;
+            height: fit-content;
+            //background-color: blueviolet;
+            //align-self: flex-end;
+            //justify-content: flex-start;
+            //align-items: flex-start;
+            flex-direction: column;
+            top: 0;
+
+            .texto{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                //background-color: coral;
+                color: $color-text-primary; 
+    
+                h2{
+                    
+                    font-family: 'Crimson Pro', serif;
+                    font-size: 2.5rem;
+                    //color: $color-text-primary;  
+                    //background-color: rgb(62, 15, 107); 
+                    margin-top: 0;                
+                }
+               
+                span{
+                    padding: 0 0 2rem 0 ;
+                }
+                
+            }
+     
+        }
+        
+        .imagen{
+            display: flex;
+            align-self: center;
+            width: 48%;
+            height: fit-content;
+            //background-color: rgb(48, 63, 33);
+            margin-left:2rem ;
+            
+            img{
+                width: 100% ;
+                object-fit: fill;
+            }
+
+            video{
+                width: 100% ;
+                height:auto;
+            }
+        }
+    }
+
+    }
+}

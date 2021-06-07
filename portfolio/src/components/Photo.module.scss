@@ -1,0 +1,52 @@
+@import "../sassVariables/variables.scss";
+$height-container-photo: 100vh;
+$height-download : 2rem;
+
+.container{
+    height: $height-container-photo;
+    .photoContainer{
+        height: 60vh;
+    }
+}
+@media (max-width: (map-get($breakpoints, medium))-1) {
+    .container{
+        width: 100% ;
+        padding-top: 3rem;
+        height: fit-content;
+        .photoContainer{
+            // background-color: $background-color-navbar;
+            margin-left: 0.5rem;
+            width: fit-content;
+            height: fit-content;
+            .photo{
+                text-align: end;
+                width: 80vw;
+                height: 90vw;
+                max-width: 20rem;
+                max-height: 21rem;
+            }
+        }
+    }
+}
+
+@media (min-width: (map-get($breakpoints, medium))) {
+    .container{
+        
+        width: $width-photo;
+        margin-left: 60vw;
+        position: fixed;
+        top:0;
+        margin-top: $height-navbar;
+        padding-right: 2rem;
+        .photoContainer{
+            width: 30vw;
+            margin-left: 2.5rem;
+            .photo{
+                text-align: end;
+                width: 28vw;
+                height: 28vw;
+            }
+        }
+        
+    }
+}

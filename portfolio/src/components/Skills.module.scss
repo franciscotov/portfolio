@@ -1,0 +1,105 @@
+@import "../sassVariables/variables.scss";
+.container{
+    background-color: $color-text-primary;
+    height: fit-content;
+    width: 100vw;
+    padding-left: $padding-base-mobile; 
+    padding-bottom: 3rem;
+    .containerSkills{
+        // background-color: tan;
+        width: 90%;
+        .containerSkill{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: right;
+            // background-color: turquoise;
+            .containerVar{
+                // width: 40rem;
+                // background-color: brown;
+                width: 80%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .skillPercentage{
+                    // background-color: $color-skills-percentage;
+                    max-height: 100%;
+                    display: flex;
+                    align-items: center;
+                    // width: ;
+                }
+                .line{
+                    // background-color: #f4f4f4;
+                    height: 10px;
+                    margin-bottom: auto;
+                    margin-top: auto;
+                }
+            }
+            .percentage{
+                display: flex;
+                justify-content: flex-end; 
+                align-items: center;
+                max-height: 100%;
+                text-align: end;
+                align-self: flex-end;
+                width: 20%;
+                // max-width: 2rem;
+                font-size: 1.8rem; 
+            }
+        }
+    }
+    .vl {
+        border-left: 3px solid $primary-color;
+        height: 3rem;
+        margin: 0 0 1rem 0;
+    }
+    .containerTitle{
+        // background-color: forestgreen;
+        padding-top: 1rem;
+        
+    }
+    .line{
+        background-color: #114e53;
+    }
+    h2, span{
+        color: $primary-color;
+    }
+}
+.skillPercentage{
+    background-color: $primary-color;
+    text-indent: 0.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    color: #f4f4f4;
+}
+.containerGrap{
+    .containerTitle{
+        h2{
+            font-size: 3rem;
+            font-family: 'Open Sans ';
+        }
+    }
+}
+
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
+    .container{
+        // background-color: tomato;
+        width: $width-min-medium;
+        padding-left: $padding-base-medium;
+        .vl {
+            height: 5rem;
+        }
+    }
+}
+
+@media (min-width: (map-get($breakpoints, large))) {
+    .container{
+        // background-color: tomato;
+        width: $width-min-medium;
+        padding-left: $padding-base-large;
+        .vl {
+            height: 5rem;
+        }
+    }
+}

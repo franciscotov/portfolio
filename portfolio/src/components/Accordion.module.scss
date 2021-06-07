@@ -1,0 +1,93 @@
+.deslizar {
+  h3 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  .date{
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  button {
+    display: flex; 
+    align-items: center;
+    background: none;
+    border: none;
+    border-bottom: 0.2rem solid;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+    color: #003333;
+    // color: red;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    padding: 1rem;
+
+    .titlewrapper {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+
+      .minus {
+        content: url('../assets/plus.svg');
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+      }
+
+      
+      .plus {
+        content: url('../assets/minus_ic.svg');
+        width: 24px;
+        height: 24px;
+        transform: rotate(180deg);
+        transition-timing-function: ease-in;
+        transition: all 1s;
+        position: absolute;
+        right: 0;
+      }
+
+  }
+
+  button.active {
+    //background-color: #dfbd85;
+    color: #003333;
+    // color: red;
+    border: #dfbd85 solid 1px;
+  }
+  
+  button:hover {
+      //background-color: #dfbd85;
+      cursor: pointer;
+  }
+  
+  .panelclose { 
+    //background: #e0e0e0;
+    // color: #003333;
+    color: red;
+    box-sizing: border-box;
+    padding: 0.5rem 1rem 0 1rem;
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease-out;
+    transition: all 1s;
+  }
+  
+  .panelopen {
+    overflow: hidden;
+    // background:none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    opacity:1;
+    width:100%;
+    height: auto;
+    transition-timing-function: ease-in;
+    transition: all 1s;
+  }
+}
+

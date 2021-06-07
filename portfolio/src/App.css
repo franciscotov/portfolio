@@ -1,10 +1,22 @@
-.App {
+/* @import "./sassVariables/variables.scss"; */
+/* .App {
   text-align: center;
+
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+h2{
+  font-family: "Prata", serif;
+}
+body{
+  font-family: 'Montserrat',sans-serif;
+}
+
+section{
+  width: 50vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +47,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
