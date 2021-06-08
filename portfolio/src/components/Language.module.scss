@@ -1,0 +1,23 @@
+@import "../sassVariables/variables.scss";
+
+.red{
+    // background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-primary-text-navbar;
+    font-size: 1.3rem;
+    font-weight: 600;
+    // height: 100%;
+    .icon{
+      // background-color: red;
+      width: 2rem;
+      height: 2rem;
+      margin-left: 0.2rem;
+      margin-right: 1rem;
+    }
+    &:hover{
+      color: $hover-footer;
+    }
+    margin-left: 5px;
+  }

@@ -2,9 +2,8 @@ import React from 'react';
 import styles from './Portfolio.module.scss';
 import data from '../projects.json';
 
-
-
-const Portfolio = () => {
+const Portfolio = ({ state }) => {
+    let dat = state ? data[0] : data[1];
 
     return (
         <section className={styles.container} id='Portfolio'>
@@ -12,7 +11,7 @@ const Portfolio = () => {
                 <h1>Portfolio</h1>
                 <div className={styles.line}></div>
            </div>
-           { data.map((e, key) => (
+           { dat.map((e, key) => (
                <>
            <div key={key} className={styles.cart}>
                <div className={styles.info}>
@@ -37,7 +36,7 @@ const Portfolio = () => {
            </div>
                 <div className={styles.botones}>
                     <button> <a href={e.deploy} target="_blank" rel="noreferrer">DEMO </a> </button>
-                    <button className={styles.repo}> <a href={e.github} target="_blank" rel="noreferrer">REPOSITORIO </a></button>
+                    <button className={styles.repo}> <a href={e.github} target="_blank" rel="noreferrer">{state ? 'REPOSITORY': 'REPOSITORIO'} </a></button>
                 </div>
             </>
            ))

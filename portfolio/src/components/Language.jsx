@@ -1,5 +1,6 @@
 import React from 'react';
-// import { FaLanguage } from 'react-icons/fa';
+import { MdLanguage } from 'react-icons/md';
+import styles from './Language.module.scss';
 
 const Language = ({state, setState}) => {
     const handlerLanguage = () => {
@@ -10,7 +11,9 @@ const Language = ({state, setState}) => {
         }
     }
     return(
-        <div onClick={handlerLanguage}>{state ? 'EN': 'ESP'}</div>
+        <div onClick={handlerLanguage} className={styles.red}>
+            {state ? 'EN': 'ESP'} <MdLanguage className={styles.icon}/>
+        </div>
     );
 }
 export default Language;

@@ -10,16 +10,13 @@ import Experience from './components/Experience';
 import Navbar from './components/Navbar';
 import styles from './App.module.scss'
 import Footer from './components/Footer';
-import Language from './components/Language';
 
 
 function App() {
   const [state, setState] = useState(true);
-  console.log(process.env.REACT_APP_URLAPI,'atstastats')  
+  // console.log(process.env.REACT_APP_URLAPI,'atstastats'); 
   return (
     <div className={styles.App}>
-      {/* Apppppppppp */}
-      <Language state={state} setState = {setState}/>
       <Navbar state={state} setState = {setState}/>
       <Home state={state}/>
       <About state={state}/> 
@@ -27,8 +24,7 @@ function App() {
       <Portfolio state={state}/>
       <Skills state={state}/>
       <Contact state={state}/>
-      <Footer/>
-    
+      <Footer state={state}/>
     </div>
   );
 }

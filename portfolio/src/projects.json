@@ -1,22 +1,42 @@
 
   
 [
+  [
     {
       "name": "Code Bakery",
       "description": "E-commerce web application, the application was made so that the user had a comfortable experience(including responsive) and that he could purchase products quickly, it allows to pay with two payment methods (mercadopago and stripe) and perform authentication in two steps 2FA. On the administrator's side, it has a comfortable experience allowing you to carry out promotions manually and manage users and products. The application is built with the PERNG technology stack (Postgresql, Express, React, Node and Graphql).",
-      "img":"",
-      "video":"https://vimeo.com/551611700",
-      "github":"https://github.com/ecommercehenry/codebakery",
-      "deploy":"https://codebakery.store/"
+      "img": "",
+      "video": "https://vimeo.com/551611700",
+      "github": "https://github.com/ecommercehenry/codebakery",
+      "deploy": "https://codebakery.store/"
     },
     {
       "name": "Countries App",
       "description": "Website to show information about countries, allows us to create activities to carry out during our possible visit to them. This is a simple page application(SPA), in which an api is consumed to build the database. This is made with the PERN technology stack (Postgresql, Express, React and Node).",
-      "img":"Countries-app.JPG",
-      "video":"",
-      "github":"https://github.com/franciscotov/countries-app",
-      "deploy":"https://countries-app-beige.vercel.app/"
+      "img": "Countries-app.JPG",
+      "video": "",
+      "github": "https://github.com/franciscotov/countries-app",
+      "deploy": "https://countries-app-beige.vercel.app/"
+    }
+  ],
+  [
+    {
+      "name": "Code Bakery",
+      "description": "Aplicación web e-commerce, la aplicación fue hecha de manera que el usuario tuviera una esperiencia agradable(incluyendo vistas responsive) y pudiera obtener productos de manera rápida, esta permite el pago a través de dos métodos de pago (mercadopago y stripe) y tiene la funcionalidad de autenticación en dos pasos 2FA. En el lado del administrador, esta tiene una vista agradable y permite cargar promociones manualmente y manejar tanto productos como usuarios. La aplicación fue construida bajo el stack de tecnologías PERNG (Postgresql, Express, React, Node y Graphql)",
+      "img": "",
+      "video": "https://vimeo.com/551611700",
+      "github": "https://github.com/ecommercehenry/codebakery",
+      "deploy": "https://codebakery.store/"
+    },
+    {
+      "name": "Countries App",
+      "description" : "Apliación web para mostrar información sobre los paises, La misma nos permite crear actividades a realizar durante la posible visita a los mismos. Esta es una aplicación de pagina simple(SPA), en la cual consumimos una api para generar nuestra base de datos. Fue realizada usando el stack de tecnologías PERN (Postgresql, Express, React y Node).",
+      "img": "Countries-app.JPG",
+      "video": "",
+      "github": "https://github.com/franciscotov/countries-app",
+      "deploy": "https://countries-app-beige.vercel.app/"
     }
   ]
+]
 
   

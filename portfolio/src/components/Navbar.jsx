@@ -4,13 +4,14 @@ import { GrLinkedinOption } from 'react-icons/gr';
 import {FaGithub, FaFreeCodeCamp} from 'react-icons/fa';
 import { RiMenuFoldFill} from 'react-icons/ri';
 import personalData from '../personalData.json';
+import Language from './Language';
 
 
 const icon = (ic) => {
     return () => ic;
 }
 
-const Navbar = () => {
+const Navbar = ({ state, setState }) => {
     let sections = ['Home', 'About', 'Skills', 'Experience', 'Contact', 'Portfolio']
     , redes = [
         {name: icon(<GrLinkedinOption className={styles.icon}/>), link: 'https://www.linkedin.com/in/franciscotov/'}, 
@@ -29,14 +30,16 @@ const Navbar = () => {
     }
     const handlerMenuSelected = (e, name) => {
         e.preventDefault();
-        console.log(name, 'ettetete');
+        // console.log(name, 'ettetete');
         window.location.href = window.location.origin + `/#${name}`
         setActive(false);
     }
     
     return (
         <div className={styles.nav}>
-            <div className={styles.containerName}><p>{`${personalData.firstName + ' '+ personalData.lastName}`.toLocaleUpperCase()}</p></div>
+            <div className={styles.containerName}>
+                <p>{`${personalData[0].firstName + ' '+ personalData[0].lastName}`.toLocaleUpperCase()}</p>
+            </div>
             <div className={styles.containerMenu}>
                 <div className={styles.containerButton}>
                     <button
@@ -56,6 +59,9 @@ const Navbar = () => {
                 {/* <div className={active ? styles.open: styles.close} className={styles.socialMenu}> */}
                 {/* <div  className={styles.containerAcor}> */}
                 <div className={active ? `${styles.containerAcor} ${styles.open}` : styles.containerAcor}>
+                    <div > 
+                        <Language state={state} setState={setState}/>
+                    </div>
                     {redes.map((ele, i) => {
                         return (
                             <div className={styles.red}>

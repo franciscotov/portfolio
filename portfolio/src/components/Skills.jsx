@@ -1,13 +1,21 @@
 import React from 'react';
 import styles from './Skills.module.scss'
-const Skills = () => {
+const Skills = ({ state }) => {
     // debe agregar a mano las habilidades con el formato siguiente
-    let skills = [{name: 'Web Development', percentage: 60}, {name: 'Electonics', percentage: 70}]
+    let skills = [
+        { name: state ? 'Web Development': 'Desarrollo Web', percentage: 80 },
+        { name: state ? 'Algorithms': 'Algoritmos', percentage: 85 }, 
+        { name: state ? 'Electonics': 'Electrónica', percentage: 70 },
+        { name: state ? 'Teaching': 'Enseñanza', percentage: 80 },
+        { name: state ? 'Teamwork': 'Trabajo en equipo', percentage: 100 },
+        { name: state ? 'Leadership': 'Liderazgo', percentage: 70 },
+    ];
+
     return (
         <section className={styles.container} id='Skills'> 
             <div className={styles.containerGrap}>
                 <div className={styles.containerTitle}> 
-                    <h2>Skills</h2>
+                    <h2>{state? 'Skills': 'Habilidades'}</h2>
                 </div>
                 <div className={styles.vl}></div>
                 
