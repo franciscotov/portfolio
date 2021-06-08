@@ -3,26 +3,24 @@ import styles from './Home.module.scss';
 import Photo from './Photo.jsx';
 import personalData from '../personalData.json';
 
-const Home = () => {
+const Home = ({state}) => {
+  let data = state ? personalData[0] : personalData[1];
     return (
       <section className={styles.container} id='Home'>
         <Photo/>
         <div className={styles.containerGrap}>
           <div className={styles.containerTitle}> 
             <h1>
-              Hello
+              {state ? 'Hello': 'Hola'}
               <br/>
-              I am {personalData.firstName}
+              {(state? 'I am ': 'Soy ') + data.firstName}
               <br/>
-              {personalData.lastName}
+              {data.lastName}
             </h1>
           </div>
           <div className={styles.containerDescription}>
-            <span>
-              A Fullstack Developer Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Saepe ex cum similique vitae magni voluptatum
-              sapiente quia iste, cumque sed eligendi nostrum blanditiis natus
-              quae delectus! Voluptate nulla odio autem!
+            <span className={styles.span}>
+              {state? 'A ':''}<b>{state ? 'Web Developer': 'Desarrollador Web'}</b>{data.homeDescription}
             </span>
           </div>
         </div>

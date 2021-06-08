@@ -18,6 +18,9 @@
     .containerDescription{
         // z-index: 99;
         text-align: start;
+        .span{
+            line-height: 1.8rem;
+        }
     }
 }
 
@@ -36,7 +39,6 @@
             max-width: $max-width-container-description-mobile;
             span{
                 font-size: $font-size-home-span;
-                line-height: -1.3rem;
             }
                     
         }

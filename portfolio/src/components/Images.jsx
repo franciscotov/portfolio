@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Images.module.scss';
 
-const Images = () => {
+const Images = ({ state }) => {
     let listOfImages = [
-        {description: 'development', img: 'web_development.png'},
-        {description: 'sports', img: 'sports.png'},
+        {description: state ? 'development': 'desarrollo', img: 'web_development.png'},
+        {description: state ? 'sports': 'deportes', img: 'sports.png'},
         {description: 'responsive', img: 'responsive.png'},
-        {description: 'science', img: 'atom.png'}
+        {description: state ? 'science' : 'ciencias', img: 'atom.png'}
     ]
+    
     return (
         <div className={styles.container}>
             {listOfImages.map((ele) => (
