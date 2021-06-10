@@ -1,3 +1,5 @@
+@import "../sassVariables/variables.scss";
+
 .deslizar {
   h3 {
     font-size: 1.75rem;
@@ -16,7 +18,7 @@
     font-size: 1.2rem;
     width: 100%;
     text-align: left;
-    color: #003333;
+    color: $primary-color;
     // color: red;
     font-weight: bold;
     margin-top: 0.5rem;
@@ -52,7 +54,7 @@
 
   button.active {
     //background-color: #dfbd85;
-    color: #003333;
+    color: red;
     // color: red;
     border: #dfbd85 solid 1px;
   }
@@ -65,7 +67,6 @@
   .panelclose { 
     //background: #e0e0e0;
     // color: #003333;
-    color: red;
     box-sizing: border-box;
     padding: 0.5rem 1rem 0 1rem;
     opacity: 0;

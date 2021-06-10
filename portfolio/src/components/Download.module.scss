@@ -6,16 +6,19 @@
     text-align: start;
     letter-spacing: 5px;
 }
-
-// @media (min-width: (map-get($breakpoints, medium))-1) {
-//     .containerDownload{
-//         background-color: none;
-//     }
-// }
-
+@media (max-width: (map-get($breakpoints, medium))){
+    .containerDownload{
+        a{
+            color: $secondary-color;
+        }
+    }
+}
 @media (min-width: (map-get($breakpoints, medium))) {
     .containerDownload{
         text-align: center;
         background-color: $background-color-navbar;
+        a{
+            color: $primary-color;
+        }
     }
 }

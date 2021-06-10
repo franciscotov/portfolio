@@ -3,11 +3,11 @@ import styles from './Home.module.scss';
 import Photo from './Photo.jsx';
 import personalData from '../personalData.json';
 
-const Home = ({state}) => {
+const Home = ({ state }) => {
   let data = state ? personalData[0] : personalData[1];
     return (
       <section className={styles.container} id='Home'>
-        <Photo/>
+        <Photo state={state}/>
         <div className={styles.containerGrap}>
           <div className={styles.containerTitle}> 
             <h1>

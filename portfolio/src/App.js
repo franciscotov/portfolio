@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -14,7 +14,6 @@ import Footer from './components/Footer';
 
 function App() {
   const [state, setState] = useState(true);
-  // console.log(process.env.REACT_APP_URLAPI,'atstastats'); 
   return (
     <div className={styles.App}>
       <Navbar state={state} setState = {setState}/>

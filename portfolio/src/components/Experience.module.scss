@@ -1,7 +1,17 @@
 //@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
 @import "../sassVariables/variables.scss";
+
 .container{
     background-color: $color-text-primary;
+}
+
+.elements{
+    h1{
+        color: $primary-color;
+    }
+    .line{
+        border-left: 0.15rem solid $primary-color; 
+    }
 }
 .iconos{
     background-color: $primary-color;
@@ -37,13 +47,11 @@
             h1{
                 font-family: 'Crimson Pro', serif;
                 font-size: 3rem;
-                color:#003333 ;
             }
     
             .line {
                 //width: 0.5rem;
-                height: 3.5rem;           
-                border-left: 0.15rem solid #003333;                   
+                height: 3.5rem;                  
             }
     
             .acordeon{
@@ -92,9 +100,7 @@
             }
     
             .line {
-                //width: 0.5rem;
-                height: 6rem;           
-                border-left: 0.15rem solid #003333;                   
+                height: 6rem;                  
             }
     
             .acordeon{
@@ -121,7 +127,6 @@
             height: 30vh;
             margin-left: -$padding-base-large;
             padding-right: $padding-base-large;
-            background-color: #003333;
         }
 
         .elements{
@@ -136,13 +141,10 @@
             h1{
                 font-family: 'Crimson Pro', serif;
                 font-size: 3rem;
-                color:#003333 ;
             }
 
             .line {
-                //width: 0.5rem;
-                height: 6rem;           
-                border-left: 0.15rem solid #003333;                   
+                height: 6rem;                  
             }
 
             .acordeon{
