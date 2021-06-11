@@ -1,7 +1,6 @@
 @import "../sassVariables/variables.scss";
 
 .nav{
-  // background-color: red;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -31,9 +30,6 @@
   color: $color-secondary-text-navbar;
   // color: red;
   .red{
-    // background-color: greenyellow;
-    // color: $color-primary-text-navbar;
-    // height: 100%;
     .icon{
       // background-color: red;
       width: 2rem;

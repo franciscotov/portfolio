@@ -8,6 +8,7 @@
 @media (max-width: (map-get($breakpoints, medium))-1) {
 
     .container{
+        // background-color: red;
         display: flex;
         padding-left: $padding-base-mobile;
         width: 100vw;
@@ -59,11 +60,11 @@
 
 }
 
-@media (min-width: (map-get($breakpoints, medium))) {
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
 
     .container{
         display: flex;
-        width: 100%;
+        width: 100vw;
         // width: 110%;
         // display: flex;
         height: $height-footer;
@@ -77,15 +78,9 @@
             width: 70%;
             justify-content: space-around; 
             align-items: flex-start;
-           
-            
-            // margin-left: $padding-base-mobile;
             height: fit-content;
             //margin-right: 4.5rem;
             margin-top: 1rem;
-            //margin-bottom: 1rem;
-           //background-color: blueviolet;
-
             .icon{
                 width: 1.8rem;
                 height: 1.8rem;
@@ -116,7 +111,7 @@
 @media (min-width: (map-get($breakpoints, large))) {
     .container{
         display: flex;
-        width: 100%;
+        width: 100vw;
         // width: 110%;
         // display: flex;
         height: $height-footer;

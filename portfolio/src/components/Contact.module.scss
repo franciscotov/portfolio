@@ -40,21 +40,7 @@
             }
     
             .cont_form{
-    
                 width: 90%;
-               // margin-right: 5rem;
-                //background-color: rgb(151, 42, 165);
-                //margin-right: 12rem;
-    
-                // .form_input_material {
-                //     width: fit-content;
-                //     background-color: brown;
-                //       input{
-                //         color: white;
-                        
-                //         background-color: aquamarine;
-                //       }
-                //     }
                 input[type=submit] {
                     width: 100%;
                     margin-top: 1.5rem;
@@ -67,8 +53,6 @@
                     font-weight: 700;
                     font-size: 1.2rem;
                     border: 0.15rem solid $color-text-primary;
-                    //-webkit-border-radius: 5px;
-                    //border-radius: 5px;
                 }
     
                 input[type=submit]:hover {
@@ -102,9 +86,6 @@
                     padding: 7px 0;
                     background: transparent;
                     transition: border-color 0.2s;
-    
-                    
-    
                     &::placeholder {
                         color: transparent;
                       }
@@ -192,21 +173,7 @@
             }
     
             .cont_form{
-    
                 width: 90%;
-               // margin-right: 5rem;
-                //background-color: rgb(151, 42, 165);
-                //margin-right: 12rem;
-    
-                // .form_input_material {
-                //     width: fit-content;
-                //     background-color: brown;
-                //       input{
-                //         color: white;
-                        
-                //         background-color: aquamarine;
-                //       }
-                //     }
                 input[type=submit] {
                     width: 100%;
                     margin-top: 1.5rem;
@@ -219,8 +186,6 @@
                     font-weight: 700;
                     font-size: 1.2rem;
                     border: 0.15rem solid $color-text-primary;
-                    //-webkit-border-radius: 5px;
-                    //border-radius: 5px;
                 }
     
                 input[type=submit]:hover {
@@ -254,9 +219,6 @@
                     padding: 7px 0;
                     background: transparent;
                     transition: border-color 0.2s;
-    
-                    
-    
                     &::placeholder {
                         color: transparent;
                       }
@@ -345,21 +307,7 @@
         }
 
         .cont_form{
-
             width: 90%;
-           // margin-right: 5rem;
-            //background-color: rgb(151, 42, 165);
-            //margin-right: 12rem;
-
-            // .form_input_material {
-            //     width: fit-content;
-            //     background-color: brown;
-            //       input{
-            //         color: white;
-                    
-            //         background-color: aquamarine;
-            //       }
-            //     }
             input[type=submit] {
                 width: 100%;
                 margin-top: 1.5rem;
@@ -372,8 +320,6 @@
                 font-weight: 700;
                 font-size: 1.2rem;
                 border: 0.15rem solid $color-text-primary;
-                //-webkit-border-radius: 5px;
-                //border-radius: 5px;
             }
 
             input[type=submit]:hover {
@@ -395,7 +341,6 @@
                  }
               }
               
-            
             .form__field {
                 font-family: inherit;
                 width: 100%;
@@ -454,23 +399,5 @@
     
         }
          
-        // .login_form {
-        //     display: flex;
-        //     flex-direction: column;
-        //     //align-items: flex-start;
-        //     padding: 50px 40px;
-        //     color: white;
-        //     align-items: center;
-        //     //padding: 50px 40px;
-            
-           
-          
-        //     .btn {
-        //       width: 100%;
-        //       margin: 18px 0 9px 0;
-        //     }
-        //   }
     }
 }
-
-//https://codepen.io/lucasyem/pen/ZEEYKdj

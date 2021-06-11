@@ -1,6 +1,10 @@
 // @import "vars";
 @import "../sassVariables/variables.scss";
 
+// section{
+//     background-color: brown;
+//     max-width: 90vw;
+// }
 .containerFirstDescription , .containerSecondDescription{
     width: 90%;
     max-width: 40rem;
@@ -12,7 +16,7 @@
     display: flex;
     // justify-content: center; 
     // align-items: center;
-    padding-left: $padding-base-mobile;
+    // padding-left: $padding-base-mobile;
     padding-bottom: 3rem;
     .vl {
         // border-left: 3px solid green;
@@ -24,6 +28,7 @@
         color: $primary-color;
     }
 }
+
 .containerGrap{
     // height: 25rem;
     .containerTitle{
@@ -53,9 +58,15 @@
     // body {
     //     background-color: salmon;
     // }
+    // section{
+    //     max-width: $max-width-movile;
+    // }
     .container{
         width: 100vw;
-        padding-left: $padding-base-mobile ; 
+        max-width: $max-width-movile;
+        .containerGrap{
+            margin-left: $padding-base-mobile;
+        }
         .vl {
             height: 3rem;
             margin: 0 0 1rem 0;
@@ -68,8 +79,13 @@
     //     background-color: salmon;
     // }
     .container{
+        // width: 100%;
         width: $width-min-medium ;
         padding-left: $padding-base-medium;
+        // .containerGrap{
+        //     // height: 25rem;
+        //     padding-left: $padding-base-medium;
+        // }
         .vl {
             // border-left: 3px solid green;
             height: 5rem;
@@ -82,6 +98,10 @@
     .container{
         width: $width-min-medium;
         padding-left: $padding-base-large;
+        // .containerGrap{
+        //     // height: 25rem;
+        //     margin-left: $padding-base-large;
+        // }
         .vl {
             // border-left: 3px solid green;
             height: 5rem;
