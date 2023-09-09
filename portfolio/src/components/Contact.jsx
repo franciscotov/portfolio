@@ -1,17 +1,17 @@
 //require("dotenv").config();
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Contact.module.scss';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 //const { YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, YOUR_USER_ID } = process.env;
 
 
 const Contact = ({ state }) => {
+    const form = useRef();
     let msg = state? 'If you think I can add value to your team, you can leave me a message and we will schedule a meeting': 'Si crees que puedo sumar valor a tu equipo, puedes dejarme un mensaje y agendarémos una reunión';
-    //console.log('hola', YOUR_SERVICE_ID);
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('service_woaklib', 'template_534f9sf', e.target, 'user_dOgMI5IkVygmDLf1SPacj')
+        emailjs.sendForm('service_9ybyce9', 'template_oagmqb1', form.current, '7BB5u9KHGLvC1D0jQ')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -28,7 +28,7 @@ const Contact = ({ state }) => {
                 <p>{msg}</p>
             </div>
             <div className={styles.cont_form}>
-                <form className={styles.login_form}  onSubmit={sendEmail}>
+                <form className={styles.login_form}  onSubmit={sendEmail} ref={form}>
                     <div className={styles.form__group}>
                         <input type="text" name="name" className={styles.form__field}
                         placeholder="Name"  id='name' required />
