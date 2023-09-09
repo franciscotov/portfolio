@@ -84,7 +84,7 @@ const Navbar = ({ state, setState }) => {
           </div>
           {redes.map((ele, i) => {
             return (
-              <div className={styles.red}>
+              <div className={styles.red} key={`redes-${i}`}>
                 <a href={ele.link} target="_blank" rel="noreferrer">
                   {ele.name()}
                 </a>
@@ -103,7 +103,7 @@ const Navbar = ({ state, setState }) => {
             <ul className={styles.menu1}>
               {sections.map((ele, i) => {
                 return (
-                  <li className={styles.divSection}>
+                  <li className={styles.divSection} key={i}>
                     <a
                       href={ele}
                       className={styles.a}

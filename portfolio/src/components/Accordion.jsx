@@ -21,7 +21,7 @@ const Accordion = ({ state }) => {
     <>
       <form>
         {dat.map((tab, index) => (
-          <div key={index} className={styles.deslizar}>
+          <div key={`acc-${index}`} className={styles.deslizar}>
             <h3>
               <button
                 onClick={(e) => eventHandler(e, index)}

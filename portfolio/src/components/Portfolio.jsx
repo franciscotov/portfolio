@@ -12,8 +12,8 @@ const Portfolio = ({ state }) => {
         <div className={styles.line}></div>
       </div>
       {dat.map((e, key) => (
-        <>
-          <div key={key} className={styles.cart}>
+        <div key={key}>
+          <div className={styles.cart}>
             <div className={styles.info}>
               <div className={styles.texto}>
                 <h2>{e.name}</h2>
@@ -42,19 +42,17 @@ const Portfolio = ({ state }) => {
           </div>
           <div className={styles.botones}>
             <button>
-              {" "}
               <a href={e.deploy} target="_blank" rel="noreferrer">
-                DEMO{" "}
-              </a>{" "}
+                DEMO
+              </a>
             </button>
             <button className={styles.repo}>
-              {" "}
               <a href={e.github} target="_blank" rel="noreferrer">
-                {state ? "REPOSITORY" : "REPOSITORIO"}{" "}
+                {state ? "REPOSITORY" : "REPOSITORIO"}
               </a>
             </button>
           </div>
-        </>
+        </div>
       ))}
     </section>
   );

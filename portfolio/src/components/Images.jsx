@@ -14,8 +14,8 @@ const Images = ({ state }) => {
 
   return (
     <div className={styles.container}>
-      {listOfImages.map((ele) => (
-        <div className={styles.containerImg}>
+      {listOfImages.map((ele, index) => (
+        <div className={styles.containerImg} key={`img-${index}`}>
           <img
             src={require(`../assets/images/${ele.img}`).default}
             alt=""

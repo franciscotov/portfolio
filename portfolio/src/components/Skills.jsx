@@ -20,9 +20,9 @@ const Skills = ({ state }) => {
         <div className={styles.vl}></div>
 
         <div className={styles.containerSkills}>
-          {skills.map((ele) => {
+          {skills.map((ele, i) => {
             return (
-              <div width="100%" className={styles.containerSkill}>
+              <div width="100%" className={styles.containerSkill} key={i}>
                 <div className={styles.containerVar}>
                   <div
                     style={{ width: `${ele.percentage}%` }}

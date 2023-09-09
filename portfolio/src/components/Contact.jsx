@@ -48,7 +48,7 @@ const Contact = ({ state }) => {
               id="name"
               required
             />
-            <label for="name" className={styles.form__label}>
+            <label htmlFor="name" className={styles.form__label}>
               {state ? "Name" : "Nombre"}
             </label>
           </div>
@@ -62,7 +62,7 @@ const Contact = ({ state }) => {
               id="email"
               required
             />
-            <label for="email" className={styles.form__label}>
+            <label htmlFor="email" className={styles.form__label}>
               {state ? "Email" : "Correo"}
             </label>
           </div>
@@ -76,7 +76,7 @@ const Contact = ({ state }) => {
               id="subject"
               required
             />
-            <label for="subject" className={styles.form__label}>
+            <label htmlFor="subject" className={styles.form__label}>
               {state ? "Subject" : "Asunto"}
             </label>
           </div>
@@ -89,7 +89,7 @@ const Contact = ({ state }) => {
               id="message"
               required
             />
-            <label for="message" className={styles.form__label}>
+            <label htmlFor="message" className={styles.form__label}>
               {state ? "Message" : "Mensaje"}
             </label>
           </div>
