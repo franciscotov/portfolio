@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Dropbox = () => {
-    return (
-        <div>
-            Dropbox
-        </div>
-    );
+  return <div>Dropbox</div>;
 };
 
 export default Dropbox;
