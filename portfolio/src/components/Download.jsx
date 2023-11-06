@@ -8,7 +8,7 @@ const Download = ({ state }) => {
     <div className={styles.containerDownload}>
       <a
         href={state ? englishFile : spanishFile}
-        download
+        download={state ? "CVI_Francisco_Tovar" : "CV_Francisco_Tovar"}
       >
         {state ? "Download CV" : "Descargar CV"}
       </a>
