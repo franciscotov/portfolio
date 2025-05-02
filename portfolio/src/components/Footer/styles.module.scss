@@ -1,0 +1,123 @@
+@import "../../sassVariables/variables.scss";
+
+.container {
+  z-index: 2;
+  background-color: $background-color-primary;
+}
+@media (max-width: (map-get($breakpoints, medium))-1) {
+  .container {
+    display: flex;
+    padding-left: $padding-base-mobile;
+    width: 100vw;
+    height: $height-footer;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .elements {
+      display: flex;
+      width: 70%;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: fit-content;
+      margin-top: 1rem;
+
+      .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+
+        .size {
+          width: 100%;
+          height: 100%;
+          color: $primary-color;
+        }
+
+        .size:hover {
+          color: #114e53;
+        }
+      }
+    }
+
+    .copyright {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
+  .container {
+    display: flex;
+    width: 100vw;
+    height: $height-footer;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .elements {
+      display: flex;
+      width: 70%;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: fit-content;
+      margin-top: 1rem;
+      .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+
+        .size {
+          width: 100%;
+          height: 100%;
+          color: $primary-color;
+        }
+
+        .size:hover {
+          color: #114e53;
+        }
+      }
+    }
+
+    .copyright {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: (map-get($breakpoints, large))) {
+  .container {
+    display: flex;
+    width: 100vw;
+    height: $height-footer;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .elements {
+      display: flex;
+      width: 30%;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: fit-content;
+      margin-right: 4.5rem;
+      margin-top: 1rem;
+      .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+        .size {
+          width: 100%;
+          height: 100%;
+          color: $primary-color;
+        }
+
+        .size:hover {
+          color: $hover-footer;
+        }
+      }
+    }
+
+    .copyright {
+      padding-top: 0.5rem;
+    }
+  }
+}
