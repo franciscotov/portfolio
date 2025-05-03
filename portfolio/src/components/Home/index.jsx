@@ -1,28 +1,31 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Photo from "@/components/Photo";
-import personalData from "@/personalData.js";
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
-const Home = ({ state }) => {
-  let data = state ? personalData[0] : personalData[1];
+const Home = () => {
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { home, data } = translationKeys;
+
   return (
     <section className={styles.container} id="Home">
-      <Photo state={state} />
+      <Photo />
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
           <h1>
-            {state ? "Hello" : "Hola"}
+            {t(home.greeting)}
             <br />
-            {(state ? "I am " : "Soy ") + data.firstName}
+            {t(home.description) + t(data.firstName)}
             <br />
-            {data.lastName}
+            {t(data.lastName)}
           </h1>
         </div>
         <div className={styles.containerDescription}>
           <span className={styles.span}>
-            {state ? "A " : ""}
-            <b>{state ? "Web Developer" : "Desarrollador Web"}</b>
-            {data.homeDescription}
+            {t(home.a)}
+            <b>{t(home.secondDescription)}</b>
+            {t(home.homeDescription)}
           </span>
         </div>
       </div>

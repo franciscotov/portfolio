@@ -4,16 +4,20 @@ import web_development from "@/assets/images/web_development.png";
 import sports from "@/assets/images/sports.png";
 import responsive from "@/assets/images/responsive.png";
 import atom from "@/assets/images/atom.png";
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
-const Images = ({ state }) => {
+const Images = () => {
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { images } = translationKeys;
   let listOfImages = [
     {
-      description: state ? "development" : "desarrollo",
+      description: t(images.development),
       img: web_development,
     },
-    { description: state ? "sports" : "deportes", img: sports },
-    { description: "responsive", img: responsive },
-    { description: state ? "science" : "ciencias", img: atom },
+    { description: t(images.sports), img: sports },
+    { description: t(images.responsive), img: responsive },
+    { description: t(images.science), img: atom },
   ];
 
   return (

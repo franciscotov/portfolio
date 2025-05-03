@@ -1,20 +1,25 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Accordeon from "../Accordion";
+import Accordeon from "@/components/Accordion";
 
-import Images from "../Images";
+import Images from "@/components/Images";
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
-const Experience = ({ state }) => {
+const Experience = () => {
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { experience } = translationKeys;
+
   return (
     <section className={styles.container}>
       <div className={styles.iconos}>
-        <Images state={state} />
+        <Images />
       </div>
       <div className={styles.elements} id="Experience">
-        <h1>{state ? "Experience" : "Experiencia"}</h1>
+        <h1>{t(experience.title)}</h1>
         <div className={styles.line}></div>
         <div className={styles.acordeon}>
-          <Accordeon state={state} />
+          <Accordeon />
         </div>
       </div>
     </section>

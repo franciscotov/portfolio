@@ -1,26 +1,31 @@
 import React from "react";
 import styles from "./styles.module.scss";
-const Skills = ({ state }) => {
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
-  let skills = [
-    { name: state ? "Web Development" : "Desarrollo Web", percentage: 80 },
-    { name: state ? "Algorithms" : "Algoritmos", percentage: 85 },
-    { name: state ? "Electonics" : "Electrónica", percentage: 70 },
-    { name: state ? "Teaching" : "Enseñanza", percentage: 80 },
-    { name: state ? "Teamwork" : "Trabajo en equipo", percentage: 100 },
-    { name: state ? "Leadership" : "Liderazgo", percentage: 80 },
+const Skills = () => {
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { skills } = translationKeys;
+
+  let skillsArr = [
+    { name: t(skills.webDevelopment), percentage: 80 },
+    { name: t(skills.algorithms), percentage: 85 },
+    { name: t(skills.electonics), percentage: 70 },
+    { name: t(skills.teaching), percentage: 80 },
+    { name: t(skills.teamwork), percentage: 100 },
+    { name: t(skills.leadership), percentage: 80 },
   ];
 
   return (
     <section className={styles.container} id="Skills">
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
-          <h2>{state ? "Skills" : "Habilidades"}</h2>
+          <h2>{t(skills.title)}</h2>
         </div>
         <div className={styles.vl}></div>
 
         <div className={styles.containerSkills}>
-          {skills.map((ele, i) => {
+          {skillsArr.map((ele, i) => {
             return (
               <div width="100%" className={styles.containerSkill} key={i}>
                 <div className={styles.containerVar}>

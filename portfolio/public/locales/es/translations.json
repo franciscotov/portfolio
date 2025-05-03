@@ -1,0 +1,58 @@
+{
+  "data": {
+    "firstName": "Francisco",
+    "lastName" : "Tovar",
+    "nickName": "Franciscotov"
+  },
+  "about": { 
+    "title": "Acerca de mi",
+    "firstDescription": "Mi experiencia en el ámbito científico y mis pasiones(la enseñanza, el deporte y la electrónica) me han hecho interesarme gradualmente en la programación, al punto de que mi logro más preciado a largo plazo es poder integrarlas en un proyecto de software que aporte valor y permita resolver un problema.",
+    "secondDescription": "Decidí en mi tiempo libre estudiar MERN Stack(Mongo, ExpressJS, ReactJS, NodeJS) en la plataforma freecodecamp, luego adquirí mayor conocimiento en Henry, un bootcamp de alto nivel de exigencia en desarrollo web PERN stack (PostgresSQL, ExpressJS, ReactJS, NodeJS), en la cual desarrollé varios proyectos, entre ellos una aplicación para la visualización de países y una aplicación web e-commerce."
+  },
+  "home": {
+    "greeting": "Hola",
+    "a": "",
+    "description": "Soy ",
+    "secondDescription": "Desarrollador Web",
+    "homeDescription": " especializado en Javascript, he realizado proyectos desde cero usando NodeJS como tecnología de backend y ReactJS como tecnología para el frontend."
+  },
+  "download": {
+    "fileName": "CV_Francisco_Tovar",
+    "description": "Descargar CV"
+  },
+  "images": {
+    "development": "desarrollo",
+    "sports": "desportes",
+    "responsive": "responsive",
+    "science": "ciencia"
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "porfolio": {
+    "title": "Portfolio",
+    "repository": "Repositorio",
+    "demo": "Demo"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "webDevelopment": "Desarrollo Web",
+    "algorithms": "Algoritmos",
+    "electonics": "Electrónica",
+    "teaching": "Enseñanza",
+    "teamwork": "Trabajo en equipo",
+    "leadership": "Liderazgo"
+  },
+  "contact": {
+    "title": "Contacto",
+    "msg": "Si crees que puedo sumar valor a tu equipo, puedes dejarme un mensaje y agendarémos una reunión",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "submit": "Enviar Mensaje"
+  },
+  "footer": {
+    "develpedBy": "© 2025 Desarrollado por Franciscotov"
+  }
+}

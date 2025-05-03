@@ -3,7 +3,8 @@ import Download from "@/components/Download";
 import styles from "./styles.module.scss";
 import img from "@/assets/img/photo.JPG";
 
-const Photo = ({ state }) => {
+const Photo = () => {
+  
   return (
     <>
       <div className={styles.container}>
@@ -15,7 +16,7 @@ const Photo = ({ state }) => {
             width="25vw"
             height="40vw"
           />
-          <Download state={state} />
+          <Download />
         </div>
       </div>
     </>

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import data from "@/data.js";
 import styles from "./styles.module.scss";
+import { translationModulesKeys } from "@/Int/constants";
+import { useTranslation } from "react-i18next";
+import { languagesKeys } from "../common/constants";
 
-const Accordion = ({ state }) => {
+const Accordion = () => {
+  const { i18n } = useTranslation([translationModulesKeys.Porfolio]);
+  const isInEnglish = i18n.language === languagesKeys.en;
   let indexPlus,
-    dat = state ? data[0] : data[1];
+    dat = isInEnglish ? data[0] : data[1];
   const [active, setActive] = useState("");
 
   const eventHandler = (e, index) => {

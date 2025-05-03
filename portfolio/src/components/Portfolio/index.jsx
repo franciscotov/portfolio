@@ -1,14 +1,21 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import data from "../../projects.json";
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
+import countriesApp from "@/assets/img/countriesApp.jpg";
+import { languagesKeys } from "@/components/common/constants";
 
-const Portfolio = ({ state }) => {
-  let dat = state ? data[0] : data[1];
+const Portfolio = () => {
+  const { t, i18n } = useTranslation([translationModulesKeys.Porfolio]);
+  const { porfolio } = translationKeys;
+  const isInEnglish = i18n.language === languagesKeys.en;
+  let dat = isInEnglish ? data[0] : data[1];
 
   return (
     <section className={styles.container} id="Portfolio">
       <div className={styles.elements}>
-        <h1>Portfolio</h1>
+        <h1>{t(porfolio.title)}</h1>
         <div className={styles.line}></div>
       </div>
       {dat.map((e, key) => (
@@ -20,11 +27,11 @@ const Portfolio = ({ state }) => {
                 <span className={styles.description}>{e.description}</span>
               </div>
             </div>
-            {e.img !== "" ? (
+            {e.img ? (
               <div className={styles.imagen}>
                 <img
-                  src={require(`../../assets/img/${e.img}`).default}
-                  alt="no se encuentra"
+                  src={countriesApp}
+                  alt="Countries App"
                 />
               </div>
             ) : (
@@ -32,7 +39,7 @@ const Portfolio = ({ state }) => {
                 <video controls>
                   <source
                     src={
-                      require("../../assets/img/codebakery_ecommerce.mp4").default
+                      "/codebakery_ecommerce.mp4"
                     }
                     type="video/mp4"
                   />
@@ -43,12 +50,12 @@ const Portfolio = ({ state }) => {
           <div className={styles.botones}>
             <button>
               <a href={e.deploy} target="_blank" rel="noreferrer">
-                DEMO
+              {t(porfolio.demo)}
               </a>
             </button>
             <button className={styles.repo}>
               <a href={e.github} target="_blank" rel="noreferrer">
-                {state ? "REPOSITORY" : "REPOSITORIO"}
+              {t(porfolio.repository)}
               </a>
             </button>
           </div>

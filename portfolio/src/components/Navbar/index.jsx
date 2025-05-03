@@ -5,20 +5,14 @@ import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
 import { RiMenuFoldFill } from "react-icons/ri";
 import personalData from "@/personalData.js";
 import Language from "@/components/Language";
+import { sectionKeys } from "../common/constants";
 
 const icon = (ic) => {
   return () => ic;
 };
 
-const Navbar = ({ state, setState }) => {
-  let sections = [
-      "Home",
-      "About",
-      "Skills",
-      "Experience",
-      "Contact",
-      "Portfolio",
-    ],
+const Navbar = () => {
+  let sections = Object.values(sectionKeys),
     redes = [
       {
         name: icon(<GrLinkedinOption className={styles.icon} />),
@@ -80,7 +74,7 @@ const Navbar = ({ state, setState }) => {
           }
         >
           <div>
-            <Language state={state} setState={setState} />
+            <Language />
           </div>
           {redes.map((ele, i) => {
             return (

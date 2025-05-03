@@ -1,25 +1,25 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import personalData from "@/personalData";
+import { useTranslation } from "react-i18next";
+import { translationModulesKeys, translationKeys } from "@/Int/constants";
+import { sectionKeys } from "@/components/common/constants";
 
-const About = ({ state }) => {
-  let data = state ? personalData[0] : personalData[1];
+const About = () => {
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { about } = translationKeys;
+
   return (
-    <section className={styles.container} id="About">
+    <section className={styles.container} id={sectionKeys.about}>
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
-          <h2>{state ? "About" : "Acerca de mi"}</h2>
+          <h2>{t(about.title)}</h2>
         </div>
         <div className={styles.vl}></div>
         <div className={styles.containerFirstDescription}>
-          <span className={styles.fristDescription}>
-            {data.firstAboutDescription}
-          </span>
+          <span className={styles.fristDescription}>{t(about.firstDescription)}</span>
         </div>
         <div className={styles.containerSecondDescription}>
-          <span className={styles.secondDescription}>
-            {data.secondAboutDescription}
-          </span>
+          <span className={styles.secondDescription}>{t(about.secondDescription)}</span>
         </div>
       </div>
     </section>

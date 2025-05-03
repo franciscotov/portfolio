@@ -1,13 +1,14 @@
-
 import React, { useRef } from "react";
 import styles from "./styles.module.scss";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
-const Contact = ({ state }) => {
+const Contact = () => {
   const form = useRef();
-  let msg = state
-    ? "If you think I can add value to your team, you can leave me a message and we will schedule a meeting"
-    : "Si crees que puedo sumar valor a tu equipo, puedes dejarme un mensaje y agendarémos una reunión";
+  const { t } = useTranslation([translationModulesKeys.Porfolio]);
+  const { contact } = translationKeys;
+
   function sendEmail(e) {
     e.preventDefault();
     emailjs
@@ -31,9 +32,9 @@ const Contact = ({ state }) => {
   return (
     <section className={styles.container} id="Contact">
       <div className={styles.elements}>
-        <h1>{state ? "Contact" : "Contacto"}</h1>
+        <h1>{t(contact.title)}</h1>
         <div className={styles.line}></div>
-        <p>{msg}</p>
+        <p>{t(contact.msg)}</p>
       </div>
       <div className={styles.cont_form}>
         <form className={styles.login_form} onSubmit={sendEmail} ref={form}>
@@ -42,12 +43,12 @@ const Contact = ({ state }) => {
               type="text"
               name="name"
               className={styles.form__field}
-              placeholder="Name"
+              placeholder={t(contact.name)}
               id="name"
               required
             />
             <label htmlFor="name" className={styles.form__label}>
-              {state ? "Name" : "Nombre"}
+              {t(contact.name)}
             </label>
           </div>
 
@@ -56,12 +57,12 @@ const Contact = ({ state }) => {
               type="email"
               name="email"
               className={styles.form__field}
-              placeholder="Email"
+              placeholder={t(contact.email)}
               id="email"
               required
             />
             <label htmlFor="email" className={styles.form__label}>
-              {state ? "Email" : "Correo"}
+              {t(contact.email)}
             </label>
           </div>
 
@@ -70,12 +71,12 @@ const Contact = ({ state }) => {
               type="text"
               name="subject"
               className={styles.form__field}
-              placeholder="Subject"
+              placeholder={t(contact.subject)}
               id="subject"
               required
             />
             <label htmlFor="subject" className={styles.form__label}>
-              {state ? "Subject" : "Asunto"}
+              {t(contact.subject)}
             </label>
           </div>
 
@@ -83,18 +84,15 @@ const Contact = ({ state }) => {
             <textarea
               name="message"
               className={styles.form__field}
-              placeholder="message"
+              placeholder={t(contact.message)}
               id="message"
               required
             />
             <label htmlFor="message" className={styles.form__label}>
-              {state ? "Message" : "Mensaje"}
+              {t(contact.message)}
             </label>
           </div>
-          <input
-            type="submit"
-            value={state ? "Send Message" : "Enviar Mensaje"}
-          />
+          <input type="submit" value={t(contact.submit)} />
         </form>
       </div>
     </section>
