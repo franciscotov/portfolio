@@ -5,8 +5,8 @@ import Backend from "i18next-xhr-backend";
 
 if (!i18n.isInitialized) {
   i18n.use(LanguageDetector).use(Backend).use(initReactI18next).init({
-    lng: "es",
-    fallbackLng: "es",
+    lng: "en",
+    fallbackLng: "en",
     keySeparator: ".",
     defaultNS: "translations",
     initImmediate: false,
