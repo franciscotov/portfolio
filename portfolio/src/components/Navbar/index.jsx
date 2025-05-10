@@ -5,7 +5,7 @@ import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
 import { RiMenuFoldFill } from "react-icons/ri";
 import personalData from "@/personalData.js";
 import Language from "@/components/Language";
-import { sectionKeys } from "../common/constants";
+import { sectionKeys } from "@/components/common/constants";
 
 const icon = (ic) => {
   return () => ic;
