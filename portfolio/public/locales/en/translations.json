@@ -52,6 +52,10 @@
     "message": "Message",
     "submit": "Send Message"
   },
+  "alert": {
+    "success": "Your email has been sent successfully",
+    "error": "There was an error sending your email, please try again"
+  },
   "footer": {
     "develpedBy": "© 2025 Developed by Franciscotov"
   }

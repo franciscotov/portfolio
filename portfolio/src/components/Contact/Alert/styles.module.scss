@@ -1,0 +1,38 @@
+@import "@/sassVariables/variables.scss";
+
+.container {
+  width: fit-content;
+  font-family: "Crimson Pro", serif;
+  margin-bottom: 2rem;
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 10px;
+  align-items: center;
+  color: #ffffff;
+}
+
+.error {
+  background-color: #c82333;
+}
+
+.success {
+  background-color: #1e7e34;
+}
+
+.iconError,
+.iconSuccess {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.iconError {
+  color: #ffffff;
+}
+
+.iconSuccess {
+  color: #ffffff;
+}
+
+.message {
+  margin-left: 0.5rem;
+}

@@ -1,29 +1,48 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./styles.module.scss";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { translationKeys, translationModulesKeys } from "@/Int/constants";
+import Alert from "./Alert";
+import { alertType } from "./constants";
 
 const Contact = () => {
   const form = useRef();
   const { t } = useTranslation([translationModulesKeys.Porfolio]);
   const { contact } = translationKeys;
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const SERVICE_ID = "service_woaklib";
   const TEMPLATE_ID = "template_534f9sf";
   const PUBLIC_KEY = "user_dOgMI5IkVygmDLf1SPacj";
   function sendEmail(e) {
-    console.log(form.current);
     e.preventDefault();
+    setLoading(true);
+    setError(false);
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
+      (_result) => {
+        e.target.reset();
+        setLoading(false);
+        setError(false);
+        handleAlert();
       },
       (error) => {
+        setLoading(false);
+        setError(true);
+        handleAlert();
         console.log(error.text);
       }
     );
-    e.target.reset();
+  }
+
+  const handleAlert = () => {
+    setShowAlert(true);
+    const time = setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
+    return () => clearTimeout(time);
   }
 
   return (
@@ -34,7 +53,7 @@ const Contact = () => {
         <p>{t(contact.msg)}</p>
       </div>
       <div className={styles.cont_form}>
-        <form className={styles.login_form} onSubmit={sendEmail} ref={form}>
+        <form className={styles.login_form} onSubmit={sendEmail} ref={form} validate="true">
           <div className={styles.form__group}>
             <input
               type="text"
@@ -89,9 +108,10 @@ const Contact = () => {
               {t(contact.message)}
             </label>
           </div>
-          <input type="submit" value={t(contact.submit)} />
+          <input type="submit" value={t(contact.submit)} disabled={loading} />
         </form>
       </div>
+      {showAlert && <Alert type={error? alertType.error: alertType.success} />}
     </section>
   );
 };

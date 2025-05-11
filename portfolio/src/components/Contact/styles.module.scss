@@ -1,4 +1,4 @@
-@import "../../sassVariables/variables.scss";
+@import "@/sassVariables/variables.scss";
 
 @media (max-width: (map-get($breakpoints, medium ))-1) {
   .container {
@@ -39,7 +39,7 @@
       input[type="submit"] {
         width: 100%;
         margin-top: 1.5rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         padding: 1rem 1rem;
         background-color: transparent;
         border: 0 none;
@@ -55,10 +55,18 @@
         border-image-slice: 1;
       }
 
+      input[type="submit"]:disabled {
+        border-image: none;
+        border: 0.15rem solid $gray;
+        color: $gray;
+        cursor: not-allowed;
+      }
+
       .form__group {
         position: relative;
         padding: 10px 0 0;
         width: 100%;
+        margin-top: 12px;
 
         textarea {
           margin-top: 1rem;
@@ -165,7 +173,7 @@
       input[type="submit"] {
         width: 100%;
         margin-top: 1.5rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         padding: 1rem 1rem;
         background-color: transparent;
         border: 0 none;
@@ -181,10 +189,18 @@
         border-image-slice: 1;
       }
 
+      input[type="submit"]:disabled {
+        border-image: none;
+        border: 0.15rem solid $gray;
+        color: $gray;
+        cursor: not-allowed;
+      }
+
       .form__group {
         position: relative;
         padding: 10px 0 0;
         width: 100%;
+        margin-top: 12px;
 
         textarea {
           margin-top: 1rem;
@@ -291,7 +307,7 @@
       input[type="submit"] {
         width: 100%;
         margin-top: 1.5rem;
-        margin-bottom: 7rem;
+        margin-bottom: 2rem;
         padding: 1rem 1rem;
         background-color: transparent;
         border: 0 none;
@@ -307,10 +323,18 @@
         border-image-slice: 1;
       }
 
+      input[type="submit"]:disabled {
+        border-image: none;
+        border: 0.15rem solid $gray;
+        color: $gray;
+        cursor: not-allowed;
+      }
+
       .form__group {
         position: relative;
         padding: 10px 0 0;
         width: 100%;
+        margin-top: 12px;
 
         textarea {
           margin-top: 1rem;

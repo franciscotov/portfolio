@@ -23,6 +23,10 @@ export const translationKeys = {
     message: 'contact.message',
     submit: 'contact.submit',
   },
+  alert: {
+    success: 'alert.success',
+    error: 'alert.error',
+  },
   download: {
     fileName: 'download.fileName',
     description: 'download.description',

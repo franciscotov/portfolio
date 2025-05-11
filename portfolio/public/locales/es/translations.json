@@ -52,6 +52,10 @@
     "message": "Mensaje",
     "submit": "Enviar Mensaje"
   },
+  "alert": {
+    "success": "Tu email ha sido enviado con éxito",
+    "error": "Hubo un error al enviar tu email, por favor intenta nuevamente"
+  },
   "footer": {
     "develpedBy": "© 2025 Desarrollado por Franciscotov"
   }
