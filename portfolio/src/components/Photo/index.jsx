@@ -13,8 +13,6 @@ const Photo = () => {
             src={img}
             alt=""
             className={styles.photo}
-            width="25vw"
-            height="40vw"
           />
           <Download />
         </div>
