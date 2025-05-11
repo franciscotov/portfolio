@@ -9,9 +9,9 @@ const Contact = () => {
   const { t } = useTranslation([translationModulesKeys.Porfolio]);
   const { contact } = translationKeys;
 
-  const SERVICE_ID = "service_9ybyce9";
-  const TEMPLATE_ID = "template_oagmqb1";
-  const PUBLIC_KEY = "7BB5u9KHGLvC1D0jQ";
+  const SERVICE_ID = "service_woaklib";
+  const TEMPLATE_ID = "template_534f9sf";
+  const PUBLIC_KEY = "user_dOgMI5IkVygmDLf1SPacj";
   function sendEmail(e) {
     console.log(form.current);
     e.preventDefault();
