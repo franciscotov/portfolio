@@ -74,9 +74,9 @@ button {
   }
 }
 
-@media (min-width: (map-get($breakpoints, medium))) and (min-width: (map-get($breakpoints, large))-1) {
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
   .App {
-    width: 100vw !important;
+    width: 100% !important;
     max-width: 100vh;
     min-height: 60vh;
   }
