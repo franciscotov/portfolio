@@ -47,13 +47,13 @@ const Portfolio = () => {
               </div>
             )}
           </div>
-          <div className={styles.botones}>
+          <div className={styles.botones} type="button">
             <button>
               <a href={e.deploy} target="_blank" rel="noreferrer">
               {t(porfolio.demo)}
               </a>
             </button>
-            <button className={styles.repo}>
+            <button className={styles.repo} type="button">
               <a href={e.github} target="_blank" rel="noreferrer">
               {t(porfolio.repository)}
               </a>

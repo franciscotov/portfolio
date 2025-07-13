@@ -1,18 +1,25 @@
 @import "./sassVariables/variables.scss";
 
-h2 {
-  font-family: "Prata", serif;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
 body,
 html {
-  font-family: "Montserrat", sans-serif;
   background-color: $background-color-primary;
 }
 body {
   overflow-x: hidden;
 }
 .App {
-  padding-top: $height-navbar;
+  margin-top: $height-navbar;
 }
 html {
   scroll-behavior: smooth;
@@ -27,6 +34,10 @@ html {
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media (max-width: (map-get($breakpoints, medium))-1) {

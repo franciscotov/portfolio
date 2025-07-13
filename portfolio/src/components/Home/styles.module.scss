@@ -1,19 +1,19 @@
 @import "../../sassVariables/variables.scss";
 .container {
+  background-color: $primary-color;
+  height: fit-content;
+  padding-bottom: $padding-bottom-component;
+
   h1,
   span {
     color: $color-text-primary;
   }
-  background-color: $primary-color;
-  height: fit-content;
-  padding-bottom: $padding-bottom-component;
+
   .containerTitle {
     width: 100%;
     text-align: start;
-    h1 {
-      font-family: "Open Sans ";
-    }
   }
+
   .containerDescription {
     text-align: start;
     .span {
@@ -24,7 +24,7 @@
 
 @media (max-width: (map-get($breakpoints, medium))-1) {
   .container {
-    width: 100%;
+    width: $section-width-without-padding-mobile;
     padding-left: $padding-base-mobile;
     .containerTitle {
       h1 {
@@ -51,7 +51,7 @@
   .containerTitle {
     h1 {
       font-size: $h1-title-large;
-      line-height: $h1-title-large - 1rem;
+      line-height: $h1-title-large - 0.5rem;
     }
   }
   .containerDescription {
@@ -76,7 +76,7 @@
   .containerTitle {
     h1 {
       font-size: $h1-title-large;
-      line-height: $h1-title-large - 1rem;
+      line-height: $h1-title-large;
     }
   }
 

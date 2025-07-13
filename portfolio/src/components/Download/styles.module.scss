@@ -4,7 +4,16 @@
   padding-top: 1rem;
   text-align: start;
   letter-spacing: 5px;
+  a {
+    color: $primary-color;
+    margin-left: 0;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
 }
+
 @media (max-width: (map-get($breakpoints, medium))) {
   .containerDownload {
     a {
@@ -12,12 +21,10 @@
     }
   }
 }
+
 @media (min-width: (map-get($breakpoints, medium))) {
   .containerDownload {
     text-align: center;
     background-color: $background-color-navbar;
-    a {
-      color: $primary-color;
-    }
   }
 }

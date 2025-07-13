@@ -2,7 +2,7 @@
 .container {
   background-color: $color-text-primary;
   height: fit-content;
-  width: 100vw;
+  width: $section-width-without-padding-mobile;
   padding-left: $padding-base-mobile;
   padding-bottom: 3rem;
   

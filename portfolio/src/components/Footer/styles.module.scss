@@ -7,7 +7,6 @@
 @media (max-width: (map-get($breakpoints, medium))-1) {
   .container {
     display: flex;
-    padding-left: $padding-base-mobile;
     width: 100vw;
     height: $height-footer;
     text-align: left;
@@ -111,7 +110,7 @@
         }
 
         .size:hover {
-          color: $hover-footer;
+          color: $hover-color;
         }
       }
     }

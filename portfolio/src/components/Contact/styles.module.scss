@@ -3,7 +3,7 @@
 @media (max-width: (map-get($breakpoints, medium ))-1) {
   .container {
     background-color: $primary-color;
-    width: 100%;
+    width: $section-width-without-padding-mobile;
     height: fit-content;
     text-align: left;
     padding-left: $padding-base-mobile;

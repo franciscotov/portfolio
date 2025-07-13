@@ -8,7 +8,7 @@ $color-secondary-text-navbar: #f393a4;
 $background-color-navbar: $background-color-primary;
 $color-line-skills: #96BEBD;
 $height-container-photo: 25rem;
-$hover-footer: #40a3d4;
+$hover-color: #40a3d4;
 $primary: #0571a7;
 $secondary: #40a3d4;
 $white: #fff;
@@ -26,7 +26,9 @@ $max-width-container-description-mobile: 25rem;
 $max-width-container-description-large: 35rem;
 $width-photo: 40vw;
 $max-width-movile: 100vw;
-$height-footer:15vh;
+$height-footer: 15vh;
+$section-width-without-padding-mobile: calc(100% - $padding-base-mobile);
+
 $breakpoints: (
     small: 380px,
     medium: 767px,

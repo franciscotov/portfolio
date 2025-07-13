@@ -26,16 +26,18 @@ function App() {
         </div>
       }
     >
-      <div className={styles.App}>
-        <Navbar />
-        <Home />
-        <About />
-        <Experience />
-        <Portfolio />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+      <main>
+        <div className={styles.App}>
+          <Navbar />
+          <Home />
+          <About />
+          <Experience />
+          <Portfolio />
+          <Skills />
+          <Contact />
+          <Footer />
+        </div>
+      </main>
     </Suspense>
   );
 }

@@ -6,15 +6,22 @@ $height-download: 2rem;
   height: $height-container-photo;
   .photoContainer {
     height: 60vh;
+
+    .photo {
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      transform: rotate(-1deg);
+      border-radius: 16px;
+    }
   }
 }
+
 @media (max-width: (map-get($breakpoints, medium))-1) {
   .container {
     width: 100%;
     padding-top: 3rem;
     height: fit-content;
     .photoContainer {
-      margin-left: 0.5rem;
       width: fit-content;
       height: fit-content;
       .photo {
@@ -22,10 +29,8 @@ $height-download: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80vw;
-        height: 90vw;
-        max-width: 20rem;
-        max-height: 21rem;
+        max-width: 80vw;
+        max-height: 80vh;
       }
     }
   }
@@ -47,8 +52,9 @@ $height-download: 2rem;
       margin-left: 2.5rem;
       .photo {
         text-align: end;
-        width: 24vw;
-        height: 24vw;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        transform: rotate(-1deg);
       }
     }
   }

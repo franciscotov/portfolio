@@ -4,7 +4,7 @@
         "firstName": "Francisco",
         "lastName" : "Tovar",
         "nickName": "Franciscotov",
-        "homeDescription": " specialized in Javascript, I have done some projectsfrom scratch using Node and Java as backend technologies and React as frontend technologies.",
+        "homeDescription": " specialized in Javascript, I have done some projects from scratch using Node and Java as backend technologies and React as frontend technologies.",
         "firstAboutDescription": "My experience in the scientific field and my passions (teaching, sports and electronics) have gradually made me interested in programming, to the point that my most precious long-term achievement is being able to integrate them into a software project that adds value and allow a problem to be solved.",
         "secondAboutDescription": "In my free time I decided to study MERN Stack (Mongo, ExpressJS, ReactJS, NodeJS) on the freecodecamp platform, then I acquired more knowledge in Henry, a highly demanding bootcamp in web development PERN stack (PostgresSQL, ExpressJS, ReactJS, NodeJS) , in which I developed several projects, among them an application for the visualization of countries and an e-commerce web application."
     },
