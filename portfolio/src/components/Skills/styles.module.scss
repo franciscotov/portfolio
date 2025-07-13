@@ -92,6 +92,12 @@
   }
 }
 
+@media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
+  .percentage {
+    font-size: 1.3rem;
+  }
+}
+
 @media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
   .container {
     width: $width-min-medium;
