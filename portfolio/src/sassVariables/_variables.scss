@@ -20,6 +20,7 @@ $padding-base-large: 5rem;
 $width-min-medium: 60vw;
 $font-size-home-span: 1.2rem;
 $padding-bottom-component: 4rem;
+$h1-title-small: 2.5rem;
 $h1-title-mobile: 3rem;
 $h1-title-large: 5rem;
 $max-width-container-description-mobile: 25rem;
@@ -28,6 +29,8 @@ $width-photo: 40vw;
 $max-width-movile: 100vw;
 $height-footer: 15vh;
 $section-width-without-padding-mobile: calc(100% - $padding-base-mobile);
+$font-family-primary: 'Inter', sans-serif;
+$font-family-secondary: 'Playfair Display', serif;
 
 $breakpoints: (
     small: 380px,

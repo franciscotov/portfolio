@@ -5,9 +5,6 @@
 }
 
 .elements {
-  h1 {
-    color: $primary-color;
-  }
   .line {
     border-left: 0.15rem solid $primary-color;
   }
@@ -40,11 +37,6 @@
       flex-direction: column;
       margin-right: 1.5rem;
       margin-top: 0.1rem;
-
-      h1 {
-        font-family: "Crimson Pro", serif;
-        font-size: 3rem;
-      }
 
       .line {
         height: 3.5rem;
@@ -82,11 +74,6 @@
       margin-right: 3rem;
       margin-top: 3rem;
 
-      h1 {
-        font-family: "Crimson Pro", serif;
-        font-size: 3rem;
-      }
-
       .line {
         height: 6rem;
       }
@@ -121,11 +108,6 @@
       flex-direction: column;
       margin-right: 5rem;
       margin-top: 3rem;
-
-      h1 {
-        font-family: "Crimson Pro", serif;
-        font-size: 3rem;
-      }
 
       .line {
         height: 6rem;

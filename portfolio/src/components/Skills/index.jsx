@@ -20,7 +20,7 @@ const Skills = () => {
     <section className={styles.container} id="Skills">
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
-          <h2>{t(skills.title)}</h2>
+          <h1>{t(skills.title)}</h1>
         </div>
         <div className={styles.vl}></div>
 

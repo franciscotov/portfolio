@@ -28,7 +28,6 @@
     padding-left: $padding-base-mobile;
     .containerTitle {
       h1 {
-        font-size: $h1-title-mobile;
         line-height: $h1-title-mobile;
       }
     }
@@ -50,7 +49,6 @@
   }
   .containerTitle {
     h1 {
-      font-size: $h1-title-large;
       line-height: $h1-title-large - 0.5rem;
     }
   }
@@ -75,7 +73,6 @@
   }
   .containerTitle {
     h1 {
-      font-size: $h1-title-large;
       line-height: $h1-title-large;
     }
   }

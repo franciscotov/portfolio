@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  color: $primary-color;
+}
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
@@ -40,13 +44,32 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: (map-get($breakpoints, medium))-1) {
+@media (max-width: (map-get($breakpoints, small))) {
   body {
     background-color: $primary-color;
 
     .App {
       width: 100% !important;
       max-width: 100vh;
+    }
+
+    h1 {
+      font-size: $h1-title-small;
+    }
+  }
+}
+
+@media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
+  body {
+    background-color: $primary-color;
+
+    .App {
+      width: 100% !important;
+      max-width: 100vh;
+    }
+
+    h1 {
+      font-size: $h1-title-mobile;
     }
   }
 }
@@ -57,12 +80,21 @@ button {
     max-width: 100vh;
     min-height: 60vh;
   }
+
+  h1 {
+    font-size: $h1-title-large;
+  }
+
 }
 @media (min-width: (map-get($breakpoints, large))) {
   .App {
     width: 100vw !important;
     max-width: 100vh;
     min-height: 60vh;
+  }
+
+  h1 {
+    font-size: $h1-title-large;
   }
 }
 

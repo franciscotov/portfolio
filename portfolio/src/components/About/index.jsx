@@ -12,7 +12,7 @@ const About = () => {
     <section className={styles.container} id={sectionKeys.about}>
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
-          <h2>{t(about.title)}</h2>
+          <h1>{t(about.title)}</h1>
         </div>
         <div className={styles.vl}></div>
         <div className={styles.containerFirstDescription}>
