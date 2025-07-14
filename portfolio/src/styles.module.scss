@@ -48,6 +48,21 @@ button {
   cursor: pointer;
 }
 
+.App::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: $progress-bar-color;
+  z-index: 1000;
+  top: 0;
+  position: fixed;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
 @media (max-width: (map-get($breakpoints, small))) {
   body {
     background-color: $primary-color;
