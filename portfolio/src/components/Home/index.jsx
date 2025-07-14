@@ -13,13 +13,11 @@ const Home = () => {
       <Photo />
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
-          <h1>
+          <p className={styles.title}>
             {t(home.greeting)}
-            <br />
-            {t(home.description) + t(data.firstName)}
-            <br />
-            {t(data.lastName)}
-          </h1>
+          </p>
+          <p className={styles.title}>{t(home.description) + t(data.firstName)}</p>
+          <p className={styles.title}>{t(data.lastName)}</p>
         </div>
         <div className={styles.containerDescription}>
           <span className={styles.span}>

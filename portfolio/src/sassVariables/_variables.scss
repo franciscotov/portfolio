@@ -31,10 +31,31 @@ $height-footer: 15vh;
 $section-width-without-padding-mobile: calc(100% - $padding-base-mobile);
 $font-family-primary: 'Inter', sans-serif;
 $font-family-secondary: 'Playfair Display', serif;
+$p-title-small: 2.6rem;
+$p-title-mobile: 3rem;
+$p-title-large: 4rem;
+$button-text-size-small: 1.2rem;
+$button-text-size-medium: 1.3rem;
+$button-text-size-large: 1.4rem;
 
 $breakpoints: (
     small: 380px,
     medium: 767px,
     large: 1025px,
     xl: 1300px,
-)
+);
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

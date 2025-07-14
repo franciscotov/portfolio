@@ -36,7 +36,6 @@
       color: $color-text-primary;
       padding: 0.8rem;
       height: fit-content;
-      
 
       a {
         outline: none;
@@ -121,6 +120,10 @@
   .repo {
     margin-left: 0;
   }
+
+  button > a {
+    font-size: $button-text-size-small;
+  }
 }
 
 
@@ -143,6 +146,10 @@
         }
       }
     }
+  }
+
+  button > a {
+    font-size: $button-text-size-medium;
   }
 }
 
@@ -179,6 +186,10 @@
         margin-left: 0.5rem;
       }
     }
+  }
+
+  button > a {
+    font-size: $button-text-size-large;
   }
 }
 

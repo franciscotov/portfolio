@@ -3,7 +3,6 @@
   background-color: $color-text-primary;
   height: fit-content;
   width: $section-width-without-padding-mobile;
-  padding-left: $padding-base-mobile;
   padding-bottom: 3rem;
   
   .containerSkills {
@@ -75,6 +74,7 @@
 }
 
 .containerGrap {
+  margin-left: 1.5rem;
   .containerTitle {
     h2 {
       font-size: 3rem;
@@ -83,6 +83,10 @@
 }
 
 @media (max-width: (map-get($breakpoints, small))) {
+  .container {
+    width: $max-width-movile;
+  }
+
   .skillPercentage {
     font-size: 0.8rem;
   }
@@ -93,6 +97,10 @@
 }
 
 @media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
+  .container {
+    width: $max-width-movile;
+  }
+
   .percentage {
     font-size: 1.3rem;
   }

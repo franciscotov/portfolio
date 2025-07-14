@@ -1,7 +1,7 @@
 @import "./sassVariables/variables.scss";
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: $font-family-primary;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,22 +12,26 @@ h1 {
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: $font-family-secondary;
 }
 
 body,
 html {
   background-color: $background-color-primary;
 }
+
 body {
   overflow-x: hidden;
 }
+
 .App {
   margin-top: $height-navbar;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .App-link {
   color: #61dafb;
 }

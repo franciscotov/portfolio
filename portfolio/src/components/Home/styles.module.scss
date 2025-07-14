@@ -4,14 +4,21 @@
   height: fit-content;
   padding-bottom: $padding-bottom-component;
 
-  h1,
+  p,
   span {
     color: $color-text-primary;
+  }
+
+  p.title {
+    font-family: $font-family-secondary;
+    max-width: fit-content;
+    margin: 0;
   }
 
   .containerTitle {
     width: 100%;
     text-align: start;
+    margin: 2rem 0;
   }
 
   .containerDescription {
@@ -22,21 +29,52 @@
   }
 }
 
-@media (max-width: (map-get($breakpoints, medium))-1) {
+.containerTitle p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(30, end) forwards, blink 1s step-end infinite;
+}
+
+
+@media (max-width: (map-get($breakpoints, small))-1) {
   .container {
     width: $section-width-without-padding-mobile;
     padding-left: $padding-base-mobile;
-    .containerTitle {
-      h1 {
-        line-height: $h1-title-mobile;
-      }
+  }
+
+  .containerTitle {
+    margin: 1rem 0;
+  }
+
+  .containerTitle {
+    p {
+      line-height: $p-title-small;
+      font-size: $p-title-mobile - 0.8rem;
     }
+  }
+
+  .containerTitle p {
+    white-space: wrap;
+  }
+}
+
+@media (min-width: (map-get($breakpoints, small))-1) and (max-width: (map-get($breakpoints, medium))-1) {
+  .container {
+    width: $section-width-without-padding-mobile;
+    padding-left: $padding-base-mobile;
+
     .containerDescription {
       width: 90vw;
-      max-width: $max-width-container-description-mobile;
       span {
         font-size: $font-size-home-span;
       }
+    }
+  }
+
+  .containerTitle {
+    p {
+      line-height: $p-title-mobile + 0.5rem;
+      font-size: $p-title-mobile;
     }
   }
 }
@@ -47,11 +85,14 @@
     display: flex;
     padding-left: $padding-base-medium;
   }
+
   .containerTitle {
-    h1 {
-      line-height: $h1-title-large - 0.5rem;
+    p {
+      line-height: $p-title-large + 0.5rem;
+      font-size: $p-title-large;
     }
   }
+
   .containerDescription {
     width: 100%;
     max-width: $max-width-container-description-large;
@@ -72,14 +113,16 @@
     padding-left: $padding-base-large;
   }
   .containerTitle {
-    h1 {
-      line-height: $h1-title-large;
+    p {
+      line-height: $p-title-large + 0.8rem;
+      font-size: $p-title-large;
     }
   }
 
   .containerDescription {
     width: 100%;
     max-width: $max-width-container-description-large;
+
     span {
       font-size: $font-size-home-span;
       line-height: 1.3rem;

@@ -5,6 +5,7 @@
 }
 
 .elements {
+  margin-left: 1.5rem;
   .line {
     border-left: 0.15rem solid $primary-color;
   }
@@ -16,10 +17,10 @@
 
 @media (max-width: (map-get($breakpoints, medium ))-1) {
   .container {
-    width: $section-width-without-padding-mobile;
+    width: 100vw;
     height: fit-content;
     text-align: left;
-    padding-left: $padding-base-mobile;
+    // padding-left: $padding-base-mobile;
     .iconos {
       display: block;
       justify-content: center;
