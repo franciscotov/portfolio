@@ -4,39 +4,31 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-  },
-  style: {
-    modules: {
-      localIdentName: '',
-    },
-    css: {
-      // loaderOptions: { /* ... */ },
-      loaderOptions: (cssLoaderOptions, { env, paths }) => {
-        /* ... */
-        return cssLoaderOptions;
-      },
-    },
-    sass: {
-      // loaderOptions: { /* ... */ },
-      loaderOptions: (sassLoaderOptions, { env, paths }) => {
-        /* ... */
-        return sassLoaderOptions;
-      },
-    },
-    postcss: {
-      mode: 'extends' /* (default value) */ || 'file',
-      // plugins: [require('plugin-to-append')],
-      // plugins: (plugins) => [require('plugin-to-prepend')].concat(plugins),
-      // env: {
-      //   autoprefixer: { /* ... */ },
-      //   stage: 3,
-      //   features: { /* ... */ },
-      // },
-      // loaderOptions: { /* ... */ },
-      // loaderOptions: (postcssLoaderOptions, { env, paths }) => {
-      //   /* ... */
-      //   return postcssLoaderOptions;
-      // },
+    configure: (webpackConfig, { env, paths }) => {
+      // Find the existing rule for CSS modules
+      const cssModuleRule = webpackConfig.module.rules.find(
+        (rule) => rule.test && rule.test.toString().includes('module')
+      );
+
+      // Add PostCSS loader for CSS files
+      const postcssLoader = {
+        loader: 'postcss-loader',
+        options: {
+          postcssOptions: {
+            ident: 'postcss',
+            plugins: [
+              'autoprefixer',
+              'postcss-nested',
+            ],
+          },
+        },
+      };
+
+      // Push PostCSS loader into the existing CSS module rule
+      if (cssModuleRule && cssModuleRule.use) {
+          cssModuleRule.use.push(postcssLoader);
+      }
+      return webpackConfig;
     },
   },
 };
