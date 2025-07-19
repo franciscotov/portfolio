@@ -11,7 +11,7 @@ const Footer = () => {
   const { footer } = translationKeys;
 
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.elements}>
         <div className={styles.icon}>
           <a href={socialMediaUrls.linkedin} target="_blank" rel="noreferrer">
@@ -42,7 +42,7 @@ const Footer = () => {
       <div className={styles.copyright}>
         <span>{t(footer.develpedBy)}</span>
       </div>
-    </section>
+    </div>
   );
 };
 
