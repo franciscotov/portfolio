@@ -4,31 +4,23 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-    configure: (webpackConfig, { env, paths }) => {
-      // Find the existing rule for CSS modules
-      const cssModuleRule = webpackConfig.module.rules.find(
-        (rule) => rule.test && rule.test.toString().includes('module')
-      );
-
-      // Add PostCSS loader for CSS files
-      const postcssLoader = {
-        loader: 'postcss-loader',
-        options: {
-          postcssOptions: {
-            ident: 'postcss',
-            plugins: [
-              'autoprefixer',
-              'postcss-nested',
-            ],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              // Prefer `dart-sass`, even if `sass-embedded` is available
+              implementation: require.resolve("sass"),
+            },
           },
-        },
-      };
-
-      // Push PostCSS loader into the existing CSS module rule
-      if (cssModuleRule && cssModuleRule.use) {
-          cssModuleRule.use.push(postcssLoader);
-      }
-      return webpackConfig;
-    },
+        ],
+      },
+    ],
   },
 };
