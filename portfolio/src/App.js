@@ -11,6 +11,7 @@ import styles from "@/styles.module.scss";
 import Footer from "@/components/Footer";
 import "@/config/i18n";
 import { InfinitySpin } from "react-loader-spinner";
+import Images from "@/components/Images";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Navbar />
           <Home />
           <About />
+          <Images />
           <Experience />
           <Portfolio />
           <Skills />

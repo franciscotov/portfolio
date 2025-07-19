@@ -1,111 +1,102 @@
 @import "../../sassVariables/variables.scss";
 
-.container {
+.containerImages {
   width: 100%;
+  background-color: transparent;
+  color: $color-text-primary;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.containerImg {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.images {
+  margin-top: 1.5rem;
+  width: 8rem;
+  height: 8rem;
+}
+
+.description {
+  margin-top: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
 }
 
 @media (max-width: (map-get($breakpoints, small ))-1) {
-  .container {
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-
-    .containerImg {
-      width: fit-content;
-      height: fit-content;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1rem;
-
-      .images {
-        margin-top: 1.5rem;
-        width: 8rem;
-        height: 8rem;
-      }
-
-      .description {
-        margin-top: 6px;
-        font-size: 0.7rem;
-        letter-spacing: 3px;
-      }
-    }
+  .containerImg {
+    margin-bottom: 1rem;
   }
 }
 
-@media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, large))-1) {
-  .container {
-    width: 21rem;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
+@media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
+  .containerImages {
+    width: calc($width-min-medium + $padding-base-medium);
     margin: auto;
     justify-content: center;
     align-items: center;
-    text-align: left;
     padding-bottom: 2rem;
+    flex-direction: row;
+  }
 
-    .containerImg {
-      width: fit-content;
-      height: fit-content;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
-      margin-right: 2rem;
-      align-items: center;
+  .containerImg {
+    flex-wrap: wrap;
+    margin-right: 2rem;
+  }
 
-      .images {
-        margin-top: 1.5rem;
-        width: 8.5rem;
-        height: 8rem;
-      }
+  .images {
+    width: 8.5rem;
+  }
+}
 
-      .description {
-        margin-top: 6px;
-        font-size: 0.7rem;
-        letter-spacing: 3px;
-      }
-    }
+@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
+  .containerImages {
+    width: calc($width-min-medium + $padding-base-medium);
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2rem;
+    background-color: $primary-color;
+  }
+
+  .containerImg {
+    flex-wrap: wrap;
+    margin-right: 2rem;
+  }
+
+  .images {
+    width: 8.5rem;
   }
 }
 
 @media (min-width: (map-get($breakpoints, large))) {
-  .container {
+  .containerImages {
+    width: calc($width-min-medium + $padding-base-large);
     height: 100%;
-    display: flex;
-    margin: auto;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    text-align: left;
-    margin-left: $padding-base-mobile;
+    background-color: $primary-color;
+  }
 
-    .containerImg {
-      width: fit-content;
-      height: fit-content;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
-      margin-right: 2rem;
-      align-items: center;
+  .containerImg {
+    flex-wrap: wrap;
+    margin-right: 2rem;
+  }
 
-      .images {
-        width: 11vw;
-        max-width: 9.5rem;
-        height: 11vw;
-        max-height: 9.5rem;
-      }
-
-      .description {
-        margin-top: 6px;
-        font-size: 0.7rem;
-        letter-spacing: 3px;
-      }
-    }
+  .images {
+    width: 11vw;
+    max-width: 9.5rem;
+    height: 11vw;
+    max-height: 9.5rem;
   }
 }

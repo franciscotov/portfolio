@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Accordeon from "@/components/Accordion";
 
-import Images from "@/components/Images";
 import { useTranslation } from "react-i18next";
 import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
@@ -12,9 +11,6 @@ const Experience = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.iconos}>
-        <Images />
-      </div>
       <div className={styles.elements} id="Experience">
         <h1>{t(experience.title)}</h1>
         <div className={styles.line}></div>

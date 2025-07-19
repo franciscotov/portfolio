@@ -127,7 +127,7 @@ button {
   }
 }
 
-section {
+section, div[class*="containerImages"] {
   view-timeline-name: --reveal;
   animation-name: show;
   animation-fill-mode: both;

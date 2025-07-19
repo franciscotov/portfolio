@@ -10,10 +10,6 @@
     border-left: 0.15rem solid $primary-color;
   }
 }
-.iconos {
-  background-color: $primary-color;
-  color: $color-text-primary;
-}
 
 @media (max-width: (map-get($breakpoints, medium ))-1) {
   .container {
@@ -21,23 +17,12 @@
     height: fit-content;
     text-align: left;
 
-    .iconos {
-      display: block;
-      justify-content: center;
-      width: 100%;
-      height: fit-content;
-      background-color: $primary-color;
-      margin-left: -$padding-base-mobile;
-      padding-right: $padding-base-mobile;
-    }
-
     .elements {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
       margin-right: 1.5rem;
-      margin-top: 0.1rem;
 
       .line {
         height: 3.5rem;
@@ -58,14 +43,6 @@
     height: fit-content;
     text-align: left;
     padding-left: $padding-base-medium;
-    .iconos {
-      display: block;
-      width: 100%;
-      height: fit-content;
-      margin-left: -$padding-base-medium;
-      padding-right: $padding-base-medium;
-      background-color: $primary-color;
-    }
 
     .elements {
       display: flex;
@@ -73,7 +50,6 @@
       align-items: flex-start;
       flex-direction: column;
       margin-right: 3rem;
-      margin-top: 3rem;
 
       .line {
         height: 6rem;
@@ -94,13 +70,6 @@
     height: fit-content;
     text-align: left;
     padding-left: $padding-base-large;
-    .iconos {
-      display: block;
-      width: 100%;
-      height: 30vh;
-      margin-left: -$padding-base-large;
-      padding-right: $padding-base-large;
-    }
 
     .elements {
       display: flex;
@@ -108,7 +77,6 @@
       align-items: flex-start;
       flex-direction: column;
       margin-right: 5rem;
-      margin-top: 3rem;
 
       .line {
         height: 6rem;

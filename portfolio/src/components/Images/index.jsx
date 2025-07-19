@@ -21,7 +21,7 @@ const Images = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containerImages}>
       {listOfImages.map((ele, index) => (
         <div className={styles.containerImg} key={`img-${index}`}>
           <img src={ele.img} alt="" className={styles.images} />
