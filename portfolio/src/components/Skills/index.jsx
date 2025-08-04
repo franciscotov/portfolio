@@ -8,12 +8,11 @@ const Skills = () => {
   const { skills } = translationKeys;
 
   let skillsArr = [
-    { name: t(skills.webDevelopment), percentage: 80 },
-    { name: t(skills.algorithms), percentage: 85 },
-    { name: t(skills.electonics), percentage: 70 },
-    { name: t(skills.teaching), percentage: 80 },
     { name: t(skills.teamwork), percentage: 100 },
-    { name: t(skills.leadership), percentage: 80 },
+    { name: t(skills.webDevelopment), percentage: 90 },
+    { name: t(skills.algorithms), percentage: 90 },
+    { name: t(skills.teaching), percentage: 85 },
+    { name: t(skills.leadership), percentage: 85 },
   ];
 
   return (
