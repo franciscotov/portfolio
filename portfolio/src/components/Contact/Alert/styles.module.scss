@@ -4,18 +4,19 @@
   width: fit-content;
   margin-bottom: 2rem;
   display: flex;
-  padding: 0.8rem;
-  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
   align-items: center;
   color: #ffffff;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
 }
 
 .error {
-  background-color: #c82333;
+  background: linear-gradient(135deg, #ff5f6d, #d72638);
 }
 
 .success {
-  background-color: #1e7e34;
+  background: linear-gradient(135deg, #12c48b, #0f6bff);
 }
 
 .iconError,
@@ -34,4 +35,5 @@
 
 .message {
   margin-left: 0.5rem;
+  font-weight: 700;
 }

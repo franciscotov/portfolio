@@ -2,26 +2,43 @@
 @import "@/sassVariables/variables.scss";
 
 .containerFirstDescription , .containerSecondDescription{
-    width: 90%;
-    max-width: 40rem;
+    width: 100%;
+    max-width: 44rem;
 }
 
 .container{
-    background-color: $color-text-primary;
+    width: min(100%, 1200px);
+    margin: 0 auto;
     height: fit-content;
     display: flex;
-    padding-bottom: 3rem;
+    padding: 0 1.25rem 4rem;
+
+    .containerGrap {
+        width: 100%;
+        padding: clamp(1.25rem, 3vw, 2.5rem);
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+        backdrop-filter: blur(14px);
+    }
+
     .vl {
         border-left: 3px solid $primary-color;
         height: 3rem;
         margin: 0 0 1rem 0;
+        opacity: 0.7;
     }
-    h2, span{
-        color: $primary-color;
+
+    h1, span{
+        color: #0f172a;
     }
 }
 
 .containerGrap{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     .containerTitle{
         h2{
             font-size: 3rem;
@@ -44,21 +61,22 @@
 }
 @media (max-width: (map-get($breakpoints, medium))) {
     .container{
-        width: 100vw;
+        width: min(100%, 1200px);
         max-width: $max-width-movile;
-        .containerGrap{
-            margin-left: $padding-base-mobile;
-        }
         .vl {
             height: 3rem;
             margin: 0 0 1rem 0;
+        }
+
+        .containerGrap{
+            gap: 0.85rem;
         }
     }
 }
 
 @media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1){
     .container{
-        width: $width-min-medium ;
+        width: min(100%, 1200px);
         padding-left: $padding-base-medium;
         .vl {
             height: 5rem;
@@ -69,7 +87,7 @@
 
 @media (min-width: (map-get($breakpoints, large))) {
     .container{
-        width: $width-min-medium;
+        width: min(100%, 1200px);
         padding-left: $padding-base-large;
         .vl {
             height: 5rem;

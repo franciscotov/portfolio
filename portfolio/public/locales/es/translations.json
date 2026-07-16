@@ -13,7 +13,7 @@
     "greeting": "Hola",
     "a": "",
     "description": "Soy ",
-    "secondDescription": "Desarrollador Web",
+    "secondDescription": "Fullstack Software Engineer",
     "homeDescription": " especializado en Javascript, he realizado proyectos desde cero usando NodeJS como tecnología de backend y ReactJS como tecnología para el frontend."
   },
   "download": {
@@ -57,6 +57,6 @@
     "error": "Hubo un error al enviar tu email, por favor intenta nuevamente"
   },
   "footer": {
-    "develpedBy": "© 2025 Desarrollado por Franciscotov"
+    "develpedBy": "© 2026 Desarrollado por Franciscotov"
   }
 }

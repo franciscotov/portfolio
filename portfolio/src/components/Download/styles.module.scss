@@ -3,13 +3,22 @@
 .containerDownload {
   padding-top: 1rem;
   text-align: start;
-  letter-spacing: 5px;
+  letter-spacing: 0.08em;
   a {
-    color: $primary-color;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     margin-left: 0;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
 
     &:hover {
-      color: $hover-color;
+      color: #e5f3ff;
+      transform: translateY(-1px);
     }
   }
 }
@@ -17,7 +26,7 @@
 @media (max-width: (map-get($breakpoints, medium))) {
   .containerDownload {
     a {
-      color: $secondary-color;
+      color: #ffffff;
     }
   }
 }
@@ -25,6 +34,6 @@
 @media (min-width: (map-get($breakpoints, medium))) {
   .containerDownload {
     text-align: center;
-    background-color: $background-color-navbar;
+    background: transparent;
   }
 }

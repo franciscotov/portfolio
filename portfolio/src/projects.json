@@ -2,37 +2,96 @@
   
 [
   [
+  
+    {
+      "name": "Google Calendar Platform",
+      "category": "Booking workflow",
+      "description": "A booking platform composed of a NestJS API and a Next.js client that validates availability against local bookings and Google Calendar free/busy data before confirming appointments.",
+      "techs": ["NestJS", "Next.js", "Prisma", "PostgreSQL", "JWT", "Google Calendar API", "Auth0", "Jest"],
+      "mediaType": "panel",
+      "panelLabel": "Backend + frontend",
+      "panelTitle": "Calendar-aware booking system",
+      "panelCopy": "End-to-end scheduling flow with authenticated booking management, conflict checks, and calendar synchronization.",
+      "github": "https://github.com/franciscotov/google-calendar-app",
+      "deploy": "https://google-calendar-app-seven.vercel.app"
+    },
+    {
+      "name": "Real-time Stocks Trading Dashboard",
+      "category": "Realtime product dashboard",
+      "description": "Live trading dashboard with watchlists, alert thresholds, drag-and-drop sorting, multi-stock charting, browser notifications, and authenticated access backed by real-time market streams.",
+      "techs": ["Next.js", "TypeScript", "Material UI", "Redux Toolkit", "Recharts", "dnd-kit", "Auth0", "Finnhub"],
+      "mediaType": "panel",
+      "panelLabel": "Realtime analytics",
+      "panelTitle": "Watchlists and market alerts",
+      "panelCopy": "Streaming prices, sortable watchlists, and chart-driven decision support in one interface.",
+      "github": "https://github.com/franciscotov/realtime-stocks-trading-dashboard-",
+      "deploy": "https://realtime-stocks-trading-dashboard.vercel.app"
+    },
     {
       "name": "Code Bakery",
-      "description": "E-commerce web application, the application was made so that the user had a comfortable experience(including responsive) and that he could purchase products quickly, it allows to pay with two payment methods (mercadopago and stripe) and perform authentication in two steps 2FA. On the administrator's side, it has a comfortable experience allowing you to carry out promotions manually and manage users and products. The application is built with the PERNG technology stack (Postgresql, Express, React, Node and Graphql).",
-      "img": "",
-      "video": "https://vimeo.com/551611700",
+      "category": "Full-stack e-commerce",
+      "description": "Responsive e-commerce platform with fast product discovery, dual payment methods through Mercado Pago and Stripe, two-step authentication, and an admin experience for managing users, products, and promotions with confidence.",
+      "techs": ["PostgreSQL", "Express", "React", "Node.js", "GraphQL", "Stripe", "Mercado Pago", "2FA"],
+      "mediaType": "video",
+      "video": "/codebakery_ecommerce.mp4",
       "github": "https://github.com/ecommercehenry/codebakery",
       "deploy": "https://codebakery-front.vercel.app/"
     },
     {
       "name": "Countries App",
-      "description": "Website to show information about countries, allows us to create activities to carry out during our possible visit to them. This is a simple page application(SPA), in which an api is consumed to build the database. This is made with the PERN technology stack (Postgresql, Express, React and Node).",
-      "img": "Countries-app.JPG",
-      "video": "",
+      "category": "Single-page application",
+      "description": "Country discovery app that consumes an API-backed data model and lets users create activities for places they want to visit, combining a simple interface with structured data management.",
+      "techs": ["React", "Node.js", "Express", "PostgreSQL", "REST API"],
+      "mediaType": "image",
+      "mediaKey": "countriesApp",
+      "mediaAlt": "Countries App interface",
       "github": "https://github.com/franciscotov/countries-app",
       "deploy": "https://countries-app-gamma-lilac.vercel.app/"
     }
   ],
   [
     {
+      "name": "Google Calendar Platform",
+      "category": "Flujo de reservas",
+      "description": "Plataforma de reservas compuesta por una API en NestJS y un cliente en Next.js que valida la disponibilidad contra reservas locales y datos free/busy de Google Calendar antes de confirmar citas.",
+      "techs": ["NestJS", "Next.js", "Prisma", "PostgreSQL", "JWT", "Google Calendar API", "Auth0", "Jest"],
+      "mediaType": "panel",
+      "panelLabel": "Backend + frontend",
+      "panelTitle": "Sistema de reservas con calendario",
+      "panelCopy": "Flujo completo de agendado con gestión autenticada de reservas, validación de conflictos y sincronización con calendarios.",
+      "github": "https://github.com/franciscotov/google-calendar-app",
+      "deploy": "https://google-calendar-app-seven.vercel.app"
+    },
+    {
+      "name": "Real-time Stocks Trading Dashboard",
+      "category": "Dashboard en tiempo real",
+      "description": "Dashboard bursátil en vivo con watchlists, umbrales de alerta, ordenamiento por drag and drop, gráficos multiactivo, notificaciones del navegador y acceso autenticado sobre streams de mercado en tiempo real.",
+      "techs": ["Next.js", "TypeScript", "Material UI", "Redux Toolkit", "Recharts", "dnd-kit", "Auth0", "Finnhub"],
+      "mediaType": "panel",
+      "panelLabel": "Analítica en vivo",
+      "panelTitle": "Watchlists y alertas de mercado",
+      "panelCopy": "Precios en tiempo real, listas ordenables y soporte visual para decisiones rápidas.",
+      "github": "https://github.com/franciscotov/realtime-stocks-trading-dashboard-",
+      "deploy": "https://realtime-stocks-trading-dashboard.vercel.app"
+    },
+    {
       "name": "Code Bakery",
-      "description": "Aplicación web e-commerce, la aplicación fue hecha de manera que el usuario tuviera una esperiencia agradable(incluyendo vistas responsive) y pudiera obtener productos de manera rápida, esta permite el pago a través de dos métodos de pago (mercadopago y stripe) y tiene la funcionalidad de autenticación en dos pasos 2FA. En el lado del administrador, esta tiene una vista agradable y permite cargar promociones manualmente y manejar tanto productos como usuarios. La aplicación fue construida bajo el stack de tecnologías PERNG (Postgresql, Express, React, Node y Graphql)",
-      "img": "",
-      "video": "https://vimeo.com/551611700",
+      "category": "E-commerce full-stack",
+      "description": "Plataforma e-commerce responsive con descubrimiento rápido de productos, dos métodos de pago mediante Mercado Pago y Stripe, autenticación en dos pasos y una experiencia de administración para gestionar usuarios, productos y promociones.",
+      "techs": ["PostgreSQL", "Express", "React", "Node.js", "GraphQL", "Stripe", "Mercado Pago", "2FA"],
+      "mediaType": "video",
+      "video": "/codebakery_ecommerce.mp4",
       "github": "https://github.com/ecommercehenry/codebakery",
       "deploy": "https://codebakery-git-main-franciscotov.vercel.app/"
     },
     {
       "name": "Countries App",
-      "description" : "Apliación web para mostrar información sobre los paises, La misma nos permite crear actividades a realizar durante la posible visita a los mismos. Esta es una aplicación de pagina simple(SPA), en la cual consumimos una api para generar nuestra base de datos. Fue realizada usando el stack de tecnologías PERN (Postgresql, Express, React y Node).",
-      "img": "Countries-app.JPG",
-      "video": "",
+      "category": "Aplicación de una sola página",
+      "description": "Aplicación para descubrir países que consume una base de datos alimentada por API y permite crear actividades para los lugares que el usuario desea visitar, combinando una interfaz simple con gestión estructurada de datos.",
+      "techs": ["React", "Node.js", "Express", "PostgreSQL", "REST API"],
+      "mediaType": "image",
+      "mediaKey": "countriesApp",
+      "mediaAlt": "Interfaz de Countries App",
       "github": "https://github.com/franciscotov/countries-app",
       "deploy": "https://countries-app-beige.vercel.app/"
     }

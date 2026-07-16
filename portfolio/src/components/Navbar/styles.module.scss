@@ -2,16 +2,18 @@
 
 .nav {
   position: fixed;
-  z-index: 2;
+  z-index: 30;
   top: 0;
   width: 100%;
   height: $height-navbar;
   max-height: $height-navbar;
-  background-color: $background-color-navbar;
+  background: rgba(238, 243, 249, 0.82);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
   color: $color-primary-text-navbar;
 }
 .containerAcor {
-  background-color: $background-color-navbar;
+  background: rgba(238, 243, 249, 0.9);
   position: fixed;
   top: 0;
   right: 5rem;
@@ -23,6 +25,8 @@
   align-items: center;
   justify-content: center;
   color: $color-secondary-text-navbar;
+  backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(148, 163, 184, 0.14);
 
   .red {
     .icon {
@@ -52,7 +56,7 @@
   z-index: 2;
   .active,
   .inactive {
-    background-color: $background-color-navbar;
+    background: rgba(255, 255, 255, 0.2);
     width: 5rem;
     display: block;
     margin: auto;
@@ -60,6 +64,7 @@
     outline: none;
     border: none;
     cursor: pointer;
+    backdrop-filter: blur(16px);
     .minus {
       width: 2.2rem;
       height: 2.2rem;
@@ -106,7 +111,7 @@ a {
   transform: translateX(0%) !important;
 }
 .menuHolder {
-  background-color: $background-color-navbar;
+  background: rgba(238, 243, 249, 0.94);
   position: fixed;
   top: $height-navbar;
   height: 100vh !important;
@@ -115,8 +120,10 @@ a {
   right: 0;
   width: 30vw;
   padding: 1rem;
+  border-left: 1px solid rgba(148, 163, 184, 0.14);
+  backdrop-filter: blur(16px);
   .headerMenu {
-    background-color: $background-color-navbar;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,13 +160,19 @@ a {
 }
 .containerName {
   position: fixed;
-  top: 5px;
+  top: 0.85rem;
   color: $color-primary-text-navbar;
   margin: auto 1rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 0.18em;
   width: fit-content;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  line-height: 0.2rem;
 }
 @media (max-width: (map-get($breakpoints, medium))) {
   .containerAcor,
@@ -168,5 +181,9 @@ a {
   }
   .containerAcor {
     justify-content: flex-end;
+  }
+
+  .menuHolder {
+    width: 100vw;
   }
 }

@@ -1,16 +1,25 @@
-$background-color-primary: #E6E6E6;
-$primary-color: #00486B;
+$brand-primary: #0f6bff;
+$brand-secondary: #12c48b;
+$brand-accent: #ffb86b;
+$brand-surface: #07111f;
+$brand-surface-elevated: #0f1b2d;
+$brand-surface-soft: rgba(15, 27, 45, 0.72);
+$brand-border: rgba(148, 163, 184, 0.18);
+$brand-text: #eff6ff;
+$brand-muted: rgba(239, 246, 255, 0.72);
+$background-color-primary: #eef3f9;
+$primary-color: var(--brand-primary);
 $secondary-color: #fff;
 $color-text-primary: $secondary-color;
 $color-skills-percentage: blue;
 $color-primary-text-navbar: $primary-color;
 $color-secondary-text-navbar: #f393a4;
-$background-color-navbar: $background-color-primary;
-$color-line-skills: #96BEBD;
+$background-color-navbar: rgba(238, 243, 249, 0.88);
+$color-line-skills: rgba(18, 196, 139, 0.28);
 $height-container-photo: 25rem;
-$hover-color: #40a3d4;
-$primary: #0571a7;
-$secondary: #40a3d4;
+$hover-color: var(--brand-secondary);
+$primary: var(--brand-primary);
+$secondary: var(--brand-secondary);
 $white: #fff;
 $gray: #9b9b9b;
 $height-navbar: 5rem;
@@ -37,7 +46,7 @@ $p-title-large: 4rem;
 $button-text-size-small: 1.2rem;
 $button-text-size-medium: 1.3rem;
 $button-text-size-large: 1.4rem;
-$progress-bar-color: #40a3d4;
+$progress-bar-color: var(--brand-primary);
 
 $breakpoints: (
   small: 380px,

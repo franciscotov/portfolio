@@ -1,40 +1,52 @@
 @import "../../sassVariables/variables.scss";
 
 .containerImages {
-  width: 100%;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
   background-color: transparent;
-  color: $color-text-primary;
+  color: #0f172a;
   height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
   text-align: left;
 }
 
 .containerImg {
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
 .images {
-  margin-top: 1.5rem;
-  width: 8rem;
-  height: 8rem;
+  margin-top: 0;
+  width: 5.75rem;
+  height: 5.75rem;
 }
 
 .description {
-  margin-top: 6px;
-  font-size: 0.7rem;
-  letter-spacing: 3px;
+  margin-top: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.7);
 }
 
 @media (max-width: (map-get($breakpoints, small ))-1) {
+  .containerImages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .containerImg {
     margin-bottom: 1rem;
   }
@@ -42,61 +54,55 @@
 
 @media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
   .containerImages {
-    width: calc($width-min-medium + $padding-base-medium);
+    width: min(100%, 1200px);
     margin: auto;
-    justify-content: center;
-    align-items: center;
     padding-bottom: 2rem;
-    flex-direction: row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .containerImg {
     flex-wrap: wrap;
-    margin-right: 2rem;
+    margin-right: 0;
   }
 
   .images {
-    width: 8.5rem;
+    width: 6rem;
   }
 }
 
 @media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
   .containerImages {
-    width: calc($width-min-medium + $padding-base-medium);
-    flex-direction: row;
-    justify-content: center;
+    width: min(100%, 1200px);
     padding-bottom: 2rem;
-    background-color: $primary-color;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .containerImg {
     flex-wrap: wrap;
-    margin-right: 2rem;
+    margin-right: 0;
   }
 
   .images {
-    width: 8.5rem;
+    width: 6rem;
   }
 }
 
 @media (min-width: (map-get($breakpoints, large))) {
   .containerImages {
-    width: calc($width-min-medium + $padding-base-large);
+    width: min(100%, 1200px);
     height: 100%;
-    flex-direction: row;
-    justify-content: center;
-    background-color: $primary-color;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .containerImg {
     flex-wrap: wrap;
-    margin-right: 2rem;
+    margin-right: 0;
   }
 
   .images {
-    width: 11vw;
+    width: 7rem;
     max-width: 9.5rem;
-    height: 11vw;
+    height: 7rem;
     max-height: 9.5rem;
   }
 }

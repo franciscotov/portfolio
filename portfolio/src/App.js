@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Portfolio from "@/components/Portfolio";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Navbar from "@/components/Navbar";
@@ -34,7 +34,7 @@ function App() {
           <About />
           <Images />
           <Experience />
-          <Portfolio />
+          <Projects />
           <Skills />
           <Contact />
           <Footer />
