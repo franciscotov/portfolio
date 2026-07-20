@@ -1,6 +1,6 @@
 @import "../../sassVariables/variables.scss";
 
-.containerDownload {
+.containerResume {
   padding-top: 1rem;
   text-align: start;
   letter-spacing: 0.08em;
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: (map-get($breakpoints, medium))) {
-  .containerDownload {
+  .containerResume {
     a {
       color: #ffffff;
     }
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: (map-get($breakpoints, medium))) {
-  .containerDownload {
+  .containerResume {
     text-align: center;
     background: transparent;
   }

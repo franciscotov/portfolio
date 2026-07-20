@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Photo from "@/components/Photo";
 import { useTranslation } from "react-i18next";
 import { translationKeys, translationModulesKeys } from "@/Int/constants";
 
@@ -10,7 +9,6 @@ const Home = () => {
 
   return (
     <section className={styles.container} id="Home">
-      <Photo />
       <div className={styles.containerGrap}>
         <div className={styles.containerTitle}>
           <p className={styles.title}>

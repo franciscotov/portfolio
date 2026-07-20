@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { GrLinkedinOption } from "react-icons/gr";
-import { FaGithub, FaFreeCodeCamp, FaLaptop } from "react-icons/fa";
+import { FaGithub, FaLaptop } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { translationKeys, translationModulesKeys } from "@/Int/constants";
 import { socialMediaUrls } from "@/components/common/constants";
@@ -21,15 +21,6 @@ const Footer = () => {
         <div className={styles.icon}>
           <a href={socialMediaUrls.github} target="_blank" rel="noreferrer">
             <FaGithub className={styles.size} />
-          </a>
-        </div>
-        <div className={styles.icon}>
-          <a
-            href={socialMediaUrls.freeCodeCamp}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaFreeCodeCamp className={styles.size} />
           </a>
         </div>
         <div className={styles.icon}>

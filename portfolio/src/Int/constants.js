@@ -27,9 +27,9 @@ export const translationKeys = {
     success: 'alert.success',
     error: 'alert.error',
   },
-  download: {
-    fileName: 'download.fileName',
-    description: 'download.description',
+  resume: {
+    fileURL: 'resume.fileURL',
+    description: 'resume.description',
   },
   experience: {
     title: 'experience.title',

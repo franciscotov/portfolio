@@ -1,11 +1,11 @@
 @import "../../sassVariables/variables.scss";
 .container {
   width: min(100%, 1200px);
-  margin: 0 auto;
+  margin: $height-navbar auto;
   height: fit-content;
   padding: 2rem 1.25rem 4rem;
   display: grid;
-  grid-template-columns: minmax(18rem, 0.95fr) minmax(20rem, 1.05fr);
+  grid-template-columns: 0.3fr 1fr;
   gap: clamp(1.25rem, 4vw, 3rem);
   align-items: center;
   position: relative;

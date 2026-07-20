@@ -4,14 +4,11 @@ import Home from "@/components/Home";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles.module.scss";
 import Footer from "@/components/Footer";
 import "@/config/i18n";
 import { InfinitySpin } from "react-loader-spinner";
-import Images from "@/components/Images";
 
 function App() {
   return (
@@ -32,10 +29,7 @@ function App() {
           <Navbar />
           <Home />
           <About />
-          <Images />
-          <Experience />
           <Projects />
-          <Skills />
           <Contact />
           <Footer />
         </div>

@@ -17,8 +17,8 @@
     "homeDescription": " especializado en Javascript, he realizado proyectos desde cero usando NodeJS como tecnología de backend y ReactJS como tecnología para el frontend."
   },
   "download": {
-    "fileName": "CV_Francisco_Tovar",
-    "description": "Descargar CV"
+    "fileURL": "https://drive.google.com/file/d/1IgkPc3sqK_eggjM0fbyyiCyR64lUFagu/view?usp=sharing",
+    "description": "Ver CV"
   },
   "images": {
     "development": "desarrollo",
