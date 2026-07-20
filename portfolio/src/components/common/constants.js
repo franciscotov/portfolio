@@ -1,10 +1,8 @@
 export const sectionKeys = {
   home: "Home",
   about: "About",
-  skills: "Skills",
-  experience: "Experience",
   contact: "Contact",
-  porfolio: "Portfolio",
+  projects: "Projects",
 };
 
 export const languagesKeys = {
