@@ -1,5 +1,8 @@
 @import "../../sassVariables/variables.scss";
+@import "../../sassVariables/mixins";
+
 .container {
+  @include porfolio-background;
   width: min(100%, 1200px);
   margin: $height-navbar auto;
   height: fit-content;

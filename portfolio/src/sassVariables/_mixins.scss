@@ -1,0 +1,5 @@
+@mixin porfolio-background {
+  background:
+    radial-gradient(circle at top left, rgba(15, 107, 255, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(18, 196, 139, 0.12), transparent 26%);
+}
