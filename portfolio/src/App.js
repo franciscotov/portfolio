@@ -1,5 +1,4 @@
-import "./App.css";
-import { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -11,19 +10,30 @@ import "@/config/i18n";
 import { InfinitySpin } from "react-loader-spinner";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className={styles.containerLoading}>
+        <InfinitySpin
+          visible={true}
+          width="200"
+          color="#00486B"
+          ariaLabel="infinity-spin-loading"
+        />
+      </div>
+    );
+  }
   return (
-    <Suspense
-      fallback={
-        <div className={styles.containerLoading}>
-          <InfinitySpin
-            visible={true}
-            width="200"
-            color="#00486B"
-            ariaLabel="infinity-spin-loading"
-          />
-        </div>
-      }
-    >
+    <Suspense fallback={null}>
       <main>
         <div className={styles.App}>
           <Navbar />

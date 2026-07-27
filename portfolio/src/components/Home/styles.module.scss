@@ -150,9 +150,6 @@
 }
 
 @media (min-width: (map-get($breakpoints, large))) {
-  body {
-    background-color: transparent;
-  }
   .container {
     width: min(100%, 1200px);
     display: grid;
