@@ -20,30 +20,30 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return (
-      <div className={styles.containerLoading}>
-        <InfinitySpin
-          visible={true}
-          width="200"
-          color="#00486B"
-          ariaLabel="infinity-spin-loading"
-        />
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className={styles.containerLoading}>
+  //       <InfinitySpin
+  //         visible={true}
+  //         width="200"
+  //         color="#00486B"
+  //         ariaLabel="infinity-spin-loading"
+  //       />
+  //     </div>
+  //   );
+  // }
   return (
     <Suspense fallback={null}>
-      <main>
-        <div className={styles.App}>
+      {/* <main> */}
+        <div className={styles.app}>
           <Navbar />
-          <Home />
-          <About />
-          <Projects />
-          <Contact />
-          <Footer />
+          {/* <Home /> */}
+          {/* <About /> */}
+          {/* <Projects /> */}
+          {/* <Contact /> */}
+          {/* <Footer /> */}
         </div>
-      </main>
+      {/* </main> */}
     </Suspense>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { GrLinkedinOption } from "react-icons/gr";
+import { FaRegWindowClose } from "react-icons/fa";
 import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
 import { RiMenuFoldFill } from "react-icons/ri";
 import personalData from "@/personalData.js";
@@ -49,6 +50,20 @@ const Navbar = () => {
           }`.toLocaleUpperCase()}
         </p>
       </div>
+      <div className={styles.menuLink}>
+        link
+        {/* <span
+          className={`${styles.menuText} ${active ? styles.menuActive : ""}`}
+          aria-hidden="false"
+        >
+          Close
+        </span>
+        <span
+          className={`${styles.menuText} ${active ? styles.menuActive : ""}`}
+        >
+          Menu
+        </span> */}
+      </div>
       <div className={styles.containerMenu}>
         <div className={styles.containerButton}>
           <button
@@ -57,16 +72,10 @@ const Navbar = () => {
             aria-expanded={active ? "true" : "false"}
             aria-disabled={active ? "true" : "false"}
           >
-            <span className={styles.titlewrapper}>
-              {!active ? (
-                <RiMenuFoldFill className={styles.minus} />
-              ) : (
-                <span className={styles.plus}> </span>
-              )}
-            </span>
+            <RiMenuFoldFill className={`${styles.menuIcon} `} />
           </button>
         </div>
-        <div
+        {/* <div
           className={
             active
               ? `${styles.containerAcor} ${styles.open}`
@@ -110,7 +119,7 @@ const Navbar = () => {
               })}
             </ul>
           </nav>
-        </div>
+        </div> */}
       </div>
     </div>
   );
