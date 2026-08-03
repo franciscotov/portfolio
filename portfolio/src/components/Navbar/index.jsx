@@ -43,15 +43,16 @@ const Navbar = () => {
 
   return (
     <div className={styles.nav}>
-      <div className={styles.containerName}>
-        <p>
-          {`${
-            personalData[0].firstName + " " + personalData[0].lastName
-          }`.toLocaleUpperCase()}
-        </p>
-      </div>
-      <div className={styles.menuLink}>
-        link
+      <a className={styles.containerContact}>
+        Hire Me
+      </a>
+      <div className={styles.menu}>
+        <button className={styles.menuButton} onClick={(e) => eventHandler(e)}>
+          <span className={styles.menuMask}>
+            <span className={`${styles.menuLabel} ${active ? '': styles.menuLabelClose}`}>Close</span>
+            <span className={`${styles.menuLabel} ${active ? '': styles.menuLabelOpen}`}>Menu</span>
+          </span>
+        </button>
         {/* <span
           className={`${styles.menuText} ${active ? styles.menuActive : ""}`}
           aria-hidden="false"

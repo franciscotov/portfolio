@@ -35,14 +35,12 @@ function App() {
   return (
     <Suspense fallback={null}>
       {/* <main> */}
-        <div className={styles.app}>
           <Navbar />
           {/* <Home /> */}
           {/* <About /> */}
           {/* <Projects /> */}
           {/* <Contact /> */}
           {/* <Footer /> */}
-        </div>
       {/* </main> */}
     </Suspense>
   );
