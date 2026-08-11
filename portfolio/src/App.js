@@ -3,6 +3,7 @@ import Home from "@/components/Home";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
+import Maintenance from "@/components/Maintenance";
 import Navbar from "@/components/Navbar";
 import styles from "@/styles.module.scss";
 import Footer from "@/components/Footer";
@@ -35,18 +36,7 @@ function App() {
   // }
 
   if (maintenenceMode) {
-    return (
-      <main className={styles.containerMaintenance}>
-        <section className={styles.maintenanceCard}>
-          <h1>Portfolio in maintenance</h1>
-          <p>
-            Thanks for visiting. This professional profile is currently being
-            updated to share new projects and improvements.
-          </p>
-          <p>Please check back soon.</p>
-        </section>
-      </main>
-    );
+    return <Maintenance />;
   }
   return (
     <Suspense fallback={null}>
