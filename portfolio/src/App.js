@@ -11,6 +11,7 @@ import { InfinitySpin } from "react-loader-spinner";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const maintenenceMode = true;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,15 +33,30 @@ function App() {
   //     </div>
   //   );
   // }
+
+  if (maintenenceMode) {
+    return (
+      <main className={styles.containerMaintenance}>
+        <section className={styles.maintenanceCard}>
+          <h1>Portfolio in maintenance</h1>
+          <p>
+            Thanks for visiting. This professional profile is currently being
+            updated to share new projects and improvements.
+          </p>
+          <p>Please check back soon.</p>
+        </section>
+      </main>
+    );
+  }
   return (
     <Suspense fallback={null}>
       {/* <main> */}
-          <Navbar />
-          {/* <Home /> */}
-          {/* <About /> */}
-          {/* <Projects /> */}
-          {/* <Contact /> */}
-          {/* <Footer /> */}
+      <Navbar />
+      {/* <Home /> */}
+      {/* <About /> */}
+      {/* <Projects /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
       {/* </main> */}
     </Suspense>
   );

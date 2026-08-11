@@ -1,4 +1,5 @@
 @import "./sassVariables/mixins.scss";
+@import "./sassVariables/variables.scss";
 
 .app {
   width: min(100%, 1440px);
@@ -25,6 +26,18 @@
   }
 }
 
+@keyframes slideIn {
+  0% {
+    opacity: 1;
+    transform: translateY(100%);
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 .containerLoading {
   display: flex;
   justify-content: center;
@@ -39,6 +52,47 @@
   animation: slideInStayAndExit 2s ease-in-out forwards;
   position: fixed;
   overflow: hidden;
+}
+
+.containerMaintenance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #aadcec;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: slideIn 2s ease-in-out forwards;
+  position: fixed;
+  overflow: hidden;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.maintenanceCard {
+  max-width: 680px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+
+  h1 {
+    margin: 0 0 0.8rem;
+    color: #00486b;
+    font-family: $font-family-secondary;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    color: #0f172a;
+    font-family: $font-family-secondary;
+    line-height: 1.5;
+  }
 }
 
 body {
