@@ -1,5 +1,4 @@
-@import "./sassVariables/mixins.scss";
-@import "./sassVariables/variables.scss";
+@use "./sassVariables/variables.scss" as vars;
 
 .app {
   width: min(100%, 1440px);
@@ -43,7 +42,7 @@
 }
 
 body {
-  @include porfolio-background;
+  // @include porfolio-background;
   margin: 0;
   font-family: 'Inter', sans-serif;
   min-height: calc(100vh - 40px);

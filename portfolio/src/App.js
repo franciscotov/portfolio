@@ -1,7 +1,6 @@
 import React, { Suspense, useState, useEffect } from "react";
 import Home from "@/components/Home";
 import About from "@/components/About";
-import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Maintenance from "@/components/Maintenance";
 import Navbar from "@/components/Navbar";

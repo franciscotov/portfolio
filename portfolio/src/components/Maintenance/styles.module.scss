@@ -1,4 +1,4 @@
-@import "../../sassVariables/variables.scss";
+@use "../../sassVariables/variables.scss" as vars;
 
 @keyframes slideIn {
   0% {
@@ -42,13 +42,13 @@
   h1 {
     margin: 0 0 0.8rem;
     color: #00486b;
-    font-family: $font-family-secondary;
+    font-family: vars.$font-family-secondary;
   }
 
   p {
     margin: 0.5rem 0;
     color: #0f172a;
-    font-family: $font-family-secondary;
+    font-family: vars.$font-family-secondary;
     line-height: 1.5;
   }
 }

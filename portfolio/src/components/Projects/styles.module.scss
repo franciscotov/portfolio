@@ -1,5 +1,6 @@
-@import "../../sassVariables/variables.scss";
-@import "../../sassVariables/mixins.scss";
+@use "sass:map";
+@use "../../sassVariables/variables.scss" as vars;
+// @use "../../sassVariables/mixins.scss" as mixins;
 
 .container {
   width: min(100%, 1200px);
@@ -21,7 +22,7 @@
       padding: 0.45rem 0.75rem;
       border-radius: 999px;
       background: rgba(15, 27, 45, 0.08);
-      color: $primary-color;
+      color: vars.$primary-color;
       font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -54,7 +55,7 @@
     gap: 1rem;
     align-items: stretch;
     padding: 1rem;
-    border: 1px solid $brand-border;
+    border: 1px solid vars.$brand-border;
     border-radius: 1.5rem;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.72));
     box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
@@ -98,7 +99,7 @@
     padding: 0.4rem 0.7rem;
     border-radius: 999px;
     background: rgba(15, 107, 255, 0.1);
-    color: $primary-color;
+    color: vars.$primary-color;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -154,8 +155,8 @@
   }
 
   .primaryAction {
-    background: linear-gradient(135deg, $primary-color, $secondary);
-    color: $white;
+    background: linear-gradient(135deg, vars.$primary-color, vars.$secondary);
+    color: vars.$white;
     box-shadow: 0 12px 28px rgba(15, 107, 255, 0.24);
   }
 
@@ -176,7 +177,7 @@
     border-radius: 1.2rem;
     background:
       linear-gradient(135deg, rgba(15, 107, 255, 0.92), rgba(18, 196, 139, 0.86)),
-      $brand-surface;
+      vars.$brand-surface;
     overflow: hidden;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
@@ -192,7 +193,7 @@
   .mediaAsset {
     object-fit: cover;
     display: block;
-    background: $brand-surface;
+    background: vars.$brand-surface;
   }
 
   .panel {
@@ -203,7 +204,7 @@
     background:
       radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 36%),
       linear-gradient(180deg, rgba(7, 17, 31, 0.08), rgba(7, 17, 31, 0.34));
-    color: $white;
+    color: vars.$white;
 
     span {
       width: fit-content;
@@ -231,78 +232,78 @@
 }
 
 
-@media (max-width: (map-get($breakpoints, small ))) {
-  .container {
-    padding: 3rem 1rem 4rem;
-  }
+// @media (max-width: (map-get(vars.$breakpoints, small ))) {
+//   .container {
+//     padding: 3rem 1rem 4rem;
+//   }
 
-  .card {
-    grid-template-columns: 1fr;
-  }
+//   .card {
+//     grid-template-columns: 1fr;
+//   }
 
-  .cardReverse {
-    .content,
-    .media {
-      order: initial;
-    }
-  }
+//   .cardReverse {
+//     .content,
+//     .media {
+//       order: initial;
+//     }
+//   }
 
-  .media,
-  .mediaAsset,
-  .panel {
-    min-height: 17rem;
-  }
-}
+//   .media,
+//   .mediaAsset,
+//   .panel {
+//     min-height: 17rem;
+//   }
+// }
 
 
 
-@media (min-width: (map-get($breakpoints, small ))) and (max-width: (map-get($breakpoints, medium ))-1) {
-  .container {
-    padding-bottom: 1rem;
-  }
+// @media (min-width: (map-get(vars.$breakpoints, small ))) and (max-width: (map-get(vars.$breakpoints, medium ))-1) {
+//   .container {
+//     padding-bottom: 1rem;
+//   }
 
-  .card {
-    grid-template-columns: 1fr;
-  }
+//   .card {
+//     grid-template-columns: 1fr;
+//   }
 
-  .media,
-  .mediaAsset,
-  .panel {
-    min-height: 19rem;
-  }
-}
+//   .media,
+//   .mediaAsset,
+//   .panel {
+//     min-height: 19rem;
+//   }
+// }
 
-@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large)) - 1) {
-  .container {
-    width: min(100%, 1200px);
-    padding-bottom: 3rem;
-  }
+// @media (min-width: (map-get(vars.$breakpoints, medium))) and (max-width: (map-get(vars.$breakpoints, large)) - 1) {
+//   .container {
+//     width: min(100%, 1200px);
+//     padding-bottom: 3rem;
+//   }
 
-  .card {
-    grid-template-columns: 1fr;
-  }
+//   .card {
+//     grid-template-columns: 1fr;
+//   }
 
-  .media,
-  .mediaAsset,
-  .panel {
-    min-height: 22rem;
-  }
-}
+//   .media,
+//   .mediaAsset,
+//   .panel {
+//     min-height: 22rem;
+//   }
+// }
 
-@media (min-width: (map-get($breakpoints, large))) {
-  .container {
-    padding-left: $padding-base-large;
-    padding-right: $padding-base-large;
-  }
+// @media (min-width: (map-get(vars.$breakpoints, large))) {
+//   .container {
+//     padding-left: vars.$padding-base-large;
+//     padding-right: vars.$padding-base-large;
+//   }
 
-  .card {
-    grid-template-columns: 1fr 0.96fr;
-    padding: 1.25rem;
-  }
+//   .card {
+//     grid-template-columns: 1fr 0.96fr;
+//     padding: 1.25rem;
+//   }
 
-  .media,
-  .mediaAsset,
-  .panel {
-    min-height: 24rem;
-  }
-}
+//   .media,
+//   .mediaAsset,
+//   .panel {
+//     min-height: 24rem;
+//   }
+// }

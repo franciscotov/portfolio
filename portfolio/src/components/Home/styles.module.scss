@@ -1,10 +1,11 @@
-@import "../../sassVariables/variables.scss";
-@import "../../sassVariables/mixins";
+@use "sass:map";
+@use "../../sassVariables/variables.scss" as vars;
+// @use "../../sassVariables/mixins";
 
 .container {
-  @include porfolio-background;
+  // @include porfolio-background;
   width: min(100%, 1200px);
-  margin: $height-navbar auto;
+  margin: vars.$height-navbar auto;
   height: fit-content;
   padding: 2rem 1.25rem 4rem;
   display: grid;
@@ -34,7 +35,7 @@
   }
 
   p.title {
-    font-family: $font-family-secondary;
+    font-family: vars.$font-family-secondary;
     max-width: fit-content;
     margin: 0;
   }
@@ -71,104 +72,104 @@
 }
 
 
-@media (max-width: (map-get($breakpoints, small))-1) {
-  .container {
-    width: min(100%, 1200px);
-    grid-template-columns: 1fr;
-    padding: 1rem 1rem 3.5rem;
+// @media (max-width: (map-get(vars.$breakpoints, small))-1) {
+//   .container {
+//     width: min(100%, 1200px);
+//     grid-template-columns: 1fr;
+//     padding: 1rem 1rem 3.5rem;
 
-    &::before {
-      inset: 0.75rem 0.5rem auto;
-      height: calc(100% - 1.5rem);
-    }
-  }
+//     &::before {
+//       inset: 0.75rem 0.5rem auto;
+//       height: calc(100% - 1.5rem);
+//     }
+//   }
 
-  .containerTitle {
-    margin: 1rem 0;
-  }
+//   .containerTitle {
+//     margin: 1rem 0;
+//   }
 
-  .containerTitle {
-    p {
-      line-height: $p-title-small;
-      font-size: $p-title-mobile - 0.8rem;
-    }
-  }
+//   .containerTitle {
+//     p {
+//       line-height: vars.$p-title-small;
+//       font-size: vars.$p-title-mobile - 0.8rem;
+//     }
+//   }
 
-  .containerTitle p {
-    white-space: wrap;
-  }
+//   .containerTitle p {
+//     white-space: wrap;
+//   }
 
-  .containerGrap {
-    padding: 1.15rem;
-  }
-}
+//   .containerGrap {
+//     padding: 1.15rem;
+//   }
+// }
 
-@media (min-width: (map-get($breakpoints, small))-1) and (max-width: (map-get($breakpoints, medium))-1) {
-  .container {
-    width: min(100%, 1200px);
-    grid-template-columns: 1fr;
-    padding: 1rem 1rem 3.5rem;
+// @media (min-width: (map-get(vars.$breakpoints, small))-1) and (max-width: (map-get(vars.$breakpoints, medium))-1) {
+//   .container {
+//     width: min(100%, 1200px);
+//     grid-template-columns: 1fr;
+//     padding: 1rem 1rem 3.5rem;
 
-    .containerDescription {
-      width: 90vw;
-      span {
-        font-size: $font-size-home-span;
-      }
-    }
-  }
+//     .containerDescription {
+//       width: 90vw;
+//       span {
+//         font-size: vars.$font-size-home-span;
+//       }
+//     }
+//   }
 
-  .containerTitle {
-    p {
-      line-height: $p-title-mobile + 0.5rem;
-      font-size: $p-title-mobile;
-    }
-  }
-}
+//   .containerTitle {
+//     p {
+//       line-height: vars.$p-title-mobile + 0.5rem;
+//       font-size: vars.$p-title-mobile;
+//     }
+//   }
+// }
 
-@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
-  .container {
-    width: $width-min-medium;
-    display: flex;
-    padding-left: $padding-base-medium;
-  }
+// @media (min-width: (map-get(vars.$breakpoints, medium))) and (max-width: (map-get(vars.$breakpoints, large))-1) {
+//   .container {
+//     width: vars.$width-min-medium;
+//     display: flex;
+//     padding-left: vars.$padding-base-medium;
+//   }
 
-  .containerTitle {
-    p {
-      line-height: $p-title-large + 0.5rem;
-      font-size: $p-title-large;
-    }
-  }
+//   .containerTitle {
+//     p {
+//       line-height: vars.$p-title-large + 0.5rem;
+//       font-size: vars.$p-title-large;
+//     }
+//   }
 
-  .containerDescription {
-    width: 100%;
-    max-width: $max-width-container-description-large;
-    span {
-      font-size: $font-size-home-span;
-      line-height: 1.3rem;
-    }
-  }
-}
+//   .containerDescription {
+//     width: 100%;
+//     max-width: vars.$max-width-container-description-large;
+//     span {
+//       font-size: vars.$font-size-home-span;
+//       line-height: 1.3rem;
+//     }
+//   }
+// }
 
-@media (min-width: (map-get($breakpoints, large))) {
-  .container {
-    width: min(100%, 1200px);
-    display: grid;
-    padding-left: $padding-base-large;
-  }
-  .containerTitle {
-    p {
-      line-height: $p-title-large + 0.8rem;
-      font-size: $p-title-large;
-    }
-  }
+// @media (min-width: (map-get(vars.$breakpoints, large))) {
+//   .container {
+//     width: min(100%, 1200px);
+//     display: grid;
+//     padding-left: vars.$padding-base-large;
+//   }
+//   .containerTitle {
+//     p {
+//       line-height: vars.$p-title-large + 0.8rem;
+//       font-size: vars.$p-title-large;
+//     }
+//   }
 
-  .containerDescription {
-    width: 100%;
-    max-width: $max-width-container-description-large;
+//   .containerDescription {
+//     width: 100%;
+//     max-width: vars.$max-width-container-description-large;
 
-    span {
-      font-size: $font-size-home-span;
-      line-height: 1.3rem;
-    }
-  }
-}
+//     span {
+//       font-size: vars.$font-size-home-span;
+//       line-height: 1.3rem;
+//     }
+//   }
+// }
