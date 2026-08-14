@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: (map-get($breakpoints, medium))) {
+@media (max-width: (map.get($breakpoints, medium))) {
   .containerResume {
     a {
       color: #ffffff;
@@ -31,7 +31,7 @@
   }
 }
 
-@media (min-width: (map-get($breakpoints, medium))) {
+@media (min-width: (map.get($breakpoints, medium))) {
   .containerResume {
     text-align: center;
     background: transparent;

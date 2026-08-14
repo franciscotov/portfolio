@@ -292,7 +292,7 @@
 //   }
 // }
 
-// @media (max-width: (map-get(vars.$breakpoints, medium))) {
+// @media (max-width: (map.get(vars.$breakpoints, medium))) {
 
 //   .containerMenu {
 //     max-width: 65px;

@@ -42,7 +42,7 @@
   color: rgba(15, 23, 42, 0.7);
 }
 
-@media (max-width: (map-get($breakpoints, small ))-1) {
+@media (max-width: (map.get($breakpoints, small ))-1) {
   .containerImages {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -52,7 +52,7 @@
   }
 }
 
-@media (min-width: (map-get($breakpoints, small))) and (max-width: (map-get($breakpoints, medium))-1) {
+@media (min-width: (map.get($breakpoints, small))) and (max-width: (map.get($breakpoints, medium))-1) {
   .containerImages {
     width: min(100%, 1200px);
     margin: auto;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (min-width: (map-get($breakpoints, medium))) and (max-width: (map-get($breakpoints, large))-1) {
+@media (min-width: (map.get($breakpoints, medium))) and (max-width: (map.get($breakpoints, large))-1) {
   .containerImages {
     width: min(100%, 1200px);
     padding-bottom: 2rem;
@@ -87,7 +87,7 @@
   }
 }
 
-@media (min-width: (map-get($breakpoints, large))) {
+@media (min-width: (map.get($breakpoints, large))) {
   .containerImages {
     width: min(100%, 1200px);
     height: 100%;
