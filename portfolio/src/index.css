@@ -1,13 +1,13 @@
 
-html::before {
+html:before {
   left: 0px;
 }
 
-html::after {
+html:after {
   right: 0px;
 }
 
-html::after, html::before {
+html:after, html:before {
   content: "";
   backface-visibility: hidden;
   position: fixed;
@@ -18,15 +18,15 @@ html::after, html::before {
   background: rgb(255, 255, 255);
 }
 
-body::before {
+body:before {
   top: 0px;
 }
 
-body::after {
+body:after {
   bottom: 0px;
 }
 
-body::after, body::before {
+body:after, body:before {
   content: "";
   backface-visibility: hidden;
   position: fixed;

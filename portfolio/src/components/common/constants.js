@@ -1,5 +1,6 @@
 export const sectionKeys = {
   home: "Home",
+  work: "Work",
   about: "About",
   contact: "Contact",
   projects: "Projects",

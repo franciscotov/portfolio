@@ -20,7 +20,7 @@ const Projects = () => {
     : "Selección de proyectos con foco en UX, integraciones y una ejecución visual más cuidada.";
 
   return (
-    <section className={styles.container} id="Portfolio">
+    <section className={styles.container} id="Work">
       <div className={styles.header}>
         <span className={styles.kicker}>Portfolio</span>
         <h1>{t(porfolio.title)}</h1>

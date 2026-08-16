@@ -1,8 +1,40 @@
 @use "./sassVariables/variables.scss" as vars;
 
-.app {
-  width: min(100%, 1440px);
+.appShell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef5ff 0%, #edf7f4 100%);
+  color: #0f172a;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+.appShell.home {
+  background:
+    radial-gradient(circle at top left, rgba(57, 120, 255, 0.18), transparent 32%),
+    linear-gradient(135deg, #eef5ff 0%, #edf7f4 100%);
+}
+
+.appShell.work {
+  background:
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.18), transparent 28%),
+    linear-gradient(135deg, #f8fbff 0%, #edf7f4 100%);
+}
+
+.appShell.about {
+  background:
+    radial-gradient(circle at bottom left, rgba(251, 146, 60, 0.18), transparent 26%),
+    linear-gradient(135deg, #f9f7f4 0%, #f2f7fb 100%);
+}
+
+.pageContent {
   position: relative;
+  z-index: 1;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 7rem 1.5rem 2rem;
+}
+
+.pageContent > section {
+  scroll-margin-top: 7rem;
 }
 
 .animate-on-appear {
@@ -42,10 +74,18 @@
 }
 
 body {
-  // @include porfolio-background;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  min-height: calc(100vh - 40px);
+  min-height: 100vh;
+  background: #eef2f7;
   position: relative;
-  padding: 20px;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }

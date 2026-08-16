@@ -1,128 +1,169 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 import { GrLinkedinOption } from "react-icons/gr";
-import { FaRegWindowClose } from "react-icons/fa";
 import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
-import { RiMenuFoldFill } from "react-icons/ri";
-import personalData from "@/personalData.js";
-import Language from "@/components/Language";
-import { sectionKeys } from "@/components/common/constants";
+import { socialMediaUrls } from "@/components/common/constants";
 
-const icon = (ic) => {
-  return () => ic;
-};
+const sections = [
+  { name: "Home", href: "Home" },
+  { name: "Work", href: "Work" },
+  { name: "About", href: "About" },
+];
 
-const Navbar = () => {
-  let sections = Object.values(sectionKeys),
-    redes = [
-      {
-        name: icon(<GrLinkedinOption className={styles.icon} />),
-        link: "https://www.linkedin.com/in/franciscotov/",
-      },
-      {
-        name: icon(<FaGithub className={styles.icon} />),
-        link: "https://github.com/franciscotov",
-      },
-      {
-        name: icon(<FaFreeCodeCamp className={styles.icon} />),
-        link: "https://www.freecodecamp.org/franciscotov",
-      },
-    ];
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: socialMediaUrls.linkedin,
+    icon: <GrLinkedinOption className={styles.icon} />,
+  },
+  {
+    label: "GitHub",
+    href: socialMediaUrls.github,
+    icon: <FaGithub className={styles.icon} />,
+  },
+  {
+    label: "FreeCodeCamp",
+    href: socialMediaUrls.leetcode,
+    icon: <FaFreeCodeCamp className={styles.icon} />,
+  },
+];
 
-  const [active, setActive] = useState(false);
-
-  const eventHandler = (e) => {
-    e.preventDefault();
-    active ? setActive(false) : setActive(true);
-  };
-  const handlerMenuSelected = (e, name) => {
-    e.preventDefault();
-    window.location.href = window.location.origin + `/#${name}`;
-    setActive(false);
-  };
-
-  return (
-    <div className={styles.nav}>
-      <a className={styles.containerContact}>
-        Hire Me
-      </a>
-      <div className={styles.menu}>
-        <button className={styles.menuButton} onClick={(e) => eventHandler(e)}>
-          <span className={styles.menuMask}>
-            <span className={`${styles.menuLabel} ${active ? '': styles.menuLabelClose}`}>Close</span>
-            <span className={`${styles.menuLabel} ${active ? '': styles.menuLabelOpen}`}>Menu</span>
-          </span>
-        </button>
-        {/* <span
-          className={`${styles.menuText} ${active ? styles.menuActive : ""}`}
-          aria-hidden="false"
+const Navbar = ({ activeSection, menuOpen, onToggleMenu, onSelectSection }) => {
+  const all = false;
+  if (all) {
+    return (
+      <div className={styles.nav}>
+        <a
+          className={styles.containerContact}
+          href="mailto:francisco.ronaldo.tovar@gmail.com"
         >
-          Close
-        </span>
-        <span
-          className={`${styles.menuText} ${active ? styles.menuActive : ""}`}
-        >
-          Menu
-        </span> */}
-      </div>
-      <div className={styles.containerMenu}>
-        <div className={styles.containerButton}>
+          Hire Me
+        </a>
+        <div className={styles.menu}>
           <button
+            className={styles.menuButton}
             onClick={(e) => eventHandler(e)}
-            className={active ? `${styles.active}` : `${styles.inactive}`}
-            aria-expanded={active ? "true" : "false"}
-            aria-disabled={active ? "true" : "false"}
           >
-            <RiMenuFoldFill className={`${styles.menuIcon} `} />
+            <span className={styles.menuMask}>
+              <span
+                className={`${styles.menuLabel} ${active ? "" : styles.menuLabelClose}`}
+              >
+                Close
+              </span>
+              <span
+                className={`${styles.menuLabel} ${active ? "" : styles.menuLabelOpen}`}
+              >
+                Menu
+              </span>
+            </span>
           </button>
         </div>
-        {/* <div
-          className={
-            active
-              ? `${styles.containerAcor} ${styles.open}`
-              : styles.containerAcor
-          }
-        >
-          <div>
-            <Language />
-          </div>
-          {redes.map((ele, i) => {
-            return (
-              <div className={styles.red} key={`redes-${i}`}>
-                <a href={ele.link} target="_blank" rel="noreferrer">
-                  {ele.name()}
-                </a>
-              </div>
-            );
-          })}
+        <div className={styles.containerLogo}>
+          <a href="/">
+            <span className={styles.logo}>Logo</span>
+          </a>
         </div>
-        <div
-          className={
-            active
-              ? `${styles.menuHolderActive} ${styles.menuHolder}`
-              : `${styles.menuHolder}`
-          }
+      </div>
+    );
+  }
+  return (
+    <header className={styles.navbarShell}>
+      <a
+        className={styles.containerContact}
+        href="mailto:francisco.ronaldo.tovar@gmail.com"
+      >
+        Hire Me
+      </a>
+
+      <div className={styles.menu}>
+        <button
+          type="button"
+          className={styles.menuButton}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close menu" : "Menu"}
+          onClick={onToggleMenu}
         >
-          <nav className={styles.headerMenu}>
-            <ul className={styles.menu1}>
-              {sections.map((ele, i) => {
+          <span className={styles.menuMask}>
+            <span
+              className={`${styles.menuLabel} ${menuOpen ? "" : styles.menuLabelOpen}`}
+            >
+              Menu
+            </span>
+            <span
+              className={`${styles.menuLabel} ${menuOpen ? styles.menuCloseActive : styles.menuLabelClose}`}
+            >
+              Close
+            </span>
+          </span>
+        </button>
+      </div>
+      <div className={styles.containerLogo}>
+        <a
+          href="/"
+          aria-label="Go to the home section"
+          className={styles.logoLink}
+        >
+          <span
+            className={`${styles.logo} ${menuOpen ? styles.logoActive : ""}`}
+          >
+            FT
+          </span>
+        </a>
+      </div>
+
+      <div
+        className={`${styles.menuOverlay} ${menuOpen ? styles.menuOverlayOpen : ""}`}
+      >
+        <div className={styles.menuPanel}>
+          <div className={styles.menuInfo}>
+            <span className={styles.menuEyebrow}>Navigation</span>
+            <h2>Francisco Tovar</h2>
+            <p>Full-Stack Engineer</p>
+
+            <div className={styles.socialList}>
+              {socialLinks.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.socialLink}
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.menuContent}>
+            <span className={styles.menuLabelText}>Menu</span>
+            <nav className={styles.menuNav} aria-label="Main navigation">
+              {sections.map((section) => {
+                const isActive = activeSection === section.name;
+
                 return (
-                  <li className={styles.divSection} key={i}>
-                    <a
-                      href={ele}
-                      className={styles.a}
-                      onClick={(e) => handlerMenuSelected(e, ele)}
-                    >
-                      {ele}
-                    </a>
-                  </li>
+                  <a
+                    key={section.name}
+                    href={`#${section.href}`}
+                    className={`${styles.menuItem} ${isActive ? styles.menuItemActive : ""}`}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      onSelectSection(section.name);
+                    }}
+                  >
+                    <span
+                      className={styles.menuIndex}
+                    >{`0${sections.indexOf(section) + 1}`}</span>
+                    <span>{section.name}</span>
+                  </a>
                 );
               })}
-            </ul>
-          </nav>
-        </div> */}
+            </nav>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,52 +1,52 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState } from "react";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import Maintenance from "@/components/Maintenance";
 import Navbar from "@/components/Navbar";
-import styles from "@/styles.module.scss";
 import Footer from "@/components/Footer";
+import styles from "@/styles.module.scss";
 import "@/config/i18n";
-import { InfinitySpin } from "react-loader-spinner";
+
+const sectionThemeMap = {
+  Home: "home",
+  Work: "work",
+  About: "about",
+};
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  const maintenenceMode = true;
+  const [activeSection, setActiveSection] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  const handleSectionSelect = (sectionName) => {
+    setActiveSection(sectionName);
+    setMenuOpen(false);
 
-    return () => clearTimeout(timer);
-  }, []);
+    const element = document.getElementById(sectionName);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-  // if (loading) {
-  //   return (
-  //     <div className={styles.containerLoading}>
-  //       <InfinitySpin
-  //         visible={true}
-  //         width="200"
-  //         color="#00486B"
-  //         ariaLabel="infinity-spin-loading"
-  //       />
-  //     </div>
-  //   );
-  // }
-
-  if (maintenenceMode) {
-    return <Maintenance />;
-  }
   return (
     <Suspense fallback={null}>
-      {/* <main> */}
-      <Navbar />
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Projects /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
-      {/* </main> */}
+      <div
+        className={`${styles.appShell} ${styles[sectionThemeMap[activeSection] || "home"]}`}
+      >
+        <Navbar
+          activeSection={activeSection}
+          menuOpen={menuOpen}
+          onToggleMenu={() => setMenuOpen((previous) => !previous)}
+          onSelectSection={handleSectionSelect}
+        />
+
+        <main className={styles.pageContent}>
+          <Home />
+          <Projects />
+          <About />
+        </main>
+
+        <Footer />
+      </div>
     </Suspense>
   );
 }
