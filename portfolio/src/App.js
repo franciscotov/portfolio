@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Maintenance from "@/components/Maintenance";
 import styles from "@/styles.module.scss";
 import "@/config/i18n";
 
@@ -16,6 +17,7 @@ const sectionThemeMap = {
 function App() {
   const [activeSection, setActiveSection] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [maintenance, setMaintenance] = useState(true);
 
   const handleSectionSelect = (sectionName) => {
     setActiveSection(sectionName);
@@ -26,6 +28,10 @@ function App() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+  
+  if(maintenance) {
+    return <Maintenance />
+  }
 
   return (
     <Suspense fallback={null}>
