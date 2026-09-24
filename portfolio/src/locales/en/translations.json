@@ -10,11 +10,10 @@
     "secondDescription": "Currently, I have strong experience working on React, Java, and Node.js projects. I've built frontend applications from scratch using microfrontend architecture and have contributed to improving performance and security across several applications."
   },
   "home": {
-    "greeting": "Hello",
-    "a": "A ",
-    "description": "I'm ",
-    "secondDescription": "Fullstack Software Engineer",
-    "homeDescription": " specialized in Javascript, I have done some projects from scratch using NodeJS and Java as backend technologies and ReactJS as frontend technology."
+    "name": "Francisco Tovar",
+    "jobDescription": "Fullstack Software Engineer — Buenos Aires, Argentina",
+    "nowDescription": "Transforming ideas into scalable, production-ready applications.",
+    "secondNowDescription": "Currently I am improving my knowledge about System Design, AI agents, LLMs, and Cloud Programming while shipping side projects."
   },
   "download": {
     "fileURL": "https://drive.google.com/file/d/1IgkPc3sqK_eggjM0fbyyiCyR64lUFagu/view?usp=sharing",
@@ -57,6 +56,6 @@
     "error": "There was an error sending your email, please try again"
   },
   "footer": {
-    "develpedBy": "© 2026 Developed by Franciscotov"
+    "develpedBy": "© {{year}} Developed by Franciscotov"
   }
 }

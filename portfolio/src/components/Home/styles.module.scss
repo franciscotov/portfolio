@@ -1,74 +1,98 @@
 @use "sass:map";
 @use "../../sassVariables/variables.scss" as vars;
-// @use "../../sassVariables/mixins";
+
 
 .container {
-  // @include porfolio-background;
   width: min(100%, 1200px);
   margin: vars.$height-navbar auto;
   height: fit-content;
   padding: 2rem 1.25rem 4rem;
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;
-  gap: clamp(1.25rem, 4vw, 3rem);
+  display: flex;
+  gap: clamp(2rem, 7vw, 7rem);
   align-items: center;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    inset: 1.25rem 0.5rem auto;
-    height: calc(100% - 2.5rem);
-    border-radius: 2rem;
+    inset: 1rem 0.5rem auto;
+    height: calc(100% - 2rem);
+    border-radius: 1.5rem;
     background:
-      radial-gradient(circle at top left, rgba(15, 107, 255, 0.14), transparent 30%),
-      radial-gradient(circle at bottom right, rgba(18, 196, 139, 0.1), transparent 26%),
-      rgba(255, 255, 255, 0.56);
-    border: 1px solid rgba(148, 163, 184, 0.16);
+      radial-gradient(circle at 12% 15%, rgba(15, 107, 255, 0.12), transparent 30%),
+      radial-gradient(circle at 90% 85%, rgba(18, 196, 139, 0.1), transparent 28%),
+      rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(148, 163, 184, 0.18);
     box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
     z-index: 0;
   }
 
   p,
-  span {
-    color: #0f172a;
-  }
-
-  p.title {
-    font-family: vars.$font-family-secondary;
-    max-width: fit-content;
-    margin: 0;
+  span,
+  h1 {
+    color: vars.$ebony;
   }
 
   .containerTitle {
     width: 100%;
     text-align: start;
     margin: 0;
+    position: relative;
+    z-index: 1;
   }
 
-  .containerDescription {
-    text-align: start;
-    .span {
-      line-height: 1.9rem;
+  .jobDescription {
+    color: vars.$brand-primary;
+    font-family: vars.$font-family-primary;
+    font-size: clamp(0.75rem, 1.3vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    font-family: vars.$font-family-secondary;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 0.9;
+    margin: 0;
+
+    span:last-child {
+      color: vars.$brand-secondary;
     }
   }
 
-  .containerGrap {
-    position: relative;
-    z-index: 1;
-    padding: clamp(1.25rem, 3vw, 2.5rem);
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(148, 163, 184, 0.16);
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-    backdrop-filter: blur(14px);
-  }
-}
+  .containerDescription {
+    border-left: 2px solid vars.$brand-accent;
+    margin-top: clamp(2rem, 5vw, 4rem);
+    max-width: 42rem;
+    padding-left: clamp(1rem, 2vw, 1.5rem);
+    text-align: start;
 
-.containerTitle p {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 2s steps(30, end) forwards, blink 1s step-end infinite;
+    p {
+      margin: 0;
+    }
+  }
+
+  .nowDescription {
+    font-family: vars.$font-family-primary;
+    font-size: clamp(1.2rem, 2.3vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .secondNowDescription {
+    color: rgba(vars.$ebony, 0.7);
+    font-family: vars.$font-family-primary;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    margin-top: 1rem !important;
+  }
 }
 
 @media (max-width: (map.get(vars.$breakpoints, small))-1) {
@@ -87,19 +111,14 @@
     margin: 1rem 0;
   }
 
-  .containerTitle {
-    p {
-      line-height: vars.$p-title-small;
-      font-size: vars.$p-title-mobile - 0.8rem;
+  .container {
+    .title {
+      font-size: clamp(3.2rem, 17vw, 4.5rem);
     }
-  }
 
-  .containerTitle p {
-    white-space: wrap;
-  }
-
-  .containerGrap {
-    padding: 1.15rem;
+    .containerDescription {
+      margin-top: 2.5rem;
+    }
   }
 }
 
@@ -117,58 +136,23 @@
     }
   }
 
-  .containerTitle {
-    p {
-      line-height: vars.$p-title-mobile + 0.5rem;
-      font-size: vars.$p-title-mobile;
-    }
+  .container .title {
+    font-size: clamp(4rem, 12vw, 5.5rem);
   }
 }
 
 @media (min-width: (map.get(vars.$breakpoints, medium))) and (max-width: (map.get(vars.$breakpoints, large))-1) {
   .container {
     width: vars.$width-min-medium;
-    display: flex;
     padding-left: vars.$padding-base-medium;
   }
 
-  .containerTitle {
-    p {
-      line-height: vars.$p-title-large + 0.5rem;
-      font-size: vars.$p-title-large;
-    }
-  }
-
-  .containerDescription {
-    width: 100%;
-    max-width: vars.$max-width-container-description-large;
-    span {
-      font-size: vars.$font-size-home-span;
-      line-height: 1.3rem;
-    }
-  }
+  .container .containerDescription { width: 100%; }
 }
 
 @media (min-width: (map.get(vars.$breakpoints, large))) {
   .container {
     width: min(100%, 1200px);
-    display: grid;
     padding-left: vars.$padding-base-large;
-  }
-  .containerTitle {
-    p {
-      line-height: vars.$p-title-large + 0.8rem;
-      font-size: vars.$p-title-large;
-    }
-  }
-
-  .containerDescription {
-    width: 100%;
-    max-width: vars.$max-width-container-description-large;
-
-    span {
-      font-size: vars.$font-size-home-span;
-      line-height: 1.3rem;
-    }
   }
 }

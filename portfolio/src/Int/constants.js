@@ -38,11 +38,9 @@ export const translationKeys = {
     develpedBy: 'footer.develpedBy',
   },
   home: {
-    greeting: 'home.greeting',
-    description: 'home.description',
-    secondDescription: 'home.secondDescription',
-    homeDescription: 'home.homeDescription',
-    a: 'home.a',
+    jobDescription: 'home.jobDescription',
+    nowDescription: 'home.nowDescription',
+    secondNowDescription: 'home.secondNowDescription',
   },
   images: {
     development: 'images.development',

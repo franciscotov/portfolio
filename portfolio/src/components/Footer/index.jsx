@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.copyright}>
-        <span>{t(footer.develpedBy)}</span>
+        <span>{t(footer.develpedBy, {year: (new Date()).getFullYear()})}</span>
       </div>
     </div>
   );

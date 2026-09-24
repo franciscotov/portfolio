@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, useEffect, useRef } from "react";
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Maintenance from "@/components/Maintenance";
 import styles from "@/styles.module.scss";
 import "@/config/i18n";
+import CustomCursor from "./components/CustomCursor";
 
 const sectionThemeMap = {
   Home: "home",
@@ -28,7 +29,7 @@ function App() {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  
+
   if(maintenance) {
     return <Maintenance />
   }
@@ -46,13 +47,15 @@ function App() {
         />
 
         <main className={styles.pageContent}>
+          <div className={styles.section} > 
           <Home />
-          <Projects />
-          <About />
+          {/* <Projects /> */}
+          {/* <About /> */}
+          </div>
         </main>
-
-        <Footer />
       </div>
+      <Footer />
+      <CustomCursor />
     </Suspense>
   );
 }

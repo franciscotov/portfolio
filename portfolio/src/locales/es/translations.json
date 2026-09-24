@@ -10,11 +10,9 @@
     "secondDescription": "Decidí en mi tiempo libre estudiar MERN Stack(Mongo, ExpressJS, ReactJS, NodeJS) en la plataforma freecodecamp, luego adquirí mayor conocimiento en Henry, un bootcamp de alto nivel de exigencia en desarrollo web PERN stack (PostgresSQL, ExpressJS, ReactJS, NodeJS), en la cual desarrollé varios proyectos, entre ellos una aplicación para la visualización de países y una aplicación web e-commerce."
   },
   "home": {
-    "greeting": "Hola",
-    "a": "",
-    "description": "Soy ",
-    "secondDescription": "Fullstack Software Engineer",
-    "homeDescription": " especializado en Javascript, he realizado proyectos desde cero usando NodeJS como tecnología de backend y ReactJS como tecnología para el frontend."
+    "jobDescription": "Ingeniero de Software Fullstack — Buenos Aires, Argentina",
+    "nowDescription": "Transformo ideas en aplicaciones escalables listas para producción.",
+    "secondNowDescription": "Actualmente estoy ampliando mis conocimientos sobre Diseño de Sistemas, Agentes de IA, LLMs y Programación Cloud mientras desarrollo proyectos personales"
   },
   "download": {
     "fileURL": "https://drive.google.com/file/d/1IgkPc3sqK_eggjM0fbyyiCyR64lUFagu/view?usp=sharing",
@@ -57,6 +55,6 @@
     "error": "Hubo un error al enviar tu email, por favor intenta nuevamente"
   },
   "footer": {
-    "develpedBy": "© 2026 Desarrollado por Franciscotov"
+    "develpedBy": "© {{year}} Desarrollado por Franciscotov"
   }
 }

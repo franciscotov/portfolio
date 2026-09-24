@@ -9,20 +9,17 @@ const Home = () => {
 
   return (
     <section className={styles.container} id="Home">
-      <div className={styles.containerGrap}>
-        <div className={styles.containerTitle}>
-          <p className={styles.title}>
-            {t(home.greeting)}
-          </p>
-          <p className={styles.title}>{t(home.description) + t(data.firstName)}</p>
-          <p className={styles.title}>{t(data.lastName)}</p>
-        </div>
+      <div className={styles.containerTitle}>
+        <p className={styles.jobDescription}>{t(home.jobDescription)}</p>
+        <h1 className={styles.title}>
+          <span>{t(data.firstName)}</span>
+          <span>{t(data.lastName)}</span>
+        </h1>
         <div className={styles.containerDescription}>
-          <span className={styles.span}>
-            {t(home.a)}
-            <b>{t(home.secondDescription)}</b>
-            {t(home.homeDescription)}
-          </span>
+          <p className={styles.nowDescription}>{t(home.nowDescription)}</p>
+          <p className={styles.secondNowDescription}>
+            {t(home.secondNowDescription)}
+          </p>
         </div>
       </div>
     </section>

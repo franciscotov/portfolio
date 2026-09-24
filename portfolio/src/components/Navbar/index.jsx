@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { GrLinkedinOption } from "react-icons/gr";
 import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
 import { socialMediaUrls } from "@/components/common/constants";
+import { GoHome } from "react-icons/go";
 
 const sections = [
   { name: "Home", href: "Home" },
@@ -29,43 +30,6 @@ const socialLinks = [
 ];
 
 const Navbar = ({ activeSection, menuOpen, onToggleMenu, onSelectSection }) => {
-  const all = false;
-  if (all) {
-    return (
-      <div className={styles.nav}>
-        <a
-          className={styles.containerContact}
-          href="mailto:francisco.ronaldo.tovar@gmail.com"
-        >
-          Hire Me
-        </a>
-        <div className={styles.menu}>
-          <button
-            className={styles.menuButton}
-            onClick={(e) => eventHandler(e)}
-          >
-            <span className={styles.menuMask}>
-              <span
-                className={`${styles.menuLabel} ${active ? "" : styles.menuLabelClose}`}
-              >
-                Close
-              </span>
-              <span
-                className={`${styles.menuLabel} ${active ? "" : styles.menuLabelOpen}`}
-              >
-                Menu
-              </span>
-            </span>
-          </button>
-        </div>
-        <div className={styles.containerLogo}>
-          <a href="/">
-            <span className={styles.logo}>Logo</span>
-          </a>
-        </div>
-      </div>
-    );
-  }
   return (
     <header className={styles.navbarShell}>
       <a
@@ -106,7 +70,7 @@ const Navbar = ({ activeSection, menuOpen, onToggleMenu, onSelectSection }) => {
           <span
             className={`${styles.logo} ${menuOpen ? styles.logoActive : ""}`}
           >
-            FT
+            <GoHome className={`${styles.homeIcon}`} />
           </span>
         </a>
       </div>

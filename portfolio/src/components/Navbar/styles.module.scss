@@ -1,21 +1,16 @@
+@use "sass:map";
 @use "../../sassVariables/variables.scss" as vars;
 
 .navbarShell {
-  // position: fixed;
-  // inset: 0 0 auto 0;
-  // z-index: 1000;
   position: fixed;
   z-index: 1000;
   top: 30px;
   right: 65px;
   width: 200px;
+  height: 102px;
   vertical-align: middle;
   display: inline-block;
-  // height: vars.$height-navbar;
-  // max-height: vars.$height-navbar;
   background: rgba(238, 243, 249, 0.82);
-  // background-color: red;
-  // backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
@@ -31,71 +26,61 @@
 }
 
 .containerContact {
+  vertical-align: middle;
+  text-align: center;
+  width: 100px;
+  height: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   position: fixed;
-  top: 3.4rem;
-  left: 2.1rem;
-  z-index: 20;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.3rem;
-  color: #0f172a;
-  font-size: 0.72rem;
+  left: 65px;
+  top: 80px;
+  border: none;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  letter-spacing: 4px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(12px);
+  color: var(--text);
+  outline: none;
+  transition: all .12s cubic-bezier(.25, .46, .45, .94);
+  z-index: 90000;
+
 }
 
 .containerLogo {
-  // display: inline-flex;
   align-items: center;
   justify-content: center;
-  // width: 4.2rem;
-  // height: 4.2rem;
-  // border-radius: 50%;
-  backdrop-filter: blur(12px);
   position: relative;
   display: inline-block;
   z-index: 90000;
-  // width: 100%;
-  // max-width: 100px;
   vertical-align: middle;
-  // background-color: #FAFAFA;
-  // background: rgba(255, 255, 255, 0.7);
-  // border: 1px solid rgba(148, 163, 184, 0.2);
-  // box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
-  height: 75px;
+  height: 100%;
 }
 
 .logoLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   text-decoration: none;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+}
+
+.homeIcon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 12px;
 }
 
 .logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  // border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
   color: var(--text, vars.$brand-surface);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  animation: logoIn 0.45s ease-out 0.2s backwards;
-  // background-color: red;
-  top: 24px;
+  animation: _logoIn_hi4pb_1 0.45s ease-out 0.2s backwards;
 }
 
 .logoActive {
@@ -109,15 +94,6 @@
   vertical-align: middle;
   z-index: 100000;
 }
-
-// .menu:after {
-//   content: "";
-//   display: block;
-//   width: 1px;
-//   height: 2rem;
-//   background: rgba(15, 23, 42, 0.18);
-// }
-
 
 .menu:after {
   content: "";
@@ -139,7 +115,7 @@
   background: transparent;
   border: none;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.77rem;
   line-height: 1.2rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -148,7 +124,6 @@
   cursor: pointer;
   transition: all .12s cubic-bezier(.25,.46,.45,.94);
   animation: menuTextIn .5s cubic-bezier(.25,.46,.45,.94) .75s backwards;
-  // background-color: red;
 
 }
 
@@ -157,14 +132,6 @@
 }
 
 .menuMask {
-  // position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // width: 100%;
-  // height: 100%;
-  // overflow: hidden;
-  padding: 4px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -344,23 +311,35 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: (map.get(vars.$breakpoints, medium))-1){
   .containerContact {
-    top: 1.4rem;
-    left: 1rem;
-    padding: 0.7rem 1rem;
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
+    left: 20px;
+    top: 38px;
   }
+
+  .menu {
+    width: 150px;
+    height: 51px;
+  }
+}
+
+@media (max-width: 760px) {
+  // .containerContact {
+  //   top: 1.4rem;
+  //   left: 1rem;
+  //   padding: 0.7rem 1rem;
+  //   font-size: 0.62rem;
+  //   letter-spacing: 0.12em;
+  // }
 
   .navBarTop {
     padding: 1rem 1rem 0;
   }
 
-  .containerLogo {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
+  // .containerLogo {
+  //   width: 3.5rem;
+  //   height: 3.5rem;
+  // }
 
   .menuPanel {
     width: 100%;
