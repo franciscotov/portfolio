@@ -3,23 +3,32 @@ import styles from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
 import { translationModulesKeys, translationKeys } from "@/Int/constants";
 import { sectionKeys } from "@/components/common/constants";
+import photo from "@/assets/img/photo.JPG";
 
 const About = () => {
   const { t } = useTranslation([translationModulesKeys.Porfolio]);
   const { about } = translationKeys;
 
   return (
-    <section className={styles.container} id={sectionKeys.about}>
-      <div className={styles.containerGrap}>
-        <div className={styles.containerTitle}>
-          <h1>{t(about.title)}</h1>
-        </div>
-        <div className={styles.vl}></div>
-        <div className={styles.containerFirstDescription}>
-          <span className={styles.fristDescription}>{t(about.firstDescription)}</span>
-        </div>
-        <div className={styles.containerSecondDescription}>
-          <span className={styles.secondDescription}>{t(about.secondDescription)}</span>
+    <section
+      className={styles.about}
+      id={sectionKeys.about}
+      aria-labelledby="about-title"
+    >
+      <h2 id="about-title">{t(about.title)}</h2>
+
+      <div className={styles.content}>
+        <img
+          className={styles.photo}
+          src={photo}
+          alt={t(about.photoAlt)}
+          width="291"
+          height="280"
+          loading="lazy"
+        />
+        <div className={styles.text}>
+          <p className={styles.lead}>{t(about.firstDescription)}</p>
+          <p className={styles.body}>{t(about.secondDescription)}</p>
         </div>
       </div>
     </section>

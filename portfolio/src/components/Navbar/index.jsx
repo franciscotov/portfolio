@@ -1,130 +1,137 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
-import { GrLinkedinOption } from "react-icons/gr";
-import { FaGithub, FaFreeCodeCamp } from "react-icons/fa";
-import { socialMediaUrls } from "@/components/common/constants";
-import { GoHome } from "react-icons/go";
-
-const sections = [
-  { name: "Home", href: "Home" },
-  { name: "Work", href: "Work" },
-  { name: "About", href: "About" },
-];
-
-const socialLinks = [
-  {
-    label: "LinkedIn",
-    href: socialMediaUrls.linkedin,
-    icon: <GrLinkedinOption className={styles.icon} />,
-  },
-  {
-    label: "GitHub",
-    href: socialMediaUrls.github,
-    icon: <FaGithub className={styles.icon} />,
-  },
-  {
-    label: "FreeCodeCamp",
-    href: socialMediaUrls.leetcode,
-    icon: <FaFreeCodeCamp className={styles.icon} />,
-  },
-];
+import { useTranslation } from "react-i18next";
+import { translationKeys, translationModulesKeys } from "@/Int/constants";
+import {
+  contactEmail,
+  contactEmailParts,
+  languagesKeys,
+  navigationSections,
+  socialMediaUrls,
+} from "@/components/common/constants";
 
 const Navbar = ({ activeSection, menuOpen, onToggleMenu, onSelectSection }) => {
+  const { t, i18n } = useTranslation([translationModulesKeys.Porfolio]);
+  const { nav, resume, porfolio } = translationKeys;
+  const menuButtonRef = useRef(null);
+  const firstLinkRef = useRef(null);
+  const wasOpen = useRef(false);
+
+  const otherLanguage =
+    i18n.language === languagesKeys.es ? languagesKeys.en : languagesKeys.es;
+
+  const externalLinks = [
+    { label: "LinkedIn", href: socialMediaUrls.linkedin },
+    { label: "GitHub", href: socialMediaUrls.github },
+    { label: "LeetCode", href: socialMediaUrls.leetcode },
+    { label: t(resume.description), href: t(resume.fileURL) },
+  ];
+
+  // Move focus into the menu when it opens and back to the button when it closes
+  useEffect(() => {
+    if (menuOpen) {
+      wasOpen.current = true;
+      firstLinkRef.current?.focus();
+    } else if (wasOpen.current) {
+      wasOpen.current = false;
+      menuButtonRef.current?.focus();
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onToggleMenu();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen, onToggleMenu]);
+
   return (
-    <header className={styles.navbarShell}>
-      <a
-        className={styles.containerContact}
-        href="mailto:francisco.ronaldo.tovar@gmail.com"
-      >
-        Hire Me
+    <header className={`${styles.header} ${menuOpen ? styles.headerOpen : ""}`}>
+      <a className={styles.hire} href={`mailto:${contactEmail}`}>
+        {t(nav.hire)}
       </a>
 
-      <div className={styles.menu}>
+      <div className={styles.controls}>
         <button
+          type="button"
+          className={styles.language}
+          lang={otherLanguage}
+          aria-label={t(nav.switchLanguageLabel)}
+          onClick={() => i18n.changeLanguage(otherLanguage)}
+        >
+          {t(nav.switchLanguage)}
+        </button>
+
+        <button
+          ref={menuButtonRef}
           type="button"
           className={styles.menuButton}
           aria-expanded={menuOpen}
-          aria-label={menuOpen ? "Close menu" : "Menu"}
+          aria-controls="site-menu"
+          aria-label={menuOpen ? t(nav.closeMenu) : t(nav.openMenu)}
           onClick={onToggleMenu}
         >
-          <span className={styles.menuMask}>
+          <span className={styles.menuMask} aria-hidden="true">
             <span
-              className={`${styles.menuLabel} ${menuOpen ? "" : styles.menuLabelOpen}`}
+              className={`${styles.menuLabels} ${menuOpen ? styles.menuLabelsOpen : ""}`}
             >
-              Menu
-            </span>
-            <span
-              className={`${styles.menuLabel} ${menuOpen ? styles.menuCloseActive : styles.menuLabelClose}`}
-            >
-              Close
+              <span>{t(nav.menu)}</span>
+              <span>{t(nav.close)}</span>
             </span>
           </span>
         </button>
       </div>
-      <div className={styles.containerLogo}>
-        <a
-          href="/"
-          aria-label="Go to the home section"
-          className={styles.logoLink}
-        >
-          <span
-            className={`${styles.logo} ${menuOpen ? styles.logoActive : ""}`}
-          >
-            <GoHome className={`${styles.homeIcon}`} />
-          </span>
-        </a>
-      </div>
 
       <div
-        className={`${styles.menuOverlay} ${menuOpen ? styles.menuOverlayOpen : ""}`}
+        id="site-menu"
+        className={`${styles.overlay} ${menuOpen ? styles.overlayOpen : ""}`}
+        inert={menuOpen ? undefined : ""}
       >
-        <div className={styles.menuPanel}>
-          <div className={styles.menuInfo}>
-            <span className={styles.menuEyebrow}>Navigation</span>
-            <h2>Francisco Tovar</h2>
-            <p>Full-Stack Engineer</p>
+        <nav className={styles.overlayNav} aria-label={t(nav.mainNavigation)}>
+          <ul>
+            {navigationSections.map((section, index) => {
+              const isActive = activeSection === section.id;
 
-            <div className={styles.socialList}>
-              {socialLinks.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.socialLink}
-                  aria-label={item.label}
-                >
-                  {item.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles.menuContent}>
-            <span className={styles.menuLabelText}>Menu</span>
-            <nav className={styles.menuNav} aria-label="Main navigation">
-              {sections.map((section) => {
-                const isActive = activeSection === section.name;
-
-                return (
+              return (
+                <li key={section.id}>
                   <a
-                    key={section.name}
-                    href={`#${section.href}`}
-                    className={`${styles.menuItem} ${isActive ? styles.menuItemActive : ""}`}
+                    ref={index === 0 ? firstLinkRef : undefined}
+                    href={`#${section.id}`}
+                    className={styles.overlayLink}
+                    aria-current={isActive ? "location" : undefined}
                     onClick={(event) => {
                       event.preventDefault();
-                      onSelectSection(section.name);
+                      onSelectSection(section.id);
                     }}
                   >
-                    <span
-                      className={styles.menuIndex}
-                    >{`0${sections.indexOf(section) + 1}`}</span>
-                    <span>{section.name}</span>
+                    {t(`${nav.sections}.${section.labelKey}`)}
                   </a>
-                );
-              })}
-            </nav>
-          </div>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className={styles.overlayFoot}>
+          <a className={styles.overlayEmail} href={`mailto:${contactEmail}`}>
+            {contactEmailParts[0]}
+            <wbr />
+            {contactEmailParts[1]}
+          </a>
+          <ul className={styles.overlayExternal}>
+            {externalLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  {link.label}
+                  <span className="visually-hidden"> {t(porfolio.newTab)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </header>

@@ -36,17 +36,6 @@
       "video": "/codebakery_ecommerce.mp4",
       "github": "https://github.com/ecommercehenry/codebakery",
       "deploy": "https://codebakery-front.vercel.app/"
-    },
-    {
-      "name": "Countries App",
-      "category": "Single-page application",
-      "description": "Country discovery app that consumes an API-backed data model and lets users create activities for places they want to visit, combining a simple interface with structured data management.",
-      "techs": ["React", "Node.js", "Express", "PostgreSQL", "REST API"],
-      "mediaType": "image",
-      "mediaKey": "countriesApp",
-      "mediaAlt": "Countries App interface",
-      "github": "https://github.com/franciscotov/countries-app",
-      "deploy": "https://countries-app-gamma-lilac.vercel.app/"
     }
   ],
   [
@@ -83,17 +72,6 @@
       "video": "/codebakery_ecommerce.mp4",
       "github": "https://github.com/ecommercehenry/codebakery",
       "deploy": "https://codebakery-git-main-franciscotov.vercel.app/"
-    },
-    {
-      "name": "Countries App",
-      "category": "Aplicación de una sola página",
-      "description": "Aplicación para descubrir países que consume una base de datos alimentada por API y permite crear actividades para los lugares que el usuario desea visitar, combinando una interfaz simple con gestión estructurada de datos.",
-      "techs": ["React", "Node.js", "Express", "PostgreSQL", "REST API"],
-      "mediaType": "image",
-      "mediaKey": "countriesApp",
-      "mediaAlt": "Interfaz de Countries App",
-      "github": "https://github.com/franciscotov/countries-app",
-      "deploy": "https://countries-app-beige.vercel.app/"
     }
   ]
 ]

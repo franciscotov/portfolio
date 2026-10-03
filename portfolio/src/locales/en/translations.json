@@ -4,20 +4,40 @@
     "lastName" : "Tovar",
     "nickName": "Franciscotov"
   },
-  "about": { 
+  "nav": {
+    "hire": "Hire me",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Español",
+    "switchLanguageLabel": "Ver el sitio en español",
+    "mainNavigation": "Main navigation",
+    "sections": {
+      "home": "Home",
+      "work": "Work",
+      "experience": "Experience",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "about": {
     "title": "About",
-    "firstDescription": "My experience in the scientific field and my passions (teaching, sports and electronics) have gradually made me interested in programming, to the point that my most precious long-term achievement is being able to integrate them into a software project that adds value and allow a problem to be solved.",
-    "secondDescription": "Currently, I have strong experience working on React, Java, and Node.js projects. I've built frontend applications from scratch using microfrontend architecture and have contributed to improving performance and security across several applications."
+    "firstDescription": "My experience in the scientific field and my passions (teaching, sports and electronics) have gradually made me interested in programming, to the point that my most precious long-term achievement is being able to integrate them into a software project that adds value and allows a problem to be solved.",
+    "secondDescription": "Currently, I have strong experience working on React, Java, and Node.js projects. I've built frontend applications from scratch using microfrontend architecture and have contributed to improving performance and security across several applications.",
+    "photoAlt": "Portrait of Francisco Tovar"
   },
   "home": {
     "name": "Francisco Tovar",
-    "jobDescription": "Fullstack Software Engineer — Buenos Aires, Argentina",
+    "jobDescription": "Fullstack software engineer in Buenos Aires, Argentina.",
     "nowDescription": "Transforming ideas into scalable, production-ready applications.",
-    "secondNowDescription": "Currently I am improving my knowledge about System Design, AI agents, LLMs, and Cloud Programming while shipping side projects."
+    "secondNowDescription": "Right now I'm learning more about system design, AI agents, LLMs and cloud programming while shipping side projects.",
+    "seeWork": "See my work",
+    "viewCv": "View CV"
   },
   "download": {
     "fileURL": "https://drive.google.com/file/d/1IgkPc3sqK_eggjM0fbyyiCyR64lUFagu/view?usp=sharing",
-    "description": "RESUME"
+    "description": "View CV"
   },
   "images": {
     "development": "development",
@@ -29,9 +49,12 @@
     "title": "Experience"
   },
   "porfolio": {
-    "title": "Portfolio",
-    "repository": "Repository",
-    "demo": "Demo"
+    "title": "Work",
+    "intro": "Selected projects. Each one links to a live demo and its source code.",
+    "repository": "View source code",
+    "demo": "Open live demo",
+    "builtWith": "Built with {{techs}}.",
+    "newTab": "(opens in a new tab)"
   },
   "skills": {
     "title": "Skills",
@@ -44,7 +67,8 @@
   },
   "contact": {
     "title": "Contact",
-    "msg": "If you think I can add value to your team, you can leave me a message and we will schedule a meeting",
+    "msg": "If you think I can add value to your team, write to me and we'll set up a call.",
+    "elsewhere": "You can also find me on",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
@@ -57,5 +81,10 @@
   },
   "footer": {
     "develpedBy": "© {{year}} Developed by Franciscotov"
+  },
+  "maintenance": {
+    "title": "This portfolio is being updated",
+    "body": "New projects and improvements are on the way. Please check back soon.",
+    "contact": "In the meantime, you can email me at"
   }
 }

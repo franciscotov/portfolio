@@ -1,0 +1,73 @@
+@use "sass:map";
+@use "../../sassVariables/variables.scss" as vars;
+
+$columns: repeat(12, minmax(0, 1fr));
+$column-gap: clamp(1rem, 2.5vw, 2rem);
+
+.experience {
+  padding-block: clamp(4rem, 12vh, 8rem);
+
+  h2 {
+    margin-bottom: clamp(2.5rem, 7vh, 4.5rem);
+    font-size: var(--step-h2);
+    font-stretch: 125%;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// A timeline is a real sequence, so each entry gets a rule and its dates
+.entry {
+  display: grid;
+  grid-template-columns: $columns;
+  column-gap: $column-gap;
+  row-gap: 0.5rem;
+  padding-block: 1.75rem 2.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+.date {
+  grid-column: 1 / span 3;
+  font-stretch: 125%;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+
+.body {
+  grid-column: 4 / span 7;
+  max-width: 40rem;
+
+  h3 {
+    font-size: var(--step-lead);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+
+.place {
+  margin-top: 0.25rem;
+  color: var(--graphite);
+}
+
+.description {
+  margin-top: 1rem;
+}
+
+@media (max-width: (map.get(vars.$breakpoints, medium))) {
+  .date,
+  .body {
+    grid-column: 1 / -1;
+  }
+
+  .date {
+    color: var(--graphite);
+  }
+}

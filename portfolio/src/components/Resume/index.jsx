@@ -9,7 +9,7 @@ const Resume = () => {
 
   return (
     <div className={styles.containerResume}>
-      <a href={resume.fileURL}>{t(resume.description)}</a>
+      <a href={t(resume.fileURL)}>{t(resume.description)}</a>
     </div>
   );
 };

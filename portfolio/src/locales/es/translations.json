@@ -4,15 +4,36 @@
     "lastName" : "Tovar",
     "nickName": "Franciscotov"
   },
-  "about": { 
-    "title": "Acerca de mi",
-    "firstDescription": "Mi experiencia en el ámbito científico y mis pasiones(la enseñanza, el deporte y la electrónica) me han hecho interesarme gradualmente en la programación, al punto de que mi logro más preciado a largo plazo es poder integrarlas en un proyecto de software que aporte valor y permita resolver un problema.",
-    "secondDescription": "Decidí en mi tiempo libre estudiar MERN Stack(Mongo, ExpressJS, ReactJS, NodeJS) en la plataforma freecodecamp, luego adquirí mayor conocimiento en Henry, un bootcamp de alto nivel de exigencia en desarrollo web PERN stack (PostgresSQL, ExpressJS, ReactJS, NodeJS), en la cual desarrollé varios proyectos, entre ellos una aplicación para la visualización de países y una aplicación web e-commerce."
+  "nav": {
+    "hire": "Contrátame",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchLanguage": "English",
+    "switchLanguageLabel": "View the site in English",
+    "mainNavigation": "Navegación principal",
+    "sections": {
+      "home": "Inicio",
+      "work": "Proyectos",
+      "experience": "Experiencia",
+      "about": "Sobre mí",
+      "contact": "Contacto"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "firstDescription": "Mi experiencia en el ámbito científico y mis pasiones (la enseñanza, el deporte y la electrónica) me han hecho interesarme gradualmente en la programación, al punto de que mi logro más preciado a largo plazo es poder integrarlas en un proyecto de software que aporte valor y permita resolver un problema.",
+    "secondDescription": "Actualmente tengo sólida experiencia trabajando en proyectos con React, Java y Node.js. He construido aplicaciones frontend desde cero con arquitectura de microfrontends y he contribuido a mejorar el rendimiento y la seguridad de varias aplicaciones.",
+    "photoAlt": "Retrato de Francisco Tovar"
   },
   "home": {
-    "jobDescription": "Ingeniero de Software Fullstack — Buenos Aires, Argentina",
+    "name": "Francisco Tovar",
+    "jobDescription": "Ingeniero de software fullstack en Buenos Aires, Argentina.",
     "nowDescription": "Transformo ideas en aplicaciones escalables listas para producción.",
-    "secondNowDescription": "Actualmente estoy ampliando mis conocimientos sobre Diseño de Sistemas, Agentes de IA, LLMs y Programación Cloud mientras desarrollo proyectos personales"
+    "secondNowDescription": "Actualmente estoy ampliando mis conocimientos sobre diseño de sistemas, agentes de IA, LLMs y programación cloud mientras desarrollo proyectos personales.",
+    "seeWork": "Ver proyectos",
+    "viewCv": "Ver CV"
   },
   "download": {
     "fileURL": "https://drive.google.com/file/d/1IgkPc3sqK_eggjM0fbyyiCyR64lUFagu/view?usp=sharing",
@@ -28,9 +49,12 @@
     "title": "Experiencia"
   },
   "porfolio": {
-    "title": "Portfolio",
-    "repository": "Repositorio",
-    "demo": "Demo"
+    "title": "Proyectos",
+    "intro": "Una selección de proyectos. Cada uno incluye una demo en vivo y su código fuente.",
+    "repository": "Ver código fuente",
+    "demo": "Abrir demo en vivo",
+    "builtWith": "Hecho con {{techs}}.",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "skills": {
     "title": "Habilidades",
@@ -43,7 +67,8 @@
   },
   "contact": {
     "title": "Contacto",
-    "msg": "Si crees que puedo sumar valor a tu equipo, puedes dejarme un mensaje y agendarémos una reunión",
+    "msg": "Si crees que puedo sumar valor a tu equipo, escríbeme y agendamos una llamada.",
+    "elsewhere": "También me encuentras en",
     "name": "Nombre",
     "email": "Email",
     "subject": "Asunto",
@@ -56,5 +81,10 @@
   },
   "footer": {
     "develpedBy": "© {{year}} Desarrollado por Franciscotov"
+  },
+  "maintenance": {
+    "title": "Este portfolio se está actualizando",
+    "body": "Pronto habrá nuevos proyectos y mejoras. Vuelve en unos días.",
+    "contact": "Mientras tanto, puedes escribirme a"
   }
 }

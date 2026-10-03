@@ -1,7 +1,7 @@
 const experienceAndEducationData = [
   [
     {
-      title: "Fullstack Developer at Tecnosoftware(BBVA)",
+      title: "Fullstack Developer at Tecnosoftware (BBVA)",
       date: "2023-Present",
       university: "Tecnosoftware",
       description:
@@ -19,27 +19,27 @@ const experienceAndEducationData = [
       date: "2021",
       university: "Henry",
       description:
-        "As part of the last stage of Henry's bootcamp, I made an e-commerce web application. I worked the implementation offunctionalities on the server side, connecting the queries and mutations of graphQL with the database, with sequelize as ORM, likewise, I implemented different functionalities on the client side, highlighting the implementation of two factor authentication and paging and filtering the products views, with react and redux. In addition to the package of technologies used (graphQL, SQL, sequelize, NodeJS, NextJS, React, Redux, and others), the project was carried out using SCRUM as agile methodology and GIT-GITHUB for version management.",
+        "As part of the last stage of Henry's bootcamp, I made an e-commerce web application. I worked the implementation of functionalities on the server side, connecting the queries and mutations of graphQL with the database, with sequelize as ORM, likewise, I implemented different functionalities on the client side, highlighting the implementation of two factor authentication and paging and filtering the products views, with react and redux. In addition to the package of technologies used (graphQL, SQL, sequelize, NodeJS, NextJS, React, Redux, and others), the project was carried out using SCRUM as agile methodology and GIT-GITHUB for version management.",
     },
     {
       title: "Teaching Assistant",
       date: "2021",
       university: "Henry",
       description:
-        "As an assistant, I guided the students of Henry's bootcamp in the completion of tasks for the day, also i provided tools for a better use of technologies such as PostgresSQL, ExpressJS, ReactJS, NodeJS and others.",
+        "As an assistant, I guided the students of Henry's bootcamp in the completion of tasks for the day, and I provided tools for a better use of technologies such as PostgresSQL, ExpressJS, ReactJS, NodeJS and others.",
     },
     {
       title: "College Professor",
       date: "2014-2016",
-      university: "Universidad central de Venezuela",
+      university: "Universidad Central de Venezuela",
       description:
         "Dictation of face to face classes to first-semester students from the Faculty of Engineering. Preparation of the class program and revision of partial exams.",
     },
   ],
   [
     {
-      title: "Fullstack Developer en Tecnosoftware(BBVA)",
-      date: "2023-Present",
+      title: "Fullstack Developer en Tecnosoftware (BBVA)",
+      date: "2023-Actualidad",
       university: "Tecnosoftware",
       description:
         "He participado en varios proyectos enfocados en la mejora de funcionalidades del home banking de BBVA Argentina incluyendo mejoras de accesibilidad, migración del flujo de login y manejo de claves. Así mismo he contribuido en el refinamiento y la documentación de los procesos. Adicionalmente he ayudado en la mejora de rendimiento y la cobertura de código de dichos proyectos.",

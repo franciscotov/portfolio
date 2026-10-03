@@ -1,158 +1,191 @@
 @use "sass:map";
 @use "../../sassVariables/variables.scss" as vars;
 
+.hero {
+  container-type: inline-size;
+  min-height: calc(100vh - 2 * var(--frame));
+  min-height: calc(100svh - 2 * var(--frame));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: clamp(2.5rem, 6vh, 4.5rem);
+  padding-top: calc(var(--header-height) + clamp(2rem, 7vh, 5rem));
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
 
-.container {
-  width: min(100%, 1200px);
-  margin: vars.$height-navbar auto;
-  height: fit-content;
-  padding: 2rem 1.25rem 4rem;
-  display: flex;
-  gap: clamp(2rem, 7vw, 7rem);
-  align-items: center;
+// The name is drawn as a physichromie: fine black lines with coloured
+// lines between them. The black lines stay put; the colour bands that
+// fill the coloured lines slide with --shift (set from JS).
+.name {
+  --shift: 0.3;
+  // "Francisco" is 6.1em wide at 125% width; the divisor leaves a little slack
+  --fit: 6.2;
+  --period: max(0.062em, 4.5px);
+  --ink-line: calc(var(--period) * 0.34);
+  --chroma-start: calc(var(--period) * 0.5);
+  --chroma-end: calc(var(--period) * 0.84);
+  --band: 1.35em;
+
   position: relative;
+  align-self: end;
+  max-width: 100%;
+  // The name fills the measure exactly: sized from the hero's inner width
+  font-size: calc((100vw - 2 * var(--frame) - 2 * var(--gutter)) / var(--fit));
+  font-size: min(100cqi / var(--fit), 26rem);
+  font-stretch: 125%;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 1rem 0.5rem auto;
-    height: calc(100% - 2rem);
-    border-radius: 1.5rem;
-    background:
-      radial-gradient(circle at 12% 15%, rgba(15, 107, 255, 0.12), transparent 30%),
-      radial-gradient(circle at 90% 85%, rgba(18, 196, 139, 0.1), transparent 28%),
-      rgba(255, 255, 255, 0.52);
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-    z-index: 0;
+.nameLine {
+  display: block;
+  // Room for descenders and the tight leading
+  padding-bottom: 0.04em;
+}
+
+.ink,
+.chroma {
+  display: block;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ink {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--ink) 0 var(--ink-line),
+    transparent var(--ink-line) var(--period)
+  );
+}
+
+.chroma {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+  background-image: repeating-linear-gradient(
+    96deg,
+    var(--carmine) 0 var(--band),
+    var(--orange) var(--band) calc(var(--band) * 2),
+    var(--cobalt) calc(var(--band) * 2) calc(var(--band) * 3),
+    var(--viridian) calc(var(--band) * 3) calc(var(--band) * 4)
+  );
+  // A wide image keeps the tile seam far outside the name while it slides
+  background-size: 1200% 100%;
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--shift) * var(--band) * 4 - 40em);
+  -webkit-mask-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 var(--chroma-start),
+    #000 var(--chroma-start) var(--chroma-end),
+    transparent var(--chroma-end) var(--period)
+  );
+  mask-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 var(--chroma-start),
+    #000 var(--chroma-start) var(--chroma-end),
+    transparent var(--chroma-end) var(--period)
+  );
+}
+
+// Solid name wherever the stripes can't render faithfully
+@supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+  .ink {
+    color: var(--ink);
+    background: none;
   }
 
-  p,
-  span,
-  h1 {
-    color: vars.$ebony;
-  }
-
-  .containerTitle {
-    width: 100%;
-    text-align: start;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .jobDescription {
-    color: vars.$brand-primary;
-    font-family: vars.$font-family-primary;
-    font-size: clamp(0.75rem, 1.3vw, 0.95rem);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.5;
-    margin: 0 0 1.25rem;
-    text-transform: uppercase;
-  }
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    font-family: vars.$font-family-secondary;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 0.9;
-    margin: 0;
-
-    span:last-child {
-      color: vars.$brand-secondary;
-    }
-  }
-
-  .containerDescription {
-    border-left: 2px solid vars.$brand-accent;
-    margin-top: clamp(2rem, 5vw, 4rem);
-    max-width: 42rem;
-    padding-left: clamp(1rem, 2vw, 1.5rem);
-    text-align: start;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  .nowDescription {
-    font-family: vars.$font-family-primary;
-    font-size: clamp(1.2rem, 2.3vw, 1.75rem);
-    font-weight: 700;
-    line-height: 1.35;
-  }
-
-  .secondNowDescription {
-    color: rgba(vars.$ebony, 0.7);
-    font-family: vars.$font-family-primary;
-    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-    line-height: 1.7;
-    margin-top: 1rem !important;
+  .chroma {
+    display: none;
   }
 }
 
-@media (max-width: (map.get(vars.$breakpoints, small))-1) {
-  .container {
-    width: min(100%, 1200px);
-    grid-template-columns: 1fr;
-    padding: 1rem 1rem 3.5rem;
-
-    &::before {
-      inset: 0.75rem 0.5rem auto;
-      height: calc(100% - 1.5rem);
-    }
+@media (forced-colors: active) {
+  .ink {
+    color: CanvasText;
+    background: none;
   }
 
-  .containerTitle {
-    margin: 1rem 0;
-  }
-
-  .container {
-    .title {
-      font-size: clamp(3.2rem, 17vw, 4.5rem);
-    }
-
-    .containerDescription {
-      margin-top: 2.5rem;
-    }
+  .chroma {
+    display: none;
   }
 }
 
-@media (min-width: (map.get(vars.$breakpoints, small))-1) and (max-width: (map.get(vars.$breakpoints, medium))-1) {
-  .container {
-    width: min(100%, 1200px);
-    grid-template-columns: 1fr;
-    padding: 1rem 1rem 3.5rem;
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(1rem, 2.5vw, 2rem);
+  row-gap: 2rem;
+  align-items: start;
+}
 
-    .containerDescription {
-      width: 90vw;
-      span {
-        font-size: vars.$font-size-home-span;
-      }
-    }
+.role {
+  grid-column: 1 / span 4;
+  max-width: 16ch;
+  font-size: var(--step-lead);
+  font-stretch: 112%;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.now {
+  grid-column: 7 / -1;
+  max-width: 36rem;
+}
+
+.statement {
+  font-size: var(--step-lead);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.learning {
+  margin-top: 1rem;
+  color: var(--graphite);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 0.75rem;
+  margin-top: 1.75rem;
+  font-weight: 600;
+}
+
+@media (max-width: (map.get(vars.$breakpoints, large) - 1)) {
+  .role {
+    grid-column: 1 / span 5;
   }
 
-  .container .title {
-    font-size: clamp(4rem, 12vw, 5.5rem);
+  .now {
+    grid-column: 6 / -1;
   }
 }
 
-@media (min-width: (map.get(vars.$breakpoints, medium))) and (max-width: (map.get(vars.$breakpoints, large))-1) {
-  .container {
-    width: vars.$width-min-medium;
-    padding-left: vars.$padding-base-medium;
+@media (max-width: (map.get(vars.$breakpoints, medium))) {
+  .name {
+    // 5.56em wide at 112%
+    --fit: 5.65;
+    font-stretch: 112%;
   }
 
-  .container .containerDescription { width: 100%; }
+  .role,
+  .now {
+    grid-column: 1 / -1;
+  }
+
+  .role {
+    max-width: none;
+  }
 }
 
-@media (min-width: (map.get(vars.$breakpoints, large))) {
-  .container {
-    width: min(100%, 1200px);
-    padding-left: vars.$padding-base-large;
+// Phones: the name stays expanded (condensed stems run parallel to the
+// stripes and turn into a barcode), so the hero gives up its full height
+@media (max-width: 599px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 4rem);
   }
 }

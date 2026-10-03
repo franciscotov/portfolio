@@ -8,15 +8,28 @@ export const translationKeys = {
     lastName: 'data.lastName',
     nickName: 'data.nickName',
   },
+  nav: {
+    hire: 'nav.hire',
+    menu: 'nav.menu',
+    close: 'nav.close',
+    openMenu: 'nav.openMenu',
+    closeMenu: 'nav.closeMenu',
+    switchLanguage: 'nav.switchLanguage',
+    switchLanguageLabel: 'nav.switchLanguageLabel',
+    mainNavigation: 'nav.mainNavigation',
+    sections: 'nav.sections',
+  },
   about: {
     title: 'about.title',
     firstDescription: 'about.firstDescription',
     secondDescription: 'about.secondDescription',
+    photoAlt: 'about.photoAlt',
   },
   accordion: 'Accordion',
   contact: {
     title: 'contact.title',
     msg: 'contact.msg',
+    elsewhere: 'contact.elsewhere',
     name: 'contact.name',
     email: 'contact.email',
     subject: 'contact.subject',
@@ -28,8 +41,8 @@ export const translationKeys = {
     error: 'alert.error',
   },
   resume: {
-    fileURL: 'resume.fileURL',
-    description: 'resume.description',
+    fileURL: 'download.fileURL',
+    description: 'download.description',
   },
   experience: {
     title: 'experience.title',
@@ -41,6 +54,8 @@ export const translationKeys = {
     jobDescription: 'home.jobDescription',
     nowDescription: 'home.nowDescription',
     secondNowDescription: 'home.secondNowDescription',
+    seeWork: 'home.seeWork',
+    viewCv: 'home.viewCv',
   },
   images: {
     development: 'images.development',
@@ -52,8 +67,16 @@ export const translationKeys = {
   navbar: 'Navbar',
   porfolio: {
     title: 'porfolio.title',
+    intro: 'porfolio.intro',
     repository: 'porfolio.repository',
     demo: 'porfolio.demo',
+    builtWith: 'porfolio.builtWith',
+    newTab: 'porfolio.newTab',
+  },
+  maintenance: {
+    title: 'maintenance.title',
+    body: 'maintenance.body',
+    contact: 'maintenance.contact',
   },
   skills: {
     title: 'skills.title',
